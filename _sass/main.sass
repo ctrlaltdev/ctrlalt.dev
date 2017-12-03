@@ -1,0 +1,233 @@
+// main.sass
+@import reset
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600')
+
+// @VARIABLES
+
+
+// @ANIMATION
+@keyframes slideup
+	from {top: 100px}
+	80% {top: 0}
+	to {top: -100px}
+
+// @GLOBAL
+html,
+body
+	font-size: 10px
+	font-family: 'Titillium Web', sans-serif
+	height: 100%
+	width: 100%
+	background-color: transparent
+	background-repeat: repeat
+	background-attachment: fixed
+	color: black
+
+body
+	display: grid
+	grid-template-columns: [full] 100%
+	grid-template-rows: [header] auto [main] auto [footer] auto
+	grid-template-areas: "headerarea" "mainarea" "footerarea"
+	grid-row-gap: 20px
+	justify-content: stretch
+	header
+		display: flex
+		grid-area: headerarea
+		grid-column: full / auto
+		grid-row: header / main
+		justify-content: space-between
+		align-items: baseline
+		h1
+			flex: 1 1 auto
+			font-size: 1200%
+			font-weight: 600
+			padding: 0 10px 10px
+			span
+				display: none
+			svg
+				max-height: 100px
+				background-color: transparent
+				padding: 0 20px
+				polygon#svgY,
+				polygon#svgD
+					fill: black
+		@media (max-width: 940px)
+			h1
+				font-size: initial
+				span
+					display: none
+		nav
+			flex: 0 1 auto
+			text-align: right
+			ul
+				display: flex
+				justify-content: flex-end
+				li
+					flex: 0 1 auto
+					font-size: 200%
+					a
+						background-color: black
+						text-decoration: none
+						color: white
+						padding: 10px 25px
+						text-transform: uppercase
+						font-weight: 600
+					a:hover
+						color: silver
+				li.current
+					a
+						color: silver
+	main
+		grid-area: mainarea
+		grid-column: full / auto
+		grid-row: main / footer
+	footer
+		grid-area: footerarea
+		grid-column: full / auto
+		grid-row: footer / auto
+		margin-top: 40px
+		hr
+			width: 33%
+			border: solid 0px transparent
+			margin-bottom: 20px
+		ul
+			display: flex
+			justify-content: center
+			align-items: center
+			margin-bottom: 20px
+			li
+				flex: 0 0 auto
+				margin: 0 10px
+				svg
+					max-height: 80px
+				svg#datalove:hover text
+					fill: red
+
+	section
+		padding: 0 20px
+	div#data
+		padding: 0 20px
+		margin: 40px 0
+		p
+			text-transform: uppercase
+			font-size: 800%
+			font-weight: 600
+			overflow: hidden
+			padding-bottom: 24px
+			span.wrapper
+				border-bottom: solid 3px black
+				z-index: 100
+				span.colorset-0
+					background: linear-gradient(45deg, cyan, magenta)
+					background-clip: text
+					-webkit-text-fill-color: transparent
+				span.colorset-1
+					background: linear-gradient(45deg, lime, orange)
+					background-clip: text
+					-webkit-text-fill-color: transparent
+				span.colorset-2
+					background: linear-gradient(45deg, purple, aqua)
+					background-clip: text
+					-webkit-text-fill-color: transparent
+				span.colorset-3
+					background: linear-gradient(45deg, orange, purple)
+					background-clip: text
+					-webkit-text-fill-color: transparent
+				span.colorset-4
+					background: linear-gradient(45deg, #FF3912, #E81411, #FF1F82, #E811DB)
+					background-clip: text
+					-webkit-text-fill-color: transparent
+				span
+					position: relative
+					z-index: 1
+					top: 100px
+					font-weight: 600
+				span.slideup
+					animation: 2s slideup
+
+	div#datalove
+		ul
+			margin-left: 20px
+			li
+				font-size: 220%
+				margin-bottom: 5px
+			li:first-of-type,
+			li:last-of-type
+				color: red
+				font-weight: 600
+				text-transform: uppercase
+		
+	section#aboutme
+		h2
+			text-transform: uppercase
+			font-size: 400%
+			font-weight: 600
+		h3
+			text-transform: uppercase
+			font-size: 300%
+			margin-top: 20px
+			a
+				color: black
+				text-decoration: none
+				padding: 0 10px
+			a[href^="//github"]
+				border-bottom: solid #0366d6 3px
+			a[href^="//linkedin"]
+				border-bottom: solid #0091ca 3px
+	section#experiences,
+	section#education,
+	section#website
+		margin-top: 40px
+		h2
+			text-transform: uppercase
+			font-size: 350%
+			font-weight: 600
+			margin: 20px 0 10px
+			span
+				padding: 5px 10px
+				background-color: black
+				color: white
+		p
+				padding-left: 20px
+				font-size: 200%
+		article
+			h3
+				text-transform: uppercase
+				font-size: 300%
+				padding-left: 20px
+				margin: 20px 0 10px
+			p
+				padding-left: 20px
+				font-size: 200%
+	section#website
+		article
+			p
+				margin: 20px 0
+
+body#project
+	ul#projlist
+		margin-top: 20px
+		display: flex
+		flex-flow: row wrap
+		justify-content: flex-start
+		li
+			flex: 0 0 auto
+			margin: 20px
+			a
+				display: block
+				text-align: center
+				text-decoration: none
+				background-color: rgba(55,55,55,0)
+				span
+					font-size: 300%
+					line-height: 250px
+					text-decoration: none
+					text-transform: uppercase
+					font-weight: 600
+					color: white
+					background-color: black
+					padding: 5px 10px
+
+// @PARTIALS
+
+@import cube

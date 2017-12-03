@@ -1,5 +1,15 @@
-remote_theme: rohanchandra/type-theme
 baseurl: ""
-url: "https://ctrlaltdev.xyz"
-title: "CTRL ALT DEV"
-description: "wait, wut?"
+url: "https://ctrlaltdev.xyz/"
+
+theme_settings:
+  title: "CTRL ALT DEV"
+  description: "I'm a tech enthusiast, web project manager, freelance developer and amateur designer."
+  favicon: assets/favicon.png
+<
+sass:
+  sass_dir: _sass
+  style: :compressed
+theme: ctrlaltdev
+exclude:
+  - Gemfile
+  - Gemfile.lock

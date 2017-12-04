@@ -4,13 +4,10 @@ switch (window.location.pathname) {
   case "/":
     document.querySelector('body').id = 'project';
     break;
-  case "/project/":
-    document.querySelector('body').id = 'project';
-    break;
-  case "/about/":
+  case "/about.html":
     document.querySelector('body').id = 'about';
     break;
-  case "/datalove/":
+  case "/datalove.html":
     document.querySelector('body').id = 'datalove';
     datalove();
     break;

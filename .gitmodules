@@ -1,0 +1,3 @@
+[submodule "GLITCH"]
+	path = GLITCH
+	url = git@github.com:ctrlaltdev/GLITCH.git

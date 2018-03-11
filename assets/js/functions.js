@@ -21,13 +21,9 @@ if (document.querySelector('li.current')) {
 setTimeout(function () {
   if (document.querySelector('a[href="' + window.location.pathname + '"]')) {
     document.querySelector('a[href="' + window.location.pathname + '"]').parentNode.classList.add('current');
-    let index = generateRandom(colors.length, null);
-    document.querySelector('a[href="' + window.location.pathname + '"]').parentNode.style.color = colors[index];
-  } else if (window.location.pathname == "/") {
-    document.querySelector('a[href="/project/"]').parentNode.classList.add('current');
-    let index = generateRandom(colors.length, null);
-    document.querySelector('a[href="/project/"]').parentNode.style.color = colors[index];
   }
+  let index = Math.floor(Math.random() * colors.length);
+  document.querySelector('.current a').style.color = colors[index];
 }, 0);
 
 function datalove(i = -1) {

@@ -1,5 +1,7 @@
 console.warn('I have become self aware, human.');
 
+var colors = ["cyan", "purple", "orange", "lime"];
+
 switch (window.location.pathname) {
   case "/":
     document.querySelector('body').id = 'project';
@@ -19,7 +21,13 @@ if (document.querySelector('li.current')) {
 setTimeout(function () {
   if (document.querySelector('a[href="' + window.location.pathname + '"]')) {
     document.querySelector('a[href="' + window.location.pathname + '"]').parentNode.classList.add('current');
-  } else if (window.location.pathname == "/") { document.querySelector('a[href="/project/"]').parentNode.classList.add('current'); }
+    let index = generateRandom(colors.length, null);
+    document.querySelector('a[href="' + window.location.pathname + '"]').parentNode.style.color = colors[index];
+  } else if (window.location.pathname == "/") {
+    document.querySelector('a[href="/project/"]').parentNode.classList.add('current');
+    let index = generateRandom(colors.length, null);
+    document.querySelector('a[href="/project/"]').parentNode.style.color = colors[index];
+  }
 }, 0);
 
 function datalove(i = -1) {

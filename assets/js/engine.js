@@ -59,23 +59,53 @@ function resize(){
 }
 window.addEventListener('resize', resize);
 
-var mousePos = {x: 0, y: 0};
+let firstLoad = true;
+var mousePos = {x: 0, y: 0, x1: 0, y1: 0, x2: 1, y2: 1};
+
 function getMousePos(evt){
   mousePos.x = evt.clientX;
   mousePos.y = evt.clientY;
+  if(firstLoad) {
+    mousePos.x = evt.clientX;
+    mousePos.y = evt.clientY;
+    mousePos.x1 = mousePos.x;
+    mousePos.y1 = mousePos.y;
+    mousePos.x2 = mousePos.x1 + 1;
+    mousePos.y2 = mousePos.y1 + 1;
+    firstLoad = false;
+  }
 }
 document.addEventListener('mousemove', getMousePos);
+document.addEventListener('touchmove', getMousePos);
 
 clock = new THREE.Clock();
+
+var rotateDelta = {x: 0, y: 0};
+
+function rotateInertia() {
+  rotateDelta.x = mousePos.x1 - mousePos.x2;
+  rotateDelta.y = mousePos.y1 - mousePos.y2;
+  
+  cube0.rotation.y += rotateDelta.x / 1000;
+  cube0.rotation.x += rotateDelta.y / 1000;
+  cube1.rotation.y -= rotateDelta.x / 2000;
+  cube1.rotation.x -= rotateDelta.y / 2000;
+  cube2.rotation.y += rotateDelta.x / 4000;
+  cube2.rotation.x += rotateDelta.y / 4000;
+  cube3.rotation.y -= rotateDelta.x / 8000;
+  cube3.rotation.x -= rotateDelta.y / 8000;
+}
+
 function render() {
-  cube0.rotation.y = (canvasWidth / canvasWidth - mousePos.x / canvasWidth) / 1;
-  cube0.rotation.x = (canvasHeight / canvasHeight - mousePos.y / canvasHeight) / 1;
-  cube1.rotation.y = (mousePos.x / canvasWidth) / 1.5;
-  cube1.rotation.x = (mousePos.y / canvasHeight) / 1.5;
-  cube2.rotation.y = (canvasWidth / canvasWidth - mousePos.x / canvasWidth) / 2;
-  cube2.rotation.x = (canvasHeight / canvasHeight - mousePos.y / canvasHeight) / 2;
-  cube3.rotation.y = (mousePos.x / canvasWidth) / 2.5;
-  cube3.rotation.x = (mousePos.y / canvasHeight) / 2.5;
+  if(mousePos.x != mousePos.x1 && mousePos.y != mousePos.y1) {
+    rotateInertia();
+    mousePos.x2 = mousePos.x1;
+    mousePos.y2 = mousePos.y1;
+    mousePos.x1 = mousePos.x;
+    mousePos.y1 = mousePos.y;
+  } else {
+    rotateInertia();
+  }
 
 	requestAnimationFrame(render);
 	clock.getElapsedTime();

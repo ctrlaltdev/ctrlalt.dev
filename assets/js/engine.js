@@ -76,7 +76,7 @@ function getMousePos(evt){
   }
 }
 document.addEventListener('mousemove', getMousePos);
-document.addEventListener('touchmove', getMousePos);
+//document.addEventListener('touchmove', getMousePos);
 
 clock = new THREE.Clock();
 

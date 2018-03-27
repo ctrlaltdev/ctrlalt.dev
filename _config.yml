@@ -1,10 +1,8 @@
-baseurl: "https://ctrlaltdev.xyz/"
 url: "https://ctrlaltdev.xyz/"
 
 theme_settings:
   title: "CTRL ALT DEV"
-  description: "I'm a tech enthusiast, web project manager, freelance developer and amateur designer."
-  favicon: assets/favicon.png
+  description: "I'm a tech enthusiast, web project manager, freelance devops and infosec amateur."
   
 sass:
   sass_dir: _sass

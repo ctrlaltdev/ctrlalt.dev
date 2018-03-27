@@ -1,15 +1,15 @@
 <head>
 	<meta charset="utf-8">
-	<title>{% if page.title %}{{ page.title }} |{% endif %} {{ site.theme_settings.title }}</title>
+	<title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.theme_settings.title }}</title>
 	<meta name="author" content="Yorick Demichelis">
 	<meta name="description" content="{% if page.description %}{{ page.description }} |{% endif %} {{ site.theme_settings.description }}">
 	<meta property="og:title">
 	<meta property="og:type" content="website">
-	<meta property="og:image" content="{{ "/assets/img/social.png" | relative_url }}">
+	<meta property="og:image" content="{{ "/assets/img/social.png" | absolute_url }}">
 	<meta property="og:description" content="{% if page.description %}{{ page.description }} |{% endif %} {{ site.theme_settings.description }}">
-	<meta property="og:url" content="{{ page.url | replace:'index.html','' | relative_url }}">
+	<meta property="og:url" content="{{ page.url | replace:'index.html','' | absolute_url }}">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}" />
-	<link rel="shortcut icon" href="{{ site.baseurl }}/{{ site.theme_settings.favicon }}" />
-	<link rel="canonical" href="{{ page.url | replace:'index.html','' | relative_url }}" />
+	<link rel="stylesheet" href="{{ "/assets/css/main.css" | absolute_url }}" />
+	<link rel="shortcut icon" href="{{ "assets/favicon.png" | absolute_url }}" />
+	<link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}" />
 </head>

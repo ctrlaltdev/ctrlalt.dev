@@ -1,6 +1,16 @@
 console.warn('I have become self aware, human.');
 
-var colors = ["cyan", "purple", "orange", "lime"];
+var colors = ["cyan", "magenta", "orange", "lime"];
+
+function setBorderColors() {
+  let elems = document.querySelectorAll('section article .content');
+  let lasti = 0;
+  [].forEach.call(elems, function(elem) {
+    let i = generateRandom(4, lasti)
+    elem.style.borderColor = colors[i];
+    lasti = i;
+  });
+}
 
 switch (window.location.pathname) {
   case "/":
@@ -8,6 +18,7 @@ switch (window.location.pathname) {
     break;
   case "/about":
     document.querySelector('body').id = 'about';
+    setBorderColors();
     break;
   case "/datalove":
     document.querySelector('body').id = 'datalove';

@@ -228,7 +228,6 @@ body
 				padding-left: 20px
 				font-size: 200%
 
-body#project
 	ul#projlist
 		margin-top: 20px
 		display: flex
@@ -252,6 +251,42 @@ body#project
 				@media (orientation: landscape)
 					span
 						font-size: 300%
+
+	section#descriptions
+		display: none
+		background-color: rgba(0, 0, 0, 0.95)
+		position: absolute
+		top: 0
+		left: 0
+		box-sizing: border-box
+		width: 100%
+		height: 100%
+		article
+			display: none
+			padding: 40px
+			h2
+				font-size: 260%
+				text-transform: uppercase
+				color: white
+				font-weight: 600
+			p
+				margin: 10px 0
+				font-size: 160%
+				color: silver
+			p.link
+				text-align: right
+				margin: 15px 0
+				a
+					background-color: silver
+					text-decoration: none
+					span
+						padding: 5px 10px
+						color: black
+
+	section#descriptions.visible
+		display: block
+		article.visible
+			display: block
 
 // @PARTIALS
 

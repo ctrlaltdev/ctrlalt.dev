@@ -55,3 +55,28 @@ function generateRandom(max, exclude = -1) {
   var num = Math.floor(Math.random() * max);
   return (num === exclude) ? generateRandom(max, exclude) : num;
 }
+
+function displayProject() {
+  if(window.location.hash.substr(1) != "") {
+    let hash = window.location.hash.substr(1);
+  
+    let elems = document.querySelectorAll('#descriptions article a');
+    let lasti = 0;
+    [].forEach.call(elems, function(elem) {
+      let i = generateRandom(4, lasti)
+      elem.style.backgroundColor = colors[i];
+      lasti = i;
+    });
+
+    document.getElementById('descriptions').classList.add('visible');
+    document.getElementById(hash).classList.add('visible');
+  }
+}
+
+document.querySelector('section#descriptions').addEventListener('click', () => {
+  document.querySelector('section#descriptions.visible article.visible').classList.remove('visible');
+  document.querySelector('section#descriptions.visible').classList.remove('visible');
+  window.location.hash = '';
+});
+
+window.addEventListener('hashchange', displayProject);

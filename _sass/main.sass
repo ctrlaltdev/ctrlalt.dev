@@ -256,11 +256,19 @@ body
 		display: none
 		background-color: rgba(0, 0, 0, 0.95)
 		position: absolute
-		top: 0
-		left: 0
 		box-sizing: border-box
-		width: 100%
-		height: 100%
+		width: 800px
+		height: 500px
+		top: calc(50% - (500px / 2))
+		left: calc(50% - (800px / 2))
+		text-align: right
+		#close
+			background-color: transparent
+			border: none
+			margin-top: 30px
+			img
+				width: 30px
+				height: 30px
 		article
 			display: none
 			padding: 40px
@@ -282,6 +290,12 @@ body
 					span
 						padding: 5px 10px
 						color: black
+	@media (max-width: 800px), (orientation: portrait)
+		section#descriptions
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
 
 	section#descriptions.visible
 		display: block

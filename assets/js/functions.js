@@ -68,12 +68,17 @@ function displayProject() {
       lasti = i;
     });
 
+    if(document.querySelector('section#descriptions.visible article.visible') && document.querySelector('section#descriptions.visible')) {
+      document.querySelector('section#descriptions.visible article.visible').classList.remove('visible');
+      document.querySelector('section#descriptions.visible').classList.remove('visible');
+    }
+
     document.getElementById('descriptions').classList.add('visible');
     document.getElementById(hash).classList.add('visible');
   }
 }
 
-document.querySelector('section#descriptions').addEventListener('click', () => {
+document.querySelector('section#descriptions #close').addEventListener('click', () => {
   document.querySelector('section#descriptions.visible article.visible').classList.remove('visible');
   document.querySelector('section#descriptions.visible').classList.remove('visible');
   window.location.hash = '';

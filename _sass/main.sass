@@ -255,7 +255,7 @@ body
 	section#descriptions
 		display: none
 		background-color: rgba(0, 0, 0, 0.95)
-		position: absolute
+		position: fixed
 		box-sizing: border-box
 		width: 800px
 		height: 500px
@@ -281,15 +281,17 @@ body
 				margin: 10px 0
 				font-size: 160%
 				color: silver
-			p.link
-				text-align: right
-				margin: 15px 0
-				a
-					background-color: silver
-					text-decoration: none
-					span
-						padding: 5px 10px
-						color: black
+			.links
+				margin-top: 40px
+				p.link
+					text-align: right
+					margin: 15px 0
+					a
+						background-color: silver
+						text-decoration: none
+						span
+							padding: 5px 10px
+							color: black
 	@media (max-width: 800px), (orientation: portrait)
 		section#descriptions
 			top: 0

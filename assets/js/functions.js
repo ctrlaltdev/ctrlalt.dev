@@ -61,11 +61,10 @@ function displayProject() {
     let hash = window.location.hash.substr(1);
   
     let elems = document.querySelectorAll('#descriptions article a');
-    let lasti = 0;
+    let i = 0;
     [].forEach.call(elems, function(elem) {
-      let i = generateRandom(4, lasti)
-      elem.style.backgroundColor = colors[i];
-      lasti = i;
+      elem.style.backgroundColor = colors[i%4];
+      i++;
     });
 
     if(document.querySelector('section#descriptions.visible article.visible') && document.querySelector('section#descriptions.visible')) {

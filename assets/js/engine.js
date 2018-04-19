@@ -86,14 +86,14 @@ function rotateInertia() {
   rotateDelta.x = mousePos.x1 - mousePos.x2;
   rotateDelta.y = mousePos.y1 - mousePos.y2;
   
-  cube0.rotation.y += rotateDelta.x / 1000;
-  cube0.rotation.x += rotateDelta.y / 1000;
-  cube1.rotation.y -= rotateDelta.x / 2000;
-  cube1.rotation.x -= rotateDelta.y / 2000;
-  cube2.rotation.y += rotateDelta.x / 4000;
-  cube2.rotation.x += rotateDelta.y / 4000;
-  cube3.rotation.y -= rotateDelta.x / 8000;
-  cube3.rotation.x -= rotateDelta.y / 8000;
+  cube0.rotation.y += rotateDelta.x / 4000;
+  cube0.rotation.x += rotateDelta.y / 4000;
+  cube1.rotation.y -= rotateDelta.x / 6666;
+  cube1.rotation.x -= rotateDelta.y / 6666;
+  cube2.rotation.y += rotateDelta.x / 16666;
+  cube2.rotation.x += rotateDelta.y / 16666;
+  cube3.rotation.y -= rotateDelta.x / 33333;
+  cube3.rotation.x -= rotateDelta.y / 33333;
 }
 
 function render() {

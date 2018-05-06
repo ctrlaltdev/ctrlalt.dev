@@ -1,15 +1,17 @@
 console.warn('I have become self aware, human.');
 
-var colors = ["cyan", "magenta", "orange", "lime"];
+var colors = ["#ef476f", "#ffd166", "#06d6a0", "#118ab2", "#4b3f72", "#13bbc4", "#331824", "#c61981", "#5471a4", "#f93b3b", "#619fad", "#248232", "#d62828", "#f77f00", "#003049"];
 
 function setBorderColors() {
   let elems = document.querySelectorAll('section article .content');
   let lasti = 0;
   [].forEach.call(elems, function(elem) {
-    let i = generateRandom(4, lasti)
+    let i = generateRandom(15, lasti)
     elem.style.borderColor = colors[i];
     lasti = i;
   });
+
+  document.querySelector('#aboutme h3 a[href^="/resume/"]').style.borderColor = colors[generateRandom(15)];
 }
 
 switch (window.location.pathname) {

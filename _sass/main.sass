@@ -185,11 +185,13 @@ body
 		h3
 			text-transform: uppercase
 			font-size: 200%
-			margin: 20px 0 60px
+			margin: 20px 0
+			line-height: 1.5
 			a
 				color: black
 				text-decoration: none
 				padding: 0 10px
+				border-bottom: solid #000000 3px
 			a[href^="//github"]
 				border-bottom: solid #0366d6 3px
 			a[href^="//linkedin"]
@@ -197,7 +199,6 @@ body
 	section#experiences,
 	section#education,
 	section#website
-		margin-top: 40px
 		article
 			margin: 40px 0
 		h2
@@ -209,6 +210,11 @@ body
 				padding: 5px 10px
 				background-color: black
 				color: white
+		h3
+			span
+				font-weight: 600
+		.timeframe
+			margin-bottom: 10px
 		.content
 			border-left: 2px solid black
 			margin-left: 25px
@@ -223,11 +229,12 @@ body
 				text-transform: uppercase
 				font-size: 250%
 				padding-left: 20px
-				margin: 20px 0 10px
+				margin: 5px 0 10px
+			h3:first-of-type
+				margin: 20px 0 5px
 			p
 				padding-left: 20px
 				font-size: 200%
-
 	ul#projlist
 		margin-top: 20px
 		display: flex
@@ -303,6 +310,34 @@ body
 		display: block
 		article.visible
 			display: block
+
+body#about
+	main
+		display: grid
+		grid-template-columns: 1fr 1fr
+		grid-template-row: 1fr 1fr
+		section#aboutme
+			grid-column: 1 / 2
+			grid-row: 1 / 1
+		section#experiences
+			grid-column: 1 / 1
+			grid-row: 2 / 2
+		section#education
+			grid-column: 2 / 2
+			grid-row: 2 / 2
+		@media (max-width: 800px), (orientation: portrait)
+			section#aboutme
+				width: calc(100vw - 40px)
+				grid-column: 1 / 2
+				grid-row: 1 / 1
+			section#experiences
+				width: calc(100vw - 40px)
+				grid-column: 1 / 2
+				grid-row: 2 / 2
+			section#education
+				width: calc(100vw - 40px)
+				grid-column: 1 / 2
+				grid-row: 3 / 3
 
 // @PARTIALS
 

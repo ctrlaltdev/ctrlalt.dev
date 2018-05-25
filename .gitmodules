@@ -1,6 +1,0 @@
-[submodule "GLITCH"]
-	path = GLITCH
-	url = https://github.com/ctrlaltdev/GLITCH.git
-[submodule "resume"]
-	path = resume
-	url = https://github.com/ctrlaltdev/resume.git

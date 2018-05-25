@@ -1,0 +1,6 @@
+[submodule "resume"]
+	path = resume
+	url = git@github.com:ctrlaltdev/resume.git
+[submodule "GLITCH"]
+	path = GLITCH
+	url = git@github.com:ctrlaltdev/GLITCH.git

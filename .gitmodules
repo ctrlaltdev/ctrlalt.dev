@@ -1,6 +1,6 @@
 [submodule "resume"]
 	path = resume
-	url = git@github.com:ctrlaltdev/resume.git
+	url = https://github.com/ctrlaltdev/resume.git
 [submodule "GLITCH"]
 	path = GLITCH
-	url = git@github.com:ctrlaltdev/GLITCH.git
+	url = https://github.com/ctrlaltdev/GLITCH.git

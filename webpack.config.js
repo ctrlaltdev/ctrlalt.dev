@@ -15,7 +15,7 @@ module.exports = {
     extensions: [ '.tsx', '.ts', '.js' ]
   },
   output: {
-    path: path.resolve(__dirname, 'docs/assets/js/'),
+    path: path.resolve(__dirname, 'assets/js/'),
     filename: '[name].js'
   }
 }

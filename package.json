@@ -7,9 +7,9 @@
   "scripts": {
     "serve": "npx serve",
     "webpack": "npx webpack --mode development --devtool source-map",
-    "pug": "npx pug-cli -P -o docs/ src/pug/index.pug && npx pug-cli -P -o docs/ src/pug/about.pug && npx pug-cli -P -o docs/ src/pug/datalove.pug",
-    "sass": "npx node-sass --output docs/assets/css --source-map true --source-map-contents src/sass",
-    "build": "npx pug-cli -o docs/ src/pug/index.pug && npx pug-cli -o docs/ src/pug/about.pug && npx pug-cli -o docs/ src/pug/datalove.pug && npx node-sass --output docs/assets/css --output-style compressed --source-map true --source-map-contents src/sass && npx webpack --mode production --devtool source-map",
+    "pug": "npx pug-cli -P -o ./ src/pug/index.pug && npx pug-cli -P -o ./ src/pug/about.pug && npx pug-cli -P -o ./ src/pug/datalove.pug",
+    "sass": "npx node-sass --output assets/css --source-map true --source-map-contents src/sass",
+    "build": "npx pug-cli -o ./ src/pug/index.pug && npx pug-cli -o ./ src/pug/about.pug && npx pug-cli -o ./ src/pug/datalove.pug && npx node-sass --output assets/css --output-style compressed --source-map true --source-map-contents src/sass && npx webpack --mode production --devtool source-map",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "repository": {

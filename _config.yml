@@ -1,9 +1,3 @@
 url: "https://ctrlaltdev.xyz/"
-
-theme_settings:
-  title: "CTRL ALT DEV"
-  description: "I'm a tech enthusiast, web project manager, freelance devops and infosec amateur."
-  
-sass:
-  sass_dir: _sass
-  style: :compressed
+title: "CTRL ALT DEV"
+description: "I'm a tech enthusiast, front and back end developer, occasional tinkerer and infosec amateur."

@@ -1,7 +1,4 @@
-language: ruby
-rvm:
-  - 2.5
-  - 2.2
-install:
-  - gem install jekyll bundler
-  - jekyll build
+language: node_js
+node_js:
+  - "node"
+  - "lts/*"

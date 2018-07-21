@@ -1,0 +1,37 @@
+{
+  "name": "ctrlaltdev",
+  "version": "1.0.0",
+  "description": "My own website",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "serve": "npx serve",
+    "webpack": "npx webpack --mode development --devtool source-map",
+    "pug": "npx pug-cli -P -o docs/ src/pug/index.pug && npx pug-cli -P -o docs/ src/pug/about.pug && npx pug-cli -P -o docs/ src/pug/datalove.pug",
+    "sass": "npx node-sass --output docs/assets/css --source-map true --source-map-contents src/sass",
+    "build": "npx pug-cli -o docs/ src/pug/index.pug && npx pug-cli -o docs/ src/pug/about.pug && npx pug-cli -o docs/ src/pug/datalove.pug && npx node-sass --output docs/assets/css --output-style compressed --source-map true --source-map-contents src/sass && npx webpack --mode production --devtool source-map",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ctrlaltdev/ctrlaltdev.github.io.git"
+  },
+  "author": "Yorick <yorick@ctrlaltdev.xyz>",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/ctrlaltdev/ctrlaltdev.github.io/issues"
+  },
+  "homepage": "https://github.com/ctrlaltdev/ctrlaltdev.github.io#readme",
+  "devDependencies": {
+    "node-sass": "^4.9.2",
+    "pug": "^2.0.3",
+    "serve": "^9.3.0",
+    "ts-loader": "^4.4.2",
+    "typescript": "^2.9.2",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "three": "^0.94.0"
+  }
+}

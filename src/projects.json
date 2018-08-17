@@ -1,0 +1,258 @@
+[
+    {
+        "id": "pugserver",
+        "name": "Pug Server",
+        "content": [
+            "npm package, based on pugjs and express that allows you to serve a functional prototype website."
+        ],
+        "links": [
+            {
+                "target": "https://ctrlaltdev.xyz/pug-server",
+                "name": "read more"
+            },
+            {
+                "target": "https://github.com/ctrlaltdev/pug-server",
+                "name": "view on github"
+            },
+            {
+                "target": "https://www.npmjs.com/package/pugserver",
+                "name": "view on npm"
+            }
+        ]
+    },
+    {
+        "id": "LMGTFY",
+        "name": "Let Me Google That For You Queries",
+        "content": [
+            "After having discovered that LMGTF short urls are sequentials, we polled the users queries for further analysis."
+        ],
+        "links": [
+            {
+                "target": "https://ctrlaltdev.xyz/LMGTFY-queries",
+                "name": "read more"
+            },
+            {
+                "target": "https://github.com/ctrlaltdev/LMGTFY-queries",
+                "name": "view on github"
+            }
+        ]
+    },
+    {
+        "id": "IAA",
+        "name": "Illegal Auth Attempts",
+        "content": [
+            "Having several public facing devices, I was curious to see if they were attempts to access them.",
+            "I made a script that scrap from auth.log or secure files the IPs that tried to log in and the users that were used to do so."
+        ],
+        "links": [
+            {
+                "target": "https://ctrlaltdev.xyz/illegal-auth-attempts",
+                "name": "read more"
+            },
+            {
+                "target": "https://github.com/ctrlaltdev/illegal-auth-attempts",
+                "name": "view on github"
+            }
+        ]
+    },
+    {
+        "id": "WYD",
+        "name": "What You Doin' CLI Task Manager",
+        "content": [
+            "This is a simple command-line task manager, made in C and depending on Sqlite3."
+        ],
+        "links": [
+            {
+                "target": "https://ctrlaltdev.xyz/WYD",
+                "name": "read more"
+            },
+            {
+                "target": "https://github.com/ctrlaltdev/WYD",
+                "name": "view on github"
+            }
+        ]
+    },
+    {
+        "id": "RLO",
+        "name": "Right-to-left Override Attack POC",
+        "content": [
+            "Using the Right-to-left Override unicode character, you can switch the text orientation mid-sentence. This can be used to fool a user and make them think they're opening a harmless file.",
+            "This proof of concept use the unicode character in a filename: \"legit-img_sjvlgpj.sh\", that will appear as \"legit-img_sjvlhs.jpg\"."
+        ],
+        "links": [
+            {
+                "target": "https://ctrlaltdev.xyz/RLO-attack",
+                "name": "read more"
+            },
+            {
+                "target": "https://github.com/ctrlaltdev/RLO-attack",
+                "name": "view on github"
+            }
+        ]
+    },
+    {
+        "id": "socialcall",
+        "name": "Social Call Browser Extension",
+        "content": [
+            "Replace social media posts (Facebook, Twitter, Instagram) with random string from an array.",
+            "This extension purpose is to highlight the deep social distress that dictate our behavior on social media."
+        ],
+        "links": [
+            {
+                "target": "https://addons.mozilla.org/en-US/firefox/addon/social-call/",
+                "name": "view on addons.mozilla.org"
+            },
+            {
+                "target": "https://chrome.google.com/webstore/detail/social-call/pmjlkmeagleojehaajmlcbkipbammjoa",
+                "name": "view on chrome web store"
+            },
+            {
+                "target": "https://github.com/ctrlaltdev/socialcall",
+                "name": "view on github"
+            }
+        ]
+    },
+    {
+        "id": "commentvoid",
+        "name": "Comment into the Void React Component",
+        "content": [
+            "Create a comment section that is not plugged into any backend or database. A user will only see their own comments.",
+            "This component is a statement about online hate, trolls, and the real value of comment sections."
+        ],
+        "links": [
+            {
+                "target": "https://www.npmjs.com/package/react-comments-void",
+                "name": "view on npm"
+            },
+            {
+                "target": "https://github.com/ctrlaltdev/react-comments-void",
+                "name": "view on github"
+            }
+        ]
+    },
+    {
+        "id": "resume",
+        "name": "Resume Generator",
+        "content": [
+            "Electron app to customize a resume and export it in PDF."
+        ],
+        "links": [
+            {
+                "target": "https://github.com/ctrlaltdev/resume",
+                "name": "view on github"
+            }
+        ]
+    },
+    {
+        "id": "coverletter",
+        "name": "Cover Letter Generator",
+        "content": [
+            "Electron app to customize a cover letter and export it in PDF."
+        ],
+        "links": [
+            {
+                "target": "https://ctrlaltdev.xyz/cover-letter",
+                "name": "read more"
+            },
+            {
+                "target": "https://github.com/ctrlaltdev/cover-letter",
+                "name": "view on github"
+            }
+        ]
+    },
+    {
+        "id": "namethee",
+        "name": "Naming Suggestions Script",
+        "content": [
+            "Simple Python script to generate name suggestions based on 2 words and thesaurus."
+        ],
+        "links": [
+            {
+                "target": "https://github.com/ctrlaltdev/namethee",
+                "name": "view on github"
+            }
+        ]
+    },
+    {
+        "id": "newstream",
+        "name": "CLI News Stream",
+        "content": [
+            "Ruby project that will stream in the CLI the RSS feeds you referenced."
+        ],
+        "links": [
+            {
+                "target": "https://ctrlaltdev.xyz/newstream",
+                "name": "read more"
+            },
+            {
+                "target": "https://github.com/ctrlaltdev/newstream",
+                "name": "view on github"
+            }
+        ]
+    },
+    {
+        "id": "UFSC",
+        "name": "Campaign against Sexual Harassment At Work Page",
+        "content": [
+            "Single page website made for the Defenseur des droits' communication campaign of February '18."
+        ],
+        "links": [
+            {
+                "target": "https://information.defenseurdesdroits.fr/unefemmesurcinq/",
+                "name": "visit the page"
+            }
+        ]
+    },
+    {
+        "id": "CC1810",
+        "name": "Petite histoire des grands droits",
+        "content": [
+            "Landing page for 2018 Défenseur des droits communication campaign dedicated to children's rights."
+        ],
+        "links": [
+            {
+                "target": "https://information.defenseurdesdroits.fr/petitehistoiregrandsdroits/",
+                "name": "visit the landing page"
+            }
+        ]
+    },
+    {
+        "id": "CC1710",
+        "name": "CC1710",
+        "content": [
+            "Landing page for 2017 Défenseur des droits communication campaign."
+        ],
+        "links": [
+            {
+                "target": "https://information.defenseurdesdroits.fr/CC1710/",
+                "name": "visit the landing page"
+            }
+        ]
+    },
+    {
+        "id": "CC1610",
+        "name": "CC1610",
+        "content": [
+            "Landing page for 2016 Défenseur des droits communication campaign."
+        ],
+        "links": [
+            {
+                "target": "https://information.defenseurdesdroits.fr/CC1610/",
+                "name": "visit the landing page"
+            }
+        ]
+    },
+    {
+        "id": "ApacheMag",
+        "name": "Apache Magazine",
+        "content": [
+            "A French online lifestyle and opinions magazine run only by volunteers."
+        ],
+        "links": [
+            {
+                "target": "https://apachemag.com/",
+                "name": "visit the magazine website"
+            }
+        ]
+    }
+]

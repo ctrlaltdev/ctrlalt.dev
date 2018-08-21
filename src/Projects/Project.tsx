@@ -1,5 +1,4 @@
 import * as React from 'react'
-import burgerCross from '../img/burger.svg'
 import './Project.css'
 
 interface InterfaceProjectComponent {
@@ -25,9 +24,6 @@ class Project extends React.Component<InterfaceProjectComponent, {}> {
           <header className="ProjectName">
             <h3>{this.props.project.name}</h3>
           </header>
-          <button onClick={this.readMore}>
-            <img src={burgerCross} />
-          </button>
           <div className="ProjectInfo">
             <div className="ProjectDesc">
               {this.createDescription()}

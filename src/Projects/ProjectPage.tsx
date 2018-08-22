@@ -3,7 +3,6 @@ import './ProjectPage.css'
 import * as jsonProjects from './Projects.json'
 
 interface InterfaceProjectPageComponent {
-  page: string,
   location: {
     pathname: string
   }

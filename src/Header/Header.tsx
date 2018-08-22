@@ -1,14 +1,16 @@
 import * as React from 'react'
 import logo from '../img/logo.svg'
 import './Header.css'
-import { HashRouter as Router, Route } from 'react-router-dom'
+import { HashRouter as Router, Link, Route } from 'react-router-dom'
 
 class Header extends React.Component {
   public render() {
     return (
       <Router>
         <header className="Header">
-          <img src={logo} alt="" />
+          <Link to="/">
+            <img src={logo} alt="" />
+          </Link>
           <span className="startPath">~</span>
           <Route component={Title} />
           <input type="text" className="path" data-enable-grammarly="false" autoCorrect="off" autoCapitalize="off" autoFocus spellCheck={false} />

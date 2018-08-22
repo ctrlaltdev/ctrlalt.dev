@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as jsonProjects from './Projects.json'
-import Project from './Project'
+import ProjectItem from './ProjectItem'
 import './Projects.css'
 
 interface InterfaceProjects {
@@ -14,7 +14,7 @@ class Projects extends React.Component<InterfaceProjects, {}> {
 
     this.list = jsonProjects
     this.projList = this.list.map((project: any, index: any) => {
-        return <Project key={project.id} project={project} />
+        return <ProjectItem key={project.id} project={project} />
       }
     )
   }

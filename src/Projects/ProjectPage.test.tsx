@@ -1,8 +1,8 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import Projects from './Projects'
+import ProjectPage from './ProjectPage'
 
-it('ProjectPage renders without crashing', () => {
+it('Projects renders without crashing', () => {
   const div = document.createElement('div')
   const testProjects = [
     {
@@ -37,6 +37,6 @@ it('ProjectPage renders without crashing', () => {
       name: "Test 2"
     }
   ]
-  ReactDOM.render(<Projects list={testProjects} />, div)
+  ReactDOM.render(<ProjectPage page={testProjects[1].id} location={{pathname: "/test2"}} />, div)
   ReactDOM.unmountComponentAtNode(div)
 })

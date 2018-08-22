@@ -1,6 +1,6 @@
 import * as React from 'react'
 import './Project.css'
-import { Link } from 'react-router-dom'
+import { Link, HashRouter as Router } from 'react-router-dom'
 
 interface InterfaceProjectComponent {
   project: {
@@ -21,13 +21,15 @@ class Project extends React.Component<InterfaceProjectComponent, {}> {
 
   public render() {
     return (
-      <li className="Project">
-        <article>
-          <Link to={this.props.project.id}>
-            <h3>{this.props.project.name}</h3>
-          </Link>
-        </article>
-      </li>
+      <Router>
+        <li className="Project">
+          <article>
+            <Link to={this.props.project.id}>
+              <h3>{this.props.project.name}</h3>
+            </Link>
+          </article>
+        </li>
+      </Router>
     )
   }
 

@@ -4,6 +4,22 @@ import './Header.css'
 import { HashRouter as Router, Link, Route } from 'react-router-dom'
 
 class Header extends React.Component {
+
+  public state: {
+    cli?: string
+  }
+  private cmds: any[]
+
+  constructor (props: any) {
+    super(props)
+    this.state = {cli: ""}
+
+    this.changeCLI = this.changeCLI.bind(this)
+    this.submitCLI = this.submitCLI.bind(this)
+
+    this.cmds = ['sudo', 'cd', 'rm']
+  }
+
   public render() {
     return (
       <Router>
@@ -13,11 +29,36 @@ class Header extends React.Component {
           </Link>
           <span className="startPath">~</span>
           <Route component={Title} />
-          <input type="text" className="path" data-enable-grammarly="false" autoCorrect="off" autoCapitalize="off" autoFocus spellCheck={false} />
+
+          <form onSubmit={this.submitCLI}>
+            <input type="text" className="path" data-enable-grammarly="false" autoCorrect="off" autoCapitalize="off" autoFocus spellCheck={false} value={this.state.cli} onChange={this.changeCLI} />
+          </form>
         </header>
       </Router>
     )
   }
+
+  private changeCLI(e: any) {
+    this.setState({cli: e.target.value})
+  }
+
+  private submitCLI(e: any) {
+    e.preventDefault()
+    
+    const cmd: string[] | string = this.state.cli!.split(" ")
+
+    if(this.cmds.includes(cmd[0])) {
+      if (cmd.length === 2 && cmd[0] === 'cd') {
+        if (cmd[1] === '../' || cmd[1] === '~' || cmd[1] === '~/') {
+          location.hash = '/'
+          this.setState({cli: ''})
+        } else {
+          location.hash = '/'+cmd[1]
+          this.setState({cli: ''})
+        }
+      }
+    }
+  } 
 }
 
 const Title = ({location}: any) => {

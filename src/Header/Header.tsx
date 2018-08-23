@@ -31,7 +31,7 @@ class Header extends React.Component {
           <Route component={Title} />
 
           <form onSubmit={this.submitCLI}>
-            <input type="text" className="path" data-enable-grammarly="false" autoCorrect="off" autoCapitalize="off" autoFocus spellCheck={false} value={this.state.cli} onChange={this.changeCLI} />
+            <input type="text" className="path" data-enable-grammarly="false" autoCorrect="off" autoCapitalize="off" autoFocus spellCheck={false} placeholder="awaiting user input" value={this.state.cli} onChange={this.changeCLI} />
           </form>
         </header>
       </Router>
@@ -47,18 +47,34 @@ class Header extends React.Component {
     
     const cmd: string[] | string = this.state.cli!.split(" ")
 
-    if(this.cmds.includes(cmd[0])) {
+    if(this.isCMD(cmd[0])) {
       if (cmd.length === 2 && cmd[0] === 'cd') {
-        if (cmd[1] === '../' || cmd[1] === '~' || cmd[1] === '~/') {
+        if (this.isHomePath(cmd[1])) {
           location.hash = '/'
           this.setState({cli: ''})
         } else {
-          location.hash = '/'+cmd[1]
+          location.hash = '/' + cmd[1]
           this.setState({cli: ''})
         }
       }
     }
-  } 
+  }
+
+  private isCMD(cmd: string): boolean {
+    if (this.cmds.includes(cmd)) {
+      return true
+    } else {
+      return false
+    }
+  }
+
+  private isHomePath(path: string): boolean {
+    if (path === '../' || path === '~' || path === '~/')  {
+      return true
+    } else {
+      return false
+    }
+  }
 }
 
 const Title = ({location}: any) => {

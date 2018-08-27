@@ -4,41 +4,57 @@ import * as jsonProjects from './Projects.json'
 
 interface InterfaceProjectPageComponent {
   location: {
-    pathname: string
+    pathname: string,
+    search: string,
+    hash: string
   }
 }
 
 class ProjectPage extends React.Component<InterfaceProjectPageComponent, {}> {
-
-  private project: {
-    id: string,
-    name: string,
-    content: [string],
-    links: [{
-      target: string,
-      name: string
-    }]
+  public state: {
+    path: string,
+    project: {
+      id: string,
+      name: string,
+      content: [string],
+      links: [{
+        target: string,
+        name: string
+      }]
+    }
   }
 
   constructor(props: any) {
     super(props)
 
-    this.project = jsonProjects.filter((proj: any) => {
-      if ("/" + proj.id === this.props.location.pathname) {
-        return true
-      } else {
-        return false
-      }
-    })
-    this.project = this.project[0]
+    const project = jsonProjects.filter((proj: any) => ("/" + proj.id === this.props.location.pathname) ? true : false)
 
+    this.state = {
+      path: this.props.location.pathname,
+      project: project[0]
+    }
+  }
+
+  public componentWillReceiveProps(nextProps: any) {
+    const {location: {pathname}} = nextProps
+    if(pathname !== this.props.location.pathname){
+      const project = jsonProjects.filter((proj: any) => ("/" + proj.id === pathname) ? true : false)
+      this.setState({path: pathname, project: project[0]})
+    }
+  }
+
+  public shouldComponentUpdate(nextProps: any) {
+    if(nextProps.location.pathname !== this.props.location.pathname){
+      return true
+    }
+    return false
   }
 
   public render() {
     return (
       <div>
         <header>
-          <h2>{this.project.name}</h2>
+          <h2>{this.state.project.name}</h2>
         </header>
         <article>
           {this.getDescription()}
@@ -50,7 +66,7 @@ class ProjectPage extends React.Component<InterfaceProjectPageComponent, {}> {
     )
   }
 
-  private getDescription(descs = this.project.content) {
+  private getDescription(descs = this.state.project.content) {
     const descList: JSX.Element[] = []
 
     descs.map(desc => {
@@ -60,7 +76,7 @@ class ProjectPage extends React.Component<InterfaceProjectPageComponent, {}> {
     return descList
   }
 
-  private getLinks(links = this.project.links) {
+  private getLinks(links = this.state.project.links) {
     const linkList: JSX.Element[] = []
 
     links.map(link => {

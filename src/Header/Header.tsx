@@ -1,20 +1,29 @@
 import * as React from 'react'
 import logo from '../img/logo.svg'
 import './Header.css'
-import { HashRouter as Router, Link, Route } from 'react-router-dom'
+import { Link, HashRouter as Router, Route } from 'react-router-dom'
 import * as jsonProjects from '../Projects/Projects.json'
 
 class Header extends React.Component {
 
   public state: {
     cli?: string,
+    history: string[],
+    historyIndex?: number,
     placeholder?: string
   }
   private cmds: any[]
 
   constructor (props: any) {
     super(props)
-    this.state = {cli: "", placeholder: "awaiting user input"}
+
+    const userhistory: string[] = localStorage.getItem('history') ? JSON.parse(localStorage.getItem('history')!).slice(-100) : []
+
+    this.state = {
+      cli: "",
+      history: userhistory,
+      placeholder: "awaiting user input"
+    }
 
     this.changeCLI = this.changeCLI.bind(this)
     this.keyDown = this.keyDown.bind(this)
@@ -68,22 +77,47 @@ class Header extends React.Component {
           }
         }
       }
+    } else if (e.key === 'ArrowUp') {
+      if (this.state.historyIndex && this.state.historyIndex !== null) {
+        this.setState({cli: this.state.history[this.state.historyIndex-1], historyIndex: this.state.historyIndex-1})
+      } else {
+        this.setState({cli: this.state.history[this.state.history.length-1], historyIndex: this.state.history.length-1})
+      }
+    } else if (e.key === 'ArrowDown') {
+      if (this.state.historyIndex && this.state.historyIndex !== null) {     
+        this.setState({cli: this.state.history[this.state.historyIndex+1], historyIndex: this.state.historyIndex+1})
+        if (this.state.historyIndex === this.state.history.length-1) {
+          this.setState({cli: '', historyIndex: null})
+        }
+      }
     }
   }
 
   private submitCLI(e: any) {
     e.preventDefault()
+
+    const userhistory = this.state.history
+    userhistory.push(this.state.cli!)
+    this.setState({history: userhistory})
+    localStorage.setItem('history', JSON.stringify(userhistory))
     
     const cmd: string[] | string = this.state.cli!.split(" ")
 
     if(this.isCMD(cmd[0])) {
       if (cmd.length === 2 && cmd[0] === 'cd') {
         if (this.isHomePath(cmd[1])) {
-          location.hash = '/'
           this.setState({cli: '', placeholder: 'awaiting user input'})
+          window.location.hash = '/'
         } else {
-          location.hash = '/' + cmd[1]
-          this.setState({cli: '', placeholder: 'awaiting user input'})
+          const projList = jsonProjects.map((proj: {id: string}) => proj.id)
+          const autocomplete = this.autoComplete(projList, cmd[cmd.length-1])
+
+          if (autocomplete.length === 1) {
+            this.setState({cli: '', placeholder: 'awaiting user input'})
+            window.location.hash = '/' + cmd[1]
+          } else {
+            this.setState({cli: '', placeholder: cmd[1] + ' is not a directory'})
+          }
         }
       } else if (cmd[0] === 'sudo') {
         this.setState({cli: '', placeholder: "user is not sudoers - admin will be notified"})
@@ -118,7 +152,7 @@ class Header extends React.Component {
   }
 
   private isHomePath(path: string): boolean {
-    if (path === '../' || path === '~' || path === '~/')  {
+    if (path === '../' || path === '~' || path === '~/' || path === '/')  {
       return true
     } else {
       return false

@@ -29,7 +29,7 @@ class Header extends React.Component {
     this.keyDown = this.keyDown.bind(this)
     this.submitCLI = this.submitCLI.bind(this)
 
-    this.cmds = ['sudo', 'cd', 'rm', 'shutdown']
+    this.cmds = ['sudo', 'cd', 'ls', 'help', 'rm', 'shutdown']
   }
 
   public render() {
@@ -119,6 +119,10 @@ class Header extends React.Component {
             this.setState({cli: '', placeholder: cmd[1] + ' is not a directory'})
           }
         }
+      } else if (cmd[0] === 'ls') {
+        this.setState({cli: '', placeholder: "with big powers come big lsponsabilities"})
+      } else if (cmd[0] === 'help') {
+        this.setState({cli: '', placeholder: "i really shouldn't do all that here"})
       } else if (cmd[0] === 'sudo') {
         this.setState({cli: '', placeholder: "user is not sudoers - admin will be notified"})
       } else if (cmd[0] === 'rm') {

@@ -3,6 +3,7 @@ import logo from '../img/logo.svg'
 import './Header.css'
 import { Link, HashRouter as Router, Route } from 'react-router-dom'
 import * as jsonProjects from '../Projects/Projects.json'
+const mainPages = ['about']
 
 class Header extends React.Component {
 
@@ -70,7 +71,8 @@ class Header extends React.Component {
       } else if (cmd.length === 2) {
         if (cmd[0] === 'cd') {
           const projList = jsonProjects.map((proj: {id: string}) => proj.id)
-          const autocomplete = this.autoComplete(projList, lastcmd)
+          const directories = projList.concat(mainPages)
+          const autocomplete = this.autoComplete(directories, lastcmd)
 
           if (autocomplete.length === 1) {
             this.setState({cli: cmd[0] + ' ' + autocomplete[0], placeholder: 'awaiting user input'})
@@ -110,7 +112,8 @@ class Header extends React.Component {
           window.location.hash = '/'
         } else {
           const projList = jsonProjects.map((proj: {id: string}) => proj.id)
-          const autocomplete = this.autoComplete(projList, cmd[cmd.length-1])
+          const directories = projList.concat(mainPages)
+          const autocomplete = this.autoComplete(directories, cmd[cmd.length-1])
 
           if (autocomplete.length === 1) {
             this.setState({cli: '', placeholder: 'awaiting user input'})

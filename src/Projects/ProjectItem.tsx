@@ -6,11 +6,8 @@ interface InterfaceProjectComponent {
   project: {
     id: string,
     name: string,
-    content: [string],
-    links: [{
-      target: string,
-      name: string
-    }]
+    content: string[],
+    links: Array<{target: string, name: string}>
   }
 }
 

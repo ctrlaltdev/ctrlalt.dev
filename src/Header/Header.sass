@@ -1,14 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200')
+
 .Header
   display: flex
+  padding: 0
+  max-width: 100vw
+  overflow-x: hidden
   span
     flex: 0 0 auto
-    font-size: 55px
-    line-height: 40px
   form
     flex: 1 0 auto
+    height: 40px
   .path
+    display: none
+    font-family: 'Poppins', monospace
+    font-weight: 200
+    text-transform: lowercase 
     width: 100%
-    font-size: 32px
+    font-size: 24px
+    line-height: 40px
     min-width: 50px
     height: 40px
     padding: 0
@@ -18,14 +27,21 @@
     &:focus
       outline: none
   .startPath
+    font-family: 'Poppins', monospace
     margin: 0 16px
-    font-weight: bold
-  h1
-    flex: 0 1 auto
-    margin: 0 16px 0 0
     font-size: 32px
+    line-height: 40px
+  h1
+    font-family: 'Poppins', monospace
+    flex: 0 1 auto
+    height: 40px
+    margin: 0 16px 0 0
+    font-size: 24px
+    line-height: 40px
     font-weight: normal
   a
+    padding: 0
+    height: 40px
     &:active,
     &:focus
       outline: none
@@ -34,3 +50,7 @@
     height: 40px
   .hidden
     display: none
+
+  @media (min-width: 735px)
+    .path
+      display: unset

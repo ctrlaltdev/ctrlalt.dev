@@ -23,7 +23,7 @@ class Header extends React.Component {
     this.state = {
       cli: "",
       history: userhistory,
-      placeholder: "awaiting user input"
+      placeholder: ""
     }
 
     this.changeCLI = this.changeCLI.bind(this)
@@ -66,7 +66,7 @@ class Header extends React.Component {
         const autocomplete = this.autoComplete(this.cmds, lastcmd)
       
         if (autocomplete.length === 1) {
-          this.setState({cli: autocomplete[0], placeholder: 'awaiting user input'})
+          this.setState({cli: autocomplete[0], placeholder: ''})
         }
       } else if (cmd.length === 2) {
         if (cmd[0] === 'cd') {
@@ -75,7 +75,7 @@ class Header extends React.Component {
           const autocomplete = this.autoComplete(directories, lastcmd)
 
           if (autocomplete.length === 1) {
-            this.setState({cli: cmd[0] + ' ' + autocomplete[0], placeholder: 'awaiting user input'})
+            this.setState({cli: cmd[0] + ' ' + autocomplete[0], placeholder: ''})
           }
         }
       }
@@ -108,7 +108,7 @@ class Header extends React.Component {
     if(this.isCMD(cmd[0])) {
       if (cmd.length === 2 && cmd[0] === 'cd') {
         if (this.isHomePath(cmd[1])) {
-          this.setState({cli: '', placeholder: 'awaiting user input'})
+          this.setState({cli: '', placeholder: ''})
           window.location.hash = '/'
         } else {
           const projList = jsonProjects.map((proj: {id: string}) => proj.id)
@@ -116,7 +116,7 @@ class Header extends React.Component {
           const autocomplete = this.autoComplete(directories, cmd[cmd.length-1])
 
           if (autocomplete.length === 1) {
-            this.setState({cli: '', placeholder: 'awaiting user input'})
+            this.setState({cli: '', placeholder: ''})
             window.location.hash = '/' + cmd[1]
           } else {
             this.setState({cli: '', placeholder: cmd[1] + ' is not a directory'})

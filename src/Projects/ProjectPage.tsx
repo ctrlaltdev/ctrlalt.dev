@@ -33,6 +33,8 @@ class ProjectPage extends React.Component<InterfaceProjectPageComponent, {}> {
       path: this.props.location.pathname,
       project: project[0]
     }
+
+    this.backgroundColor.bind(this)
   }
 
   public componentWillReceiveProps(nextProps: any) {
@@ -52,16 +54,23 @@ class ProjectPage extends React.Component<InterfaceProjectPageComponent, {}> {
 
   public render() {
     return (
-      <div>
+      <div className="ProjectPage">
         <header>
           <h2>{this.state.project.name}</h2>
         </header>
-        <article>
-          {this.getDescription()}
-        </article>
-        <footer>
-          {this.getLinks()}
-        </footer>
+        <section>
+          <article>
+            {this.getDescription()}
+          </article>
+          <footer>
+            <ul>
+              {this.getLinks()}
+            </ul>
+          </footer>
+        </section>
+        <section>
+          <img src="https://placekitten.com/1600/1000" />
+        </section>
       </div>
     )
   }
@@ -80,10 +89,16 @@ class ProjectPage extends React.Component<InterfaceProjectPageComponent, {}> {
     const linkList: JSX.Element[] = []
 
     links.map(link => {
-      linkList.push(<li key={link.name}><a href={link.target}>{link.name}</a></li>)
+      linkList.push(<li key={link.name}><a href={link.target} onMouseOver={this.backgroundColor}>{link.name}</a></li>)
     })
 
     return linkList
+  }
+
+  private backgroundColor(e: any) {
+    const colors: string[] = ['Turquoise', 'Aquamarine', 'SteelBlue', 'Chartreuse', 'SpringGreen', 'ForestGreen', 'OliveDrab', 'Gold', 'Khaki', 'Coral', 'OrangeRed', 'DarkOrange', 'IndianRed', 'Salmon', 'FireBrick', 'Crimson', 'MediumVioletRed', 'HotPink', 'DeepPink', 'Orchid']
+
+    e.target.className = colors[Math.floor(Math.random() * colors.length)]
   }
 }
 

@@ -1,5 +1,16 @@
 language: node_js
 node_js:
-  - "node"
-  - "lts/*"
-before_script: yarn run build
+  - node
+  - lts/*
+addons:
+  sonarcloud:
+    organization: "ctrlaltdev-github"
+    token:
+      secure: "QZayUTYJF5vT51gvgpfVPVTsN4uBJKvYPp62SeqUmOlCgT30BnoYP++r+4TobXZFksAXA04+XONihAyogs2A+p9m6mcphuC0o2an9JNKPRcO6vh+oEp9O66LGSh/APxrnGeVqc341yWLmgODOofxLv3x5WtHEGu6o3Q3lcmUh2b42aJQ56dPDFs5wegIF0Y5O478LTQPBIQZOshhp+5GwAmKIQ61YfjG5Y4jHNZS1/uczZ1hxCRSIYIVN74sNwGz22O0tn3YmPvV6cWwxBNBasEw1G8ZQ4aprZaUBmcTXOgFKvYj2c2pTSyigNQB56bUeyrGBqcIsXuVEHKOxBFs1SCledBfM/gfC7io4g+Bg+frHj51vVbnXGBsgyXcCW2CGibQPsBBM5tq9vP8/UjUewx/VUQpma4mBZ54+642XxZb/ectjTHccRFwLK7QAaJO0ZkHtRG14qsH2MnzKjN62UBEhyJEpoS1uZk+pk10qgCxKei5y/iTaKcQWFGDpTuSAVjyOT3usB6p03GAUxCJFl+RCCueV+/nmp9nBVJVi3ep9hWRPMTT9XlVlaU6CI9QMTYP5gLufWH1nd62juR+4xPJMdIUbZB7KUkp4OAnzHT5pq3phZlyZsmbS1qtR5rjvwJ+QGPYP/A2x733zHuhRrE3ZitoKLqz53Uu/aXBs8="
+before_script:
+  - yarn run build
+script:
+  - sonar-scanner
+cache:
+  directories:
+    - '$HOME/.sonar/cache'

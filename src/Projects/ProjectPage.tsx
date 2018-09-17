@@ -16,7 +16,8 @@ class ProjectPage extends React.Component<InterfaceProjectPageComponent, {}> {
     project: {
       id: string,
       name: string,
-      content: [string],
+      img: string,
+      content: string[],
       links: [{
         target: string,
         name: string
@@ -69,7 +70,7 @@ class ProjectPage extends React.Component<InterfaceProjectPageComponent, {}> {
           </footer>
         </section>
         <section>
-          <img src="https://placekitten.com/1600/1000" />
+          <img src={this.state.project.img} />
         </section>
       </div>
     )
@@ -89,7 +90,7 @@ class ProjectPage extends React.Component<InterfaceProjectPageComponent, {}> {
     const linkList: JSX.Element[] = []
 
     links.map(link => {
-      linkList.push(<li key={link.name}><a href={link.target} onMouseOver={this.backgroundColor}>{link.name}</a></li>)
+      linkList.push(<li key={link.name}><a href={link.target} target="_blank" onMouseOver={this.backgroundColor}>{link.name}</a></li>)
     })
 
     return linkList

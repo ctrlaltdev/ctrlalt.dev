@@ -2,6 +2,7 @@
     {
         "id": "pugserver",
         "name": "Pug Server",
+        "img": "https://placekitten.com/1600/1000",
         "content": [
             "npm package, based on pugjs and express that allows you to serve a functional prototype website."
         ],
@@ -23,6 +24,7 @@
     {
         "id": "LMGTFY",
         "name": "Let Me Google That For You Queries",
+        "img": "https://placekitten.com/1600/1000",
         "content": [
             "After having discovered that LMGTF short urls are sequentials, we polled the users queries for further analysis."
         ],
@@ -40,6 +42,7 @@
     {
         "id": "IAA",
         "name": "Illegal Auth Attempts",
+        "img": "https://placekitten.com/1600/1000",
         "content": [
             "Having several public facing devices, I was curious to see if they were attempts to access them.",
             "I made a script that scrap from auth.log or secure files the IPs that tried to log in and the users that were used to do so."
@@ -58,6 +61,7 @@
     {
         "id": "WYD",
         "name": "What You Doin' CLI Task Manager",
+        "img": "https://placekitten.com/1600/1000",
         "content": [
             "This is a simple command-line task manager, made in C and depending on Sqlite3."
         ],
@@ -75,6 +79,7 @@
     {
         "id": "RLO",
         "name": "Right-to-left Override Attack POC",
+        "img": "https://placekitten.com/1600/1000",
         "content": [
             "Using the Right-to-left Override unicode character, you can switch the text orientation mid-sentence. This can be used to fool a user and make them think they're opening a harmless file.",
             "This proof of concept use the unicode character in a filename: \"legit-img_sjvlgpj.sh\", that will appear as \"legit-img_sjvlhs.jpg\"."
@@ -93,6 +98,7 @@
     {
         "id": "socialcall",
         "name": "Social Call Browser Extension",
+        "img": "https://placekitten.com/1600/1000",
         "content": [
             "Replace social media posts (Facebook, Twitter, Instagram) with random string from an array.",
             "This extension purpose is to highlight the deep social distress that dictate our behavior on social media."
@@ -115,6 +121,7 @@
     {
         "id": "commentvoid",
         "name": "Comment into the Void React Component",
+        "img": "https://placekitten.com/1600/1000",
         "content": [
             "Create a comment section that is not plugged into any backend or database. A user will only see their own comments.",
             "This component is a statement about online hate, trolls, and the real value of comment sections."
@@ -133,6 +140,7 @@
     {
         "id": "resume",
         "name": "Resume Generator",
+        "img": "https://placekitten.com/1600/1000",
         "content": [
             "Electron app to customize a resume and export it in PDF."
         ],
@@ -146,6 +154,7 @@
     {
         "id": "coverletter",
         "name": "Cover Letter Generator",
+        "img": "https://placekitten.com/1600/1000",
         "content": [
             "Electron app to customize a cover letter and export it in PDF."
         ],
@@ -163,6 +172,7 @@
     {
         "id": "namethee",
         "name": "Naming Suggestions Script",
+        "img": "https://placekitten.com/1600/1000",
         "content": [
             "Simple Python script to generate name suggestions based on 2 words and thesaurus."
         ],
@@ -176,6 +186,7 @@
     {
         "id": "newstream",
         "name": "CLI News Stream",
+        "img": "https://placekitten.com/1600/1000",
         "content": [
             "Ruby project that will stream in the CLI the RSS feeds you referenced."
         ],
@@ -193,6 +204,7 @@
     {
         "id": "UFSC",
         "name": "Campaign against Sexual Harassment At Work Page",
+        "img": "https://placekitten.com/1600/1000",
         "content": [
             "Single page website made for the Defenseur des droits' communication campaign of February '18."
         ],
@@ -206,6 +218,7 @@
     {
         "id": "CC1810",
         "name": "Petite histoire des grands droits",
+        "img": "https://placekitten.com/1600/1000",
         "content": [
             "Landing page for 2018 Défenseur des droits communication campaign dedicated to children's rights."
         ],
@@ -219,6 +232,7 @@
     {
         "id": "CC1710",
         "name": "CC1710",
+        "img": "https://placekitten.com/1600/1000",
         "content": [
             "Landing page for 2017 Défenseur des droits communication campaign."
         ],
@@ -232,6 +246,7 @@
     {
         "id": "CC1610",
         "name": "CC1610",
+        "img": "https://placekitten.com/1600/1000",
         "content": [
             "Landing page for 2016 Défenseur des droits communication campaign."
         ],
@@ -245,6 +260,7 @@
     {
         "id": "ApacheMag",
         "name": "Apache Magazine",
+        "img": "https://placekitten.com/1600/1000",
         "content": [
             "A French online lifestyle and opinions magazine run only by volunteers."
         ],

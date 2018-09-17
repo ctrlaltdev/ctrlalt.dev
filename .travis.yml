@@ -11,6 +11,7 @@ addons:
 before_script:
   - yarn run build
 script:
+  - yarn test --coverage
   - sonar-scanner
 cache:
   directories:

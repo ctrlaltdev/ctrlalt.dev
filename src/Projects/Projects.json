@@ -3,118 +3,46 @@
         "id": "pugserver",
         "name": "Pug Server",
         "img": "https://placekitten.com/1600/1000",
-        "content": [
-            "npm package, based on pugjs and express that allows you to serve a functional prototype website."
-        ],
-        "links": [
-            {
-                "target": "https://ctrlaltdev.xyz/pug-server",
-                "name": "read more"
-            },
-            {
-                "target": "https://github.com/ctrlaltdev/pug-server",
-                "name": "view on github"
-            },
-            {
-                "target": "https://www.npmjs.com/package/pugserver",
-                "name": "view on npm"
-            }
-        ]
+        "github": "ctrlaltdev/pug-server",
+        "npm": "pugserver"
     },
     {
         "id": "LMGTFY",
         "name": "Let Me Google That For You Queries",
         "img": "https://placekitten.com/1600/1000",
-        "content": [
-            "After having discovered that LMGTF short urls are sequentials, we polled the users queries for further analysis."
-        ],
-        "links": [
-            {
-                "target": "https://ctrlaltdev.xyz/LMGTFY-queries",
-                "name": "read more"
-            },
-            {
-                "target": "https://github.com/ctrlaltdev/LMGTFY-queries",
-                "name": "view on github"
-            }
-        ]
+        "github": "ctrlaltdev/LMGTFY-queries"
     },
     {
         "id": "IAA",
         "name": "Illegal Auth Attempts",
         "img": "https://placekitten.com/1600/1000",
-        "content": [
-            "Having several public facing devices, I was curious to see if they were attempts to access them.",
-            "I made a script that scrap from auth.log or secure files the IPs that tried to log in and the users that were used to do so."
-        ],
-        "links": [
-            {
-                "target": "https://ctrlaltdev.xyz/illegal-auth-attempts",
-                "name": "read more"
-            },
-            {
-                "target": "https://github.com/ctrlaltdev/illegal-auth-attempts",
-                "name": "view on github"
-            }
-        ]
+        "github": "ctrlaltdev/illegal-auth-attempts"
     },
     {
         "id": "WYD",
         "name": "What You Doin' CLI Task Manager",
         "img": "https://placekitten.com/1600/1000",
-        "content": [
-            "This is a simple command-line task manager, made in C and depending on Sqlite3."
-        ],
-        "links": [
-            {
-                "target": "https://ctrlaltdev.xyz/WYD",
-                "name": "read more"
-            },
-            {
-                "target": "https://github.com/ctrlaltdev/WYD",
-                "name": "view on github"
-            }
-        ]
+        "github": "ctrlaltdev/WYD"
     },
     {
         "id": "RLO",
         "name": "Right-to-left Override Attack POC",
         "img": "https://placekitten.com/1600/1000",
-        "content": [
-            "Using the Right-to-left Override unicode character, you can switch the text orientation mid-sentence. This can be used to fool a user and make them think they're opening a harmless file.",
-            "This proof of concept use the unicode character in a filename: \"legit-img_sjvlgpj.sh\", that will appear as \"legit-img_sjvlhs.jpg\"."
-        ],
-        "links": [
-            {
-                "target": "https://ctrlaltdev.xyz/RLO-attack",
-                "name": "read more"
-            },
-            {
-                "target": "https://github.com/ctrlaltdev/RLO-attack",
-                "name": "view on github"
-            }
-        ]
+        "github": "ctrlaltdev/RLO-attack"
     },
     {
         "id": "socialcall",
         "name": "Social Call Browser Extension",
         "img": "https://placekitten.com/1600/1000",
-        "content": [
-            "Replace social media posts (Facebook, Twitter, Instagram) with random string from an array.",
-            "This extension purpose is to highlight the deep social distress that dictate our behavior on social media."
-        ],
+        "github": "ctrlaltdev/socialcall",
         "links": [
             {
-                "target": "https://addons.mozilla.org/en-US/firefox/addon/social-call/",
-                "name": "view on addons.mozilla.org"
+                "href": "https://addons.mozilla.org/en-US/firefox/addon/social-call/",
+                "txt": "view on addons.mozilla.org"
             },
             {
-                "target": "https://chrome.google.com/webstore/detail/social-call/pmjlkmeagleojehaajmlcbkipbammjoa",
-                "name": "view on chrome web store"
-            },
-            {
-                "target": "https://github.com/ctrlaltdev/socialcall",
-                "name": "view on github"
+                "href": "https://chrome.google.com/webstore/detail/social-call/pmjlkmeagleojehaajmlcbkipbammjoa",
+                "txt": "view on chrome web store"
             }
         ]
     },
@@ -126,80 +54,32 @@
             "Create a comment section that is not plugged into any backend or database. A user will only see their own comments.",
             "This component is a statement about online hate, trolls, and the real value of comment sections."
         ],
-        "links": [
-            {
-                "target": "https://www.npmjs.com/package/react-comments-void",
-                "name": "view on npm"
-            },
-            {
-                "target": "https://github.com/ctrlaltdev/react-comments-void",
-                "name": "view on github"
-            }
-        ]
+        "github": "ctrlaltdev/react-comments-void",
+        "npm": "react-comments-void"
     },
     {
         "id": "resume",
         "name": "Resume Generator",
         "img": "https://placekitten.com/1600/1000",
-        "content": [
-            "Electron app to customize a resume and export it in PDF."
-        ],
-        "links": [
-            {
-                "target": "https://github.com/ctrlaltdev/resume",
-                "name": "view on github"
-            }
-        ]
+        "github": "ctrlaltdev/resume"
     },
     {
         "id": "coverletter",
         "name": "Cover Letter Generator",
         "img": "https://placekitten.com/1600/1000",
-        "content": [
-            "Electron app to customize a cover letter and export it in PDF."
-        ],
-        "links": [
-            {
-                "target": "https://ctrlaltdev.xyz/cover-letter",
-                "name": "read more"
-            },
-            {
-                "target": "https://github.com/ctrlaltdev/cover-letter",
-                "name": "view on github"
-            }
-        ]
+        "github": "ctrlaltdev/cover-letter"
     },
     {
         "id": "namethee",
         "name": "Naming Suggestions Script",
         "img": "https://placekitten.com/1600/1000",
-        "content": [
-            "Simple Python script to generate name suggestions based on 2 words and thesaurus."
-        ],
-        "links": [
-            {
-                "target": "https://github.com/ctrlaltdev/namethee",
-                "name": "view on github"
-            }
-        ]
+        "github": "ctrlaltdev/namethee"
     },
     {
         "id": "newstream",
         "name": "CLI News Stream",
         "img": "https://placekitten.com/1600/1000",
-        "content": [
-            "Ruby project that will stream in the CLI the RSS feeds you referenced."
-        ],
-        "links": [
-            {
-                "target": "https://ctrlaltdev.xyz/newstream",
-                "name": "read more"
-            },
-            {
-                "target": "https://github.com/ctrlaltdev/newstream",
-                "name": "view on github"
-            }
-        ]
+        "github": "ctrlaltdev/newstream"
     },
     {
         "id": "UFSC",
@@ -210,8 +90,8 @@
         ],
         "links": [
             {
-                "target": "https://information.defenseurdesdroits.fr/unefemmesurcinq/",
-                "name": "visit the page"
+                "href": "https://information.defenseurdesdroits.fr/unefemmesurcinq/",
+                "txt": "visit the page"
             }
         ]
     },
@@ -224,8 +104,8 @@
         ],
         "links": [
             {
-                "target": "https://information.defenseurdesdroits.fr/petitehistoiregrandsdroits/",
-                "name": "visit the landing page"
+                "href": "https://information.defenseurdesdroits.fr/petitehistoiregrandsdroits/",
+                "txt": "visit the landing page"
             }
         ]
     },
@@ -238,8 +118,8 @@
         ],
         "links": [
             {
-                "target": "https://information.defenseurdesdroits.fr/CC1710/",
-                "name": "visit the landing page"
+                "href": "https://information.defenseurdesdroits.fr/CC1710/",
+                "txt": "visit the landing page"
             }
         ]
     },
@@ -252,8 +132,8 @@
         ],
         "links": [
             {
-                "target": "https://information.defenseurdesdroits.fr/CC1610/",
-                "name": "visit the landing page"
+                "href": "https://information.defenseurdesdroits.fr/CC1610/",
+                "txt": "visit the landing page"
             }
         ]
     },
@@ -266,8 +146,8 @@
         ],
         "links": [
             {
-                "target": "https://apachemag.com/",
-                "name": "visit the magazine website"
+                "href": "https://apachemag.com/",
+                "txt": "visit the magazine website"
             }
         ]
     }

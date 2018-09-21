@@ -1,4 +1,5 @@
 import * as React from 'react'
+import * as Markdown from 'react-markdown'
 import './ProjectPage.css'
 import * as jsonProjects from './Projects.json'
 
@@ -17,10 +18,12 @@ class ProjectPage extends React.Component<InterfaceProjectPageComponent, {}> {
       id: string,
       name: string,
       img: string,
-      content: string[],
-      links: [{
-        target: string,
-        name: string
+      github?: string,
+      npm?: string,
+      content?: string[],
+      links?: [{
+        href: string,
+        txt: string
       }]
     }
   }
@@ -76,24 +79,48 @@ class ProjectPage extends React.Component<InterfaceProjectPageComponent, {}> {
     )
   }
 
-  private getDescription(descs = this.state.project.content) {
-    const descList: JSX.Element[] = []
+  private getDescription() {
+    if (this.state.project.github) {
 
-    descs.map(desc => {
-      descList.push(<p key={desc}>{desc}</p>)
-    })
+      return <Markdown>{fetch(`https://raw.githubusercontent.com/${this.state.project.github}/master/README.md`)
+      .then(response => response.body!)
+      })}</Markdown>
 
-    return descList
+    } else {
+
+      const descs = this.state.project.content!
+      const descList: JSX.Element[] = []
+  
+      descs.map(desc => {
+        descList.push(<p key={desc}>{desc}</p>)
+      })
+
+      return descList
+
+    }
   }
 
-  private getLinks(links = this.state.project.links) {
-    const linkList: JSX.Element[] = []
+  private getLinks() {
+    if (this.state.project.links) {
+      const links = this.state.project.links
+      const linkList: JSX.Element[] = []
+  
+      links.map(link => {
+        linkList.push(<li key={link.txt}><a href={link.href} target="_blank" onMouseOver={this.backgroundColor}>{link.txt}</a></li>)
+      })
+  
+      return linkList
+    } else {
+      const links: JSX.Element[] = []
+      if (this.state.project.github) {
+        links.push(<li key="github"><a href={`https://github.com/${this.state.project.github}`} target="_blank" onMouseOver={this.backgroundColor}>view on github</a></li>)
+      }
+      if (this.state.project.npm) {
+        links.push(<li key="npm"><a href={`https://npmjs.com/package/${this.state.project.npm}`} target="_blank" onMouseOver={this.backgroundColor}>view on npm</a></li>)
+      }
 
-    links.map(link => {
-      linkList.push(<li key={link.name}><a href={link.target} target="_blank" onMouseOver={this.backgroundColor}>{link.name}</a></li>)
-    })
-
-    return linkList
+      return links
+    }
   }
 
   private backgroundColor(e: any) {

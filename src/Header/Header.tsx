@@ -140,8 +140,8 @@ class Header extends React.Component {
     const array = arraysrc.slice(0)
     const matches: string[] = []
 
-    while (array.findIndex((elem) => elem.startsWith(match)) !== -1) {
-      const matchIndex = array.findIndex((elem) => elem.startsWith(match))
+    while (array.findIndex((elem) => elem.toLowerCase().startsWith(match.toLowerCase())) !== -1) {
+      const matchIndex = array.findIndex((elem) => elem.toLowerCase().startsWith(match.toLowerCase()))
 
       matches.push(array[matchIndex])
       array.splice(matchIndex, 1)
@@ -159,7 +159,7 @@ class Header extends React.Component {
   }
 
   private isHomePath(path: string): boolean {
-    if (path === '../' || path === '~' || path === '~/' || path === '/')  {
+    if (path === '../' || path === '..' || path === '~' || path === '~/' || path === '/')  {
       return true
     } else {
       return false

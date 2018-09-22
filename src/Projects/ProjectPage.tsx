@@ -78,7 +78,7 @@ class ProjectPage extends React.Component<InterfaceProjectPageComponent, {}> {
     this.getContent()
     this.getLinks()
   }
-
+ 
   public render() {
     return (
       <div className="ProjectPage">

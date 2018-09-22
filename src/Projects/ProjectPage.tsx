@@ -19,6 +19,7 @@ class ProjectPage extends React.Component<InterfaceProjectPageComponent, {}> {
     img: string,
     github?: string,
     npm?: string,
+    codepen?: string,
     content: string,
     links?: [{
       href: string,
@@ -32,6 +33,7 @@ class ProjectPage extends React.Component<InterfaceProjectPageComponent, {}> {
     img: string,
     github?: string,
     npm?: string,
+    codepen?: string,
     content: string,
     links?: [{
       href: string,
@@ -49,9 +51,7 @@ class ProjectPage extends React.Component<InterfaceProjectPageComponent, {}> {
       id: this.project.id,
       name: this.project.name,
       img: this.project.img,
-      content: '`Loading...`',
-      github: this.project.github ? this.project.github : undefined,
-      npm: this.project.npm ? this.project.npm : undefined
+      content: '`Loading...`'
     }
 
     this.backgroundColor.bind(this)
@@ -91,14 +91,14 @@ class ProjectPage extends React.Component<InterfaceProjectPageComponent, {}> {
               {this.state.content}
             </Markdown>
           </article>
+        </section>
+        <section>
+          <img src={this.state.img} />
           <footer>
             <ul>
               {this.state.links}
             </ul>
           </footer>
-        </section>
-        <section>
-          <img src={this.state.img} />
         </section>
       </div>
     )
@@ -138,6 +138,9 @@ class ProjectPage extends React.Component<InterfaceProjectPageComponent, {}> {
       }
       if (this.project.npm) {
         linkList.push(<li key="npm"><a href={`https://npmjs.com/package/${this.project.npm}`} target="_blank" onMouseOver={this.backgroundColor}>view on npm</a></li>)
+      }
+      if (this.project.codepen) {
+        linkList.push(<li key="codepen"><a href={`https://codepen.io/${this.project.codepen}`} target="_blank" onMouseOver={this.backgroundColor}>view on codepen</a></li>)
       }
 
       this.setState({links: linkList})

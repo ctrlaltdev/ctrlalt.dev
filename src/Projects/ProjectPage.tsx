@@ -14,28 +14,44 @@ interface InterfaceProjectPageComponent {
 class ProjectPage extends React.Component<InterfaceProjectPageComponent, {}> {
   public state: {
     path: string,
-    project: {
-      id: string,
-      name: string,
-      img: string,
-      github?: string,
-      npm?: string,
-      content?: string[],
-      links?: [{
-        href: string,
-        txt: string
-      }]
-    }
+    id: string,
+    name: string,
+    img: string,
+    github?: string,
+    npm?: string,
+    content: string,
+    links?: [{
+      href: string,
+      txt: string
+    }]
+  }
+
+  private project: {
+    id: string,
+    name: string,
+    img: string,
+    github?: string,
+    npm?: string,
+    content: string,
+    links?: [{
+      href: string,
+      txt: string
+    }]
   }
 
   constructor(props: any) {
     super(props)
 
-    const project = jsonProjects.filter((proj: any) => ("/" + proj.id === this.props.location.pathname) ? true : false)
+    this.project = jsonProjects.filter((proj: any) => ("/" + proj.id === this.props.location.pathname) ? true : false)[0]
 
     this.state = {
       path: this.props.location.pathname,
-      project: project[0]
+      id: this.project.id,
+      name: this.project.name,
+      img: this.project.img,
+      content: '`Loading...`',
+      github: this.project.github ? this.project.github : undefined,
+      npm: this.project.npm ? this.project.npm : undefined
     }
 
     this.backgroundColor.bind(this)
@@ -44,82 +60,88 @@ class ProjectPage extends React.Component<InterfaceProjectPageComponent, {}> {
   public componentWillReceiveProps(nextProps: any) {
     const {location: {pathname}} = nextProps
     if(pathname !== this.props.location.pathname){
-      const project = jsonProjects.filter((proj: any) => ("/" + proj.id === pathname) ? true : false)
-      this.setState({path: pathname, project: project[0]})
+      this.project = jsonProjects.filter((proj: any) => ("/" + proj.id === pathname) ? true : false)[0]
+      this.setState({
+        path: pathname,
+        id: this.project.id,
+        name: this.project.name,
+        img: this.project.img,
+        content: '`Loading...`'
+      })
+
+      this.getContent()
+      this.getLinks()
     }
   }
 
-  public shouldComponentUpdate(nextProps: any) {
-    if(nextProps.location.pathname !== this.props.location.pathname){
-      return true
-    }
-    return false
+  public componentWillMount() {
+    this.getContent()
+    this.getLinks()
   }
 
   public render() {
     return (
       <div className="ProjectPage">
         <header>
-          <h2>{this.state.project.name}</h2>
+          <h2>{this.state.name}</h2>
         </header>
         <section>
           <article>
-            {this.getDescription()}
+            <Markdown>
+              {this.state.content}
+            </Markdown>
           </article>
           <footer>
             <ul>
-              {this.getLinks()}
+              {this.state.links}
             </ul>
           </footer>
         </section>
         <section>
-          <img src={this.state.project.img} />
+          <img src={this.state.img} />
         </section>
       </div>
     )
   }
 
-  private getDescription() {
-    if (this.state.project.github) {
+  private getContent() {
+    if (this.project.github) {
 
-      return <Markdown>{fetch(`https://raw.githubusercontent.com/${this.state.project.github}/master/README.md`)
-      .then(response => response.body!)
-      })}</Markdown>
-
-    } else {
-
-      const descs = this.state.project.content!
-      const descList: JSX.Element[] = []
-  
-      descs.map(desc => {
-        descList.push(<p key={desc}>{desc}</p>)
+      fetch(`https://raw.githubusercontent.com/${this.project.github}/master/README.md`)
+      .then(r => r.text())
+      .then(r => {
+        this.setState({content: r})
       })
 
-      return descList
-
+    } else {
+      this.setState({content: this.project.content})
     }
   }
 
   private getLinks() {
-    if (this.state.project.links) {
-      const links = this.state.project.links
+    if (this.project.links) {
+
+      const links = this.project.links
       const linkList: JSX.Element[] = []
   
       links.map(link => {
         linkList.push(<li key={link.txt}><a href={link.href} target="_blank" onMouseOver={this.backgroundColor}>{link.txt}</a></li>)
       })
   
-      return linkList
+      this.setState({links: linkList})
+
     } else {
-      const links: JSX.Element[] = []
-      if (this.state.project.github) {
-        links.push(<li key="github"><a href={`https://github.com/${this.state.project.github}`} target="_blank" onMouseOver={this.backgroundColor}>view on github</a></li>)
+
+      const linkList: JSX.Element[] = []
+      if (this.project.github) {
+        linkList.push(<li key="github"><a href={`https://github.com/${this.project.github}`} target="_blank" onMouseOver={this.backgroundColor}>view on github</a></li>)
       }
-      if (this.state.project.npm) {
-        links.push(<li key="npm"><a href={`https://npmjs.com/package/${this.state.project.npm}`} target="_blank" onMouseOver={this.backgroundColor}>view on npm</a></li>)
+      if (this.project.npm) {
+        linkList.push(<li key="npm"><a href={`https://npmjs.com/package/${this.project.npm}`} target="_blank" onMouseOver={this.backgroundColor}>view on npm</a></li>)
       }
 
-      return links
+      this.setState({links: linkList})
+
     }
   }
 

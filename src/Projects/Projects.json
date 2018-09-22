@@ -50,10 +50,6 @@
         "id": "commentvoid",
         "name": "Comment into the Void React Component",
         "img": "https://placekitten.com/1600/1000",
-        "content": [
-            "Create a comment section that is not plugged into any backend or database. A user will only see their own comments.",
-            "This component is a statement about online hate, trolls, and the real value of comment sections."
-        ],
         "github": "ctrlaltdev/react-comments-void",
         "npm": "react-comments-void"
     },
@@ -85,9 +81,7 @@
         "id": "UFSC",
         "name": "Campaign against Sexual Harassment At Work Page",
         "img": "https://placekitten.com/1600/1000",
-        "content": [
-            "Single page website made for the Defenseur des droits' communication campaign of February '18."
-        ],
+        "content": "Single page website made for the Defenseur des droits' communication campaign of February '18.",
         "links": [
             {
                 "href": "https://information.defenseurdesdroits.fr/unefemmesurcinq/",
@@ -99,9 +93,7 @@
         "id": "CC1810",
         "name": "Petite histoire des grands droits",
         "img": "https://placekitten.com/1600/1000",
-        "content": [
-            "Landing page for 2018 Défenseur des droits communication campaign dedicated to children's rights."
-        ],
+        "content": "Landing page for 2018 Défenseur des droits communication campaign dedicated to children's rights.",
         "links": [
             {
                 "href": "https://information.defenseurdesdroits.fr/petitehistoiregrandsdroits/",
@@ -113,9 +105,7 @@
         "id": "CC1710",
         "name": "CC1710",
         "img": "https://placekitten.com/1600/1000",
-        "content": [
-            "Landing page for 2017 Défenseur des droits communication campaign."
-        ],
+        "content": "Landing page for 2017 Défenseur des droits communication campaign.",
         "links": [
             {
                 "href": "https://information.defenseurdesdroits.fr/CC1710/",
@@ -127,9 +117,7 @@
         "id": "CC1610",
         "name": "CC1610",
         "img": "https://placekitten.com/1600/1000",
-        "content": [
-            "Landing page for 2016 Défenseur des droits communication campaign."
-        ],
+        "content": "Landing page for 2016 Défenseur des droits communication campaign.",
         "links": [
             {
                 "href": "https://information.defenseurdesdroits.fr/CC1610/",
@@ -141,9 +129,7 @@
         "id": "ApacheMag",
         "name": "Apache Magazine",
         "img": "https://placekitten.com/1600/1000",
-        "content": [
-            "A French online lifestyle and opinions magazine run only by volunteers."
-        ],
+        "content": "A French online lifestyle and opinions magazine run by volunteers.",
         "links": [
             {
                 "href": "https://apachemag.com/",

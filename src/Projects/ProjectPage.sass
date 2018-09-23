@@ -10,10 +10,14 @@
   header
     flex: 1 0 100%
     margin: 16px 0
-    h2
-      font-family: 'Yantramanav', sans-serif
-      text-transform: uppercase
-      font-weight: 700
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+    font-family: 'Yantramanav', sans-serif
+    text-transform: uppercase
+    font-weight: 700
   section
     flex: 1 0 calc(50% - 32px)
     margin: 0 16px
@@ -24,15 +28,23 @@
       margin: 16px 0
       p
         margin: 8px 0
+        line-height: 1.4
       a
-        img
-          max-height: 35px
-          width: auto
+        color: unset
+        text-decoration: none
+      img
+        max-height: 64px
+        width: auto
+      img[src^="https://img"]
+        max-height: 32px
+        width: auto
       p > code
         padding: 0 8px
         font-style: italic
+      code
+        font-family: monospace
       pre
-        background-color: Black
+        background-color: #111
         padding: 16px
         border-radius: 2px
     footer

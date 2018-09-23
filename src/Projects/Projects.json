@@ -34,17 +34,7 @@
         "id": "socialcall",
         "name": "Social Call Browser Extension",
         "img": "https://placekitten.com/1600/1000",
-        "github": "ctrlaltdev/socialcall",
-        "links": [
-            {
-                "href": "https://addons.mozilla.org/en-US/firefox/addon/social-call/",
-                "txt": "view on addons.mozilla.org"
-            },
-            {
-                "href": "https://chrome.google.com/webstore/detail/social-call/pmjlkmeagleojehaajmlcbkipbammjoa",
-                "txt": "view on chrome web store"
-            }
-        ]
+        "github": "ctrlaltdev/socialcall"
     },
     {
         "id": "commentvoid",

@@ -19,7 +19,7 @@
     "dev-js": "react-scripts-ts start",
     "build-js": "react-scripts-ts build",
     "prestart": "npm run build",
-    "start": "npx serve public/",
+    "start": "npx serve -s build",
     "dev": "npm-run-all -p watch-css start-js",
     "build": "npm-run-all build-css build-js",
     "test": "react-scripts-ts test --env=jsdom"

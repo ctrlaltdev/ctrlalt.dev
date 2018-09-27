@@ -45,6 +45,33 @@
         "codepen": "ctrlaltdev/pen/XPZNNP"
     },
     {
+        "id": "matchgame",
+        "name": "Match Game",
+        "img": "https://placekitten.com/1600/1000",
+        "github": "ctrlaltdev/matchgame",
+        "npm": "matchgame"
+    },
+    {
+        "id": "wordpuzzle",
+        "name": "Word Puzzle",
+        "img": "https://placekitten.com/1600/1000",
+        "github": "ctrlaltdev/wordpuzzle",
+        "npm": "wordpuzzle"
+    },
+    {
+        "id": "multichoicetest",
+        "name": "Multichoice Test",
+        "img": "https://placekitten.com/1600/1000",
+        "github": "ctrlaltdev/multichoicetest",
+        "npm": "multichoicetest"
+    },
+    {
+        "id": "isFileUsed",
+        "name": "isFileUsed",
+        "img": "https://placekitten.com/1600/1000",
+        "github": "ctrlaltdev/isFileUsed"
+    },
+    {
         "id": "resume",
         "name": "Resume Generator",
         "img": "https://placekitten.com/1600/1000",
@@ -70,7 +97,7 @@
     },
     {
         "id": "UFSC",
-        "name": "Campaign against Sexual Harassment At Work Page",
+        "name": "UFSC",
         "img": "https://placekitten.com/1600/1000",
         "content": "Single page website made for the Defenseur des droits' communication campaign of February '18.",
         "links": [
@@ -82,7 +109,7 @@
     },
     {
         "id": "CC1810",
-        "name": "Petite histoire des grands droits",
+        "name": "CC1810",
         "img": "https://placekitten.com/1600/1000",
         "content": "Landing page for 2018 Défenseur des droits communication campaign dedicated to children's rights.",
         "links": [

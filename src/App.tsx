@@ -19,6 +19,7 @@ class App extends React.Component {
             <Route path="/:projectID" component={ProjectPage} />
           </Switch>
           <Footer />
+          <div className="beta"><span>Beta</span></div>
         </div>
       </Router>
     )

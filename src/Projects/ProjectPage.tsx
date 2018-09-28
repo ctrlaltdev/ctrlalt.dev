@@ -4,11 +4,7 @@ import './ProjectPage.css'
 import * as jsonProjects from './Projects.json'
 
 interface InterfaceProjectPageComponent {
-  location: {
-    pathname: string,
-    search: string,
-    hash: string
-  }
+  location: {pathname: string, hash: string}
 }
 
 class ProjectPage extends React.Component<InterfaceProjectPageComponent, {}> {

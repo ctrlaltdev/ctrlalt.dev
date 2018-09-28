@@ -1,6 +1,6 @@
 import * as React from 'react'
 import './ProjectItem.css'
-import { Link, HashRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 interface InterfaceProjectComponent {
   project: {
@@ -21,15 +21,15 @@ class Project extends React.Component<InterfaceProjectComponent, {}> {
       <Router>
         <li className="Project">
           <article>
-            <Link to={this.props.project.id}>
+            <a href={this.props.project.id}>
               <h3>{this.props.project.name}</h3>
-            </Link>
+            </a>
           </article>
         </li>
       </Router>
     )
   }
-
+  
   public readMore(e: any) {
     e.target.parentNode.classList.toggle('active')
   }

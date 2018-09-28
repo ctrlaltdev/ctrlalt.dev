@@ -1,6 +1,6 @@
 import * as React from 'react'
 import './Footer.css'
-import { Link, HashRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 import LinkFile from '../Links/LinkFile'
 import ExtLink from '../Links/ExtLink'
 import codepen from '../img/codepen.svg'
@@ -13,7 +13,7 @@ class Footer extends React.Component {
       <Router>
         <footer className="Footer">
           <ul>
-            <li><Link to="/about">about me</Link></li>
+            <li><a href="/about">about me</a></li>
             <li><LinkFile to="/PGPKEY.txt">PGPKEY</LinkFile></li>
           </ul>
           <nav>

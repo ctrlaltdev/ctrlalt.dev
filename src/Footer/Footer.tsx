@@ -1,6 +1,6 @@
 import * as React from 'react'
 import './Footer.css'
-import { Link, HashRouter as Router } from 'react-router-dom'
+import { Link, BrowserRouter as Router } from 'react-router-dom'
 import LinkFile from '../Links/LinkFile'
 import ExtLink from '../Links/ExtLink'
 import codepen from '../img/codepen.svg'

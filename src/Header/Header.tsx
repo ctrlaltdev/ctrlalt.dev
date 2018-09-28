@@ -1,7 +1,7 @@
 import * as React from 'react'
 import logo from '../img/logo.svg'
 import './Header.css'
-import { Link, HashRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import * as jsonProjects from '../Projects/Projects.json'
 const mainPages = ['about']
 
@@ -37,9 +37,9 @@ class Header extends React.Component {
     return (
       <Router>
         <header className="Header">
-          <Link to="/">
+          <a href="/">
             <img src={logo} alt="" />
-          </Link>
+          </a>
           <span className="startPath">~</span>
           <Route component={Title} />
 
@@ -109,7 +109,7 @@ class Header extends React.Component {
       if (cmd.length === 2 && cmd[0] === 'cd') {
         if (this.isHomePath(cmd[1])) {
           this.setState({cli: '', placeholder: ''})
-          window.location.hash = '/'
+          location.assign(`${window.location.origin}/`)
         } else {
           const projList = jsonProjects.map((proj: {id: string}) => proj.id)
           const directories = projList.concat(mainPages)
@@ -117,7 +117,7 @@ class Header extends React.Component {
 
           if (autocomplete.length === 1) {
             this.setState({cli: '', placeholder: ''})
-            window.location.hash = '/' + cmd[1]
+            location.assign(`${window.location.origin}/${cmd[1]}`)
           } else {
             this.setState({cli: '', placeholder: cmd[1] + ' is not a directory'})
           }

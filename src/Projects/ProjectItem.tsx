@@ -1,6 +1,5 @@
 import * as React from 'react'
 import './ProjectItem.css'
-import { BrowserRouter as Router } from 'react-router-dom'
 
 interface InterfaceProjectComponent {
   project: {
@@ -12,21 +11,27 @@ interface InterfaceProjectComponent {
 }
 
 class Project extends React.Component<InterfaceProjectComponent, {}> {
+  private ref: any
+  private colors: string[]
   constructor (project: any) {
     super(project)
+    this.ref = React.createRef()
+    this.colors = ["Turquoise", "Aquamarine", "SteelBlue", "Chartreuse", "SpringGreen", "ForestGreen", "OliveDrab", "Gold", "Khaki", "Coral", "OrangeRed", "DarkOrange", "IndianRed", "Salmon", "FireBrick", "Crimson", "MediumVioletRed", "HotPink", "DeepPink", "Orchid"]
+  }
+
+  public componentDidMount() {
+    this.ref.current.classList.add(this.colors[Math.floor(Math.random() * this.colors.length)])
   }
 
   public render() {
     return (
-      <Router>
-        <li className="Project">
-          <article>
-            <a href={this.props.project.id}>
-              <h3>{this.props.project.name}</h3>
-            </a>
-          </article>
-        </li>
-      </Router>
+      <li className="Project" ref={this.ref}>
+        <article>
+          <a href={this.props.project.id}>
+            <h3>{this.props.project.name}</h3>
+          </a>
+        </article>
+      </li>
     )
   }
   

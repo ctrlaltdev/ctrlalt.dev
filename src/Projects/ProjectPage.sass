@@ -1,5 +1,5 @@
 =gradient($color)
-  background-image: linear-gradient(45deg, $color, $color 50%, white 50%, white)
+  background-image: linear-gradient(45deg, $color, $color 50%, #333 50%, #333)
 
 .ProjectPage
   display: flex
@@ -38,11 +38,11 @@
         width: auto
       table
         width: 100%
-        border: solid 2px #333
+        border: solid 2px #DDD
         tr:hover
-          background-color: #333
+          background-color: #DDD
         th
-          background-color: #333
+          background-color: #DDD
           text-align: left
         th, td
           padding: 8px 16px
@@ -52,7 +52,8 @@
       code
         font-family: monospace
       pre
-        background-color: #111
+        background-color: #333
+        color: white
         padding: 16px
         border-radius: 2px
     footer
@@ -66,14 +67,15 @@
         a
           padding: 8px 16px
           text-decoration: none
-          color: #333
-          background-color: white
+          color: #DDD
+          background-color: #333
           background-size: 400%
           background-position: 100% 0%
-          transition: background-position 2s
+          transition: background-position 2s, color 2s
           &:hover
             background-position: 0% 0%
-            transition: background-position 1s
+            color: #111
+            transition: background-position 1s, color 1s
           &.Turquoise
             +gradient(Turquoise)
           &.Aquamarine

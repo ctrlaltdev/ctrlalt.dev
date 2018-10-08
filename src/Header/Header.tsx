@@ -3,7 +3,7 @@ import logo from '../img/logo.svg'
 import './Header.css'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import * as jsonProjects from '../Projects/Projects.json'
-const mainPages = ['about']
+const mainPages: string[] = []
 
 class Header extends React.Component {
 

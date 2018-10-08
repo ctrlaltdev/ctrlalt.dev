@@ -5,6 +5,7 @@ interface InterfaceProjectComponent {
   project: {
     id: string,
     name: string,
+    img: string,
     content: string[],
     links: Array<{target: string, name: string}>
   }
@@ -20,17 +21,16 @@ class Project extends React.Component<InterfaceProjectComponent, {}> {
   }
 
   public componentDidMount() {
-    this.ref.current.classList.add(this.colors[Math.floor(Math.random() * this.colors.length)])
+    this.ref.current.style.backgroundImage = `url(${this.props.project.img})`
+    this.ref.current.querySelector('h3').classList.add(this.colors[Math.floor(Math.random() * this.colors.length)])
   }
 
   public render() {
     return (
       <li className="Project" ref={this.ref}>
-        <article>
-          <a href={this.props.project.id}>
-            <h3>{this.props.project.name}</h3>
-          </a>
-        </article>
+        <a href={this.props.project.id}>
+          <h3>{this.props.project.name}</h3>
+        </a>
       </li>
     )
   }

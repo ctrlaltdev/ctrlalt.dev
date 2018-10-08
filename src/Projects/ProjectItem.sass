@@ -1,105 +1,57 @@
-=gradient($color)
-  background-image: linear-gradient(45deg, $color, $color 50%, #DDD 50%, #DDD)
-  
 .Project
-  flex: 1 1 auto
-  margin: 16px
-  background-color: #DDD
-  background-size: 400%
-  background-position: 100% 0%
-  box-shadow: none
-  transition: box-shadow 0.5s, background-position 0.5s
+  height: 100vh
+  display: flex
+  justify-content: center
+  align-items: center
+  background: center / cover no-repeat Azure
   a
-    display: block
-    padding: 64px 32px
+    flex: 0 0 auto
+    font-size: 3rem
     text-decoration: none
     color: #222
-    h3
-      text-align: center
-      text-transform: uppercase
-      font-family: 'Yantramanav', sans-serif
-      font-weight: 700
-  &.Turquoise
-    +gradient(Turquoise)
-    a
-      border-bottom: 8px solid Turquoise
-  &.Aquamarine
-    +gradient(Aquamarine)
-    a
-      border-bottom: 8px solid Aquamarine
-  &.SteelBlue
-    +gradient(SteelBlue)
-    a
-      border-bottom: 8px solid SteelBlue
-  &.Chartreuse
-    +gradient(Chartreuse)
-    a
-      border-bottom: 8px solid Chartreuse
-  &.SpringGreen
-    +gradient(SpringGreen)
-    a
-      border-bottom: 8px solid SpringGreen
-  &.ForestGreen
-    +gradient(ForestGreen)
-    a
-      border-bottom: 8px solid ForestGreen
-  &.OliveDrab
-    +gradient(OliveDrab)
-    a
-      border-bottom: 8px solid OliveDrab
-  &.Gold
-    +gradient(Gold)
-    a
-      border-bottom: 8px solid Gold
-  &.Khaki
-    +gradient(Khaki)
-    a
-      border-bottom: 8px solid Khaki
-  &.Coral
-    +gradient(Coral)
-    a
-      border-bottom: 8px solid Coral
-  &.OrangeRed
-    +gradient(OrangeRed)
-    a
-      border-bottom: 8px solid OrangeRed
-  &.DarkOrange
-    +gradient(DarkOrange)
-    a
-      border-bottom: 8px solid DarkOrange
-  &.IndianRed
-    +gradient(IndianRed)
-    a
-      border-bottom: 8px solid IndianRed
-  &.Salmon
-    +gradient(Salmon)
-    a
-      border-bottom: 8px solid Salmon
-  &.FireBrick
-    +gradient(FireBrick)
-    a
-      border-bottom: 8px solid FireBrick
-  &.Crimson
-    +gradient(Crimson)
-    a
-      border-bottom: 8px solid Crimson
-  &.MediumVioletRed
-    +gradient(MediumVioletRed)
-    a
-      border-bottom: 8px solid MediumVioletRed
-  &.HotPink
-    +gradient(HotPink)
-    a
-      border-bottom: 8px solid HotPink
-  &.DeepPink
-    +gradient(DeepPink)
-    a
-      border-bottom: 8px solid DeepPink
-  &.Orchid
-    +gradient(Orchid)
-    a
-      border-bottom: 8px solid Orchid
-  &:hover
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1), -2px -2px 2px rgba(0, 0, 0, 0.1)
-    background-position: 0% 0%
-    transition: box-shadow 0.5s, background-position 0.5s
+  h3
+    text-transform: uppercase
+    font-family: 'Yantramanav', sans-serif
+    font-weight: 700
+    margin: 0
+    padding: 2rem 3rem
+    &.Turquoise
+      background-color: Turquoise
+    &.Aquamarine
+      background-color: Aquamarine
+    &.SteelBlue
+      background-color: SteelBlue
+    &.Chartreuse
+      background-color: Chartreuse
+    &.SpringGreen
+      background-color: SpringGreen
+    &.ForestGreen
+      background-color: ForestGreen
+    &.OliveDrab
+      background-color: OliveDrab
+    &.Gold
+      background-color: Gold
+    &.Khaki
+      background-color: Khaki
+    &.Coral
+      background-color: Coral
+    &.OrangeRed
+      background-color: OrangeRed
+    &.DarkOrange
+      background-color: DarkOrange
+    &.IndianRed
+      background-color: IndianRed
+    &.Salmon
+      background-color: Salmon
+    &.FireBrick
+      background-color: FireBrick
+    &.Crimson
+      background-color: Crimson
+    &.MediumVioletRed
+      background-color: MediumVioletRed
+    &.HotPink
+      background-color: HotPink
+    &.DeepPink
+      background-color: DeepPink
+    &.Orchid
+      background-color: Orchid

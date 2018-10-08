@@ -13,7 +13,6 @@ class Footer extends React.Component {
       <Router>
         <footer className="Footer">
           <ul>
-            <li><a href="/about">about me</a></li>
             <li><LinkFile to="/PGPKEY.txt">PGPKEY</LinkFile></li>
           </ul>
           <nav>

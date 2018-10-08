@@ -11,6 +11,7 @@ it('Projects renders without crashing', () => {
         "This is a test"
       ],
       id: "test1",
+      img: "https://placekitten.com/1920/1080",
       links: [
         {
           name: "Test link",
@@ -25,6 +26,7 @@ it('Projects renders without crashing', () => {
         "This is again another test"
       ],
       id: "test2",
+      img: "https://placekitten.com/1920/1080",
       links: [
         {
           name: "Test link 2",
@@ -47,6 +49,7 @@ it('ProjectItem renders without crashing', () => {
   const testProject = {
     id: "test2",
     name: "Test 2",
+    img: "https://placekitten.com/1920/1080",
     content: [
       "This is another test",
       "This is again another test"

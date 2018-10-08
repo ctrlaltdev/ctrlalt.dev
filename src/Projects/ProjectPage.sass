@@ -4,10 +4,10 @@
 .ProjectPage
   display: flex
   flex-flow: row wrap
-  margin: 16px
+  margin: 2rem
   header
     flex: 1 0 100%
-    margin: 16px 0
+    margin: 2rem 0
   h2,
   h3,
   h4,
@@ -16,16 +16,27 @@
     font-family: 'Yantramanav', sans-serif
     text-transform: uppercase
     font-weight: 700
+  h2
+    font-size: 4rem
+  h3
+    font-size: 3rem
+  h4,
+  h5,
+  h6
+    font-size: 2em
   section
-    flex: 1 1 calc(50% - 32px)
-    margin: 0 16px
+    flex: 1 1 calc(50% - 4rem)
+    margin: 0 2rem
+    @media only screen and (max-width: 735px)
+      flex: 1 1 100%
     img
       width: 100%
       height: auto
     article
-      margin: 16px 0
+      margin: 2rem 0
+      font-size: 2rem
       p
-        margin: 8px 0
+        margin: 1rem 0
         line-height: 1.4
       a
         color: unset
@@ -34,7 +45,7 @@
         max-height: 64px
         width: auto
       img[src^="https://img"]
-        max-height: 32px
+        max-height: 4rem
         width: auto
       table
         width: 100%
@@ -45,27 +56,28 @@
           background-color: #DDD
           text-align: left
         th, td
-          padding: 8px 16px
+          padding: 1rem 2rem
       p > code
-        padding: 0 8px
+        padding: 0 1rem
         font-style: italic
       code
         font-family: monospace
       pre
         background-color: #333
         color: white
-        padding: 16px
+        padding: 2rem
         border-radius: 2px
     footer
-      margin: 16px 0
+      margin: 2rem 0
       ul
         padding: 0
         list-style: none
         li
           display: inline-block
-          margin: 16px
+          margin: 2rem
         a
-          padding: 8px 16px
+          padding: 1rem 2rem
+          font-size: 2rem
           text-decoration: none
           color: #DDD
           background-color: #333

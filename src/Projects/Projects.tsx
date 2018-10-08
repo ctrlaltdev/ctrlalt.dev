@@ -20,9 +20,11 @@ class Projects extends React.Component<InterfaceProjects, {}> {
   }
   public render() {
     return (
-      <ul className="Projects">
-        {this.projList}
-      </ul>
+      <section>
+        <ul className="Projects">
+          {this.projList}
+        </ul>
+      </section>
     )
   }
 }

@@ -20,13 +20,13 @@ class About extends React.Component {
 
   public render() {
     return(
-      <main className="About">
+      <section className="About">
         <h2>Yorick Demichelis</h2>
         <p className="intro">I'm a tech enthusiast, front and back end developer, occasional tinkerer and infosec amateur.</p>
         <ul className="techs">
           {this.state.techs}
         </ul>
-      </main>
+      </section>
     )
   }
 }

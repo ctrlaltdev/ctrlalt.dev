@@ -65,6 +65,6 @@ it('ProjectItem renders without crashing', () => {
       }
     ]
   }
-  ReactDOM.render(<ProjectItem project={testProject} />, div)
+  ReactDOM.render(<ProjectItem img="/img/DTS1.jpg" project={testProject} />, div)
   ReactDOM.unmountComponentAtNode(div)
 })

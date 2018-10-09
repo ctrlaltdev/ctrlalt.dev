@@ -8,7 +8,8 @@ interface InterfaceProjectComponent {
     img: string,
     content: string[],
     links: Array<{target: string, name: string}>
-  }
+  },
+  img: string
 }
 
 class Project extends React.Component<InterfaceProjectComponent, {}> {
@@ -21,7 +22,7 @@ class Project extends React.Component<InterfaceProjectComponent, {}> {
   }
 
   public componentDidMount() {
-    this.ref.current.style.backgroundImage = `url(${this.props.project.img})`
+    this.ref.current.style.backgroundImage = `url(/img/${this.props.img})`
     this.ref.current.querySelector('h3').classList.add(this.colors[Math.floor(Math.random() * this.colors.length)])
   }
 

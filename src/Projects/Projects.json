@@ -2,44 +2,44 @@
     {
         "id": "pugserver",
         "name": "Pug Server",
-        "img": "https://picsum.photos/g/1920/1080?random",
+        "img": "https://placekitten.com/1920/1080",
         "github": "ctrlaltdev/pug-server",
         "npm": "pugserver"
     },
     {
         "id": "LMGTFY",
         "name": "Let Me Google That For You Queries",
-        "img": "https://picsum.photos/g/1920/1080?random",
+        "img": "https://placekitten.com/1920/1080",
         "github": "ctrlaltdev/LMGTFY-queries"
     },
     {
         "id": "IAA",
         "name": "Illegal Auth Attempts",
-        "img": "https://picsum.photos/g/1920/1080?random",
+        "img": "https://placekitten.com/1920/1080",
         "github": "ctrlaltdev/illegal-auth-attempts"
     },
     {
         "id": "WYD",
         "name": "What You Doin' CLI Task Manager",
-        "img": "https://picsum.photos/g/1920/1080?random",
+        "img": "https://placekitten.com/1920/1080",
         "github": "ctrlaltdev/WYD"
     },
     {
         "id": "RLO",
         "name": "Right-to-left Override Attack POC",
-        "img": "https://picsum.photos/g/1920/1080?random",
+        "img": "https://placekitten.com/1920/1080",
         "github": "ctrlaltdev/RLO-attack"
     },
     {
         "id": "socialcall",
         "name": "Social Call Browser Extension",
-        "img": "https://picsum.photos/g/1920/1080?random",
+        "img": "https://placekitten.com/1920/1080",
         "github": "ctrlaltdev/socialcall"
     },
     {
         "id": "commentvoid",
         "name": "Comment into the Void React Component",
-        "img": "https://picsum.photos/g/1920/1080?random",
+        "img": "https://placekitten.com/1920/1080",
         "github": "ctrlaltdev/react-comments-void",
         "npm": "react-comments-void",
         "codepen": "ctrlaltdev/pen/XPZNNP"
@@ -47,58 +47,58 @@
     {
         "id": "matchgame",
         "name": "Match Game",
-        "img": "https://picsum.photos/g/1920/1080?random",
+        "img": "https://placekitten.com/1920/1080",
         "github": "ctrlaltdev/matchgame",
         "npm": "matchgame"
     },
     {
         "id": "wordpuzzle",
         "name": "Word Puzzle",
-        "img": "https://picsum.photos/g/1920/1080?random",
+        "img": "https://placekitten.com/1920/1080",
         "github": "ctrlaltdev/wordpuzzle",
         "npm": "wordpuzzle"
     },
     {
         "id": "multichoicetest",
         "name": "Multichoice Test",
-        "img": "https://picsum.photos/g/1920/1080?random",
+        "img": "https://placekitten.com/1920/1080",
         "github": "ctrlaltdev/multichoicetest",
         "npm": "multichoicetest"
     },
     {
         "id": "isFileUsed",
         "name": "isFileUsed",
-        "img": "https://picsum.photos/g/1920/1080?random",
+        "img": "https://placekitten.com/1920/1080",
         "github": "ctrlaltdev/isFileUsed"
     },
     {
         "id": "resume",
         "name": "Resume Generator",
-        "img": "https://picsum.photos/g/1920/1080?random",
+        "img": "https://placekitten.com/1920/1080",
         "github": "ctrlaltdev/resume"
     },
     {
         "id": "coverletter",
         "name": "Cover Letter Generator",
-        "img": "https://picsum.photos/g/1920/1080?random",
+        "img": "https://placekitten.com/1920/1080",
         "github": "ctrlaltdev/cover-letter"
     },
     {
         "id": "namethee",
         "name": "Naming Suggestions Script",
-        "img": "https://picsum.photos/g/1920/1080?random",
+        "img": "https://placekitten.com/1920/1080",
         "github": "ctrlaltdev/namethee"
     },
     {
         "id": "newstream",
         "name": "CLI News Stream",
-        "img": "https://picsum.photos/g/1920/1080?random",
+        "img": "https://placekitten.com/1920/1080",
         "github": "ctrlaltdev/newstream"
     },
     {
         "id": "UFSC",
         "name": "UFSC",
-        "img": "https://picsum.photos/g/1920/1080?random",
+        "img": "https://placekitten.com/1920/1080",
         "content": "Single page website made for the Defenseur des droits' communication campaign of February '18.",
         "links": [
             {
@@ -110,7 +110,7 @@
     {
         "id": "CC1810",
         "name": "CC1810",
-        "img": "https://picsum.photos/g/1920/1080?random",
+        "img": "https://placekitten.com/1920/1080",
         "content": "Landing page for 2018 Défenseur des droits communication campaign dedicated to children's rights.",
         "links": [
             {
@@ -122,7 +122,7 @@
     {
         "id": "CC1710",
         "name": "CC1710",
-        "img": "https://picsum.photos/g/1920/1080?random",
+        "img": "https://placekitten.com/1920/1080",
         "content": "Landing page for 2017 Défenseur des droits communication campaign.",
         "links": [
             {
@@ -134,7 +134,7 @@
     {
         "id": "CC1610",
         "name": "CC1610",
-        "img": "https://picsum.photos/g/1920/1080?random",
+        "img": "https://placekitten.com/1920/1080",
         "content": "Landing page for 2016 Défenseur des droits communication campaign.",
         "links": [
             {
@@ -146,7 +146,7 @@
     {
         "id": "ApacheMag",
         "name": "Apache Magazine",
-        "img": "https://picsum.photos/g/1920/1080?random",
+        "img": "https://placekitten.com/1920/1080",
         "content": "A French online lifestyle and opinions magazine run by volunteers.",
         "links": [
             {

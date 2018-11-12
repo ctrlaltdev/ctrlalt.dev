@@ -7,6 +7,12 @@
         "npm": "pugserver"
     },
     {
+        "id": "DYIDDNS",
+        "name": "DIY Dynamic DNS",
+        "img": "https://placekitten.com/1920/1080",
+        "github": "ctrlaltdev/DIYDDNS"
+    },
+    {
         "id": "LMGTFY",
         "name": "Let Me Google That For You Queries",
         "img": "https://placekitten.com/1920/1080",

@@ -31,10 +31,10 @@
         "github": "ctrlaltdev/WYD"
     },
     {
-        "id": "RLO",
-        "name": "Right-to-left Override Attack POC",
+        "id": "RTLO",
+        "name": "Right-To-left Override Attack POC",
         "img": "https://placekitten.com/1920/1080",
-        "github": "ctrlaltdev/RLO-attack"
+        "github": "ctrlaltdev/RTLO-attack"
     },
     {
         "id": "socialcall",

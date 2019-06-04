@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "name": "ctrlalt.dev",
+  "builds": [
+    { "src": "next.config.js", "use": "@now/next" }
+  ],
+  "routes": [
+    { "src": "/(?<id>[^/]+)$", "dest": "/project?id=$id" }
+  ],
+  "alias": ["ctrlalt.dev", "ctrlaltdev.now.sh"]
+}

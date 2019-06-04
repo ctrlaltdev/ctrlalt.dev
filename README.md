@@ -1,6 +1,5 @@
-[![Travis](https://img.shields.io/travis/com/ctrlaltdev/ctrlaltdev.github.io.svg?style=for-the-badge)](https://travis-ci.com/ctrlaltdev/ctrlaltdev.github.io/)
-[![Website](https://img.shields.io/website-up-down-green-red/https/ctrlaltdev.xyz.svg?style=for-the-badge)](https://ctrlaltdev.xyz)
+[![Website](https://img.shields.io/website-up-down-green-red/https/ctrlaltdev.xyz.svg?style=for-the-badge)](https://ctrlalt.dev)
 [![license](https://img.shields.io/github/license/ctrlaltdev/ctrlaltdev.github.io.svg?style=for-the-badge)](https://github.com/ctrlaltdev/ctrlaltdev.github.io/blob/master/LICENSE)
 ![HTML5](https://img.shields.io/badge/_-HTML-E44D26.svg?style=for-the-badge)
 ![Sass](https://img.shields.io/badge/_-Sass-CC6699.svg?style=for-the-badge)
-![TypeScript](https://img.shields.io/badge/_-TS-007ACC.svg?style=for-the-badge)
+![JavaScript](https://img.shields.io/badge/_-JS-F0DB4F.svg?style=for-the-badge)

@@ -5,7 +5,8 @@
     { "src": "next.config.js", "use": "@now/next" }
   ],
   "routes": [
-    { "src": "/(?<id>[^/]+)$", "dest": "/project?id=$id" }
+    { "src": "/(?<id>[^/]+)$", "dest": "/project?id=$id" },
+    { "src": "/PGPKEY.txt", "dest": "/static/PGPKEY.txt" }
   ],
   "alias": ["ctrlalt.dev", "ctrlaltdev.now.sh"]
 }

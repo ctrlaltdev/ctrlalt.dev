@@ -1,11 +1,10 @@
 import '../style/Footer.sass'
-import LinkFile from './Links/LinkFile'
 import ExtLink from './Links/ExtLink'
 
 const Footer = () => (
   <footer className="Footer">
     <ul>
-      <li><LinkFile to="/static/PGPKEY.txt">PGPKEY</LinkFile></li>
+      <li><ExtLink to="/PGPKEY.txt">PGPKEY</ExtLink></li>
     </ul>
     <nav>
       <ul>

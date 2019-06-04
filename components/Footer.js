@@ -4,7 +4,7 @@ import ExtLink from './Links/ExtLink'
 const Footer = () => (
   <footer className="Footer">
     <ul>
-      <li><ExtLink to="/PGPKEY.txt">PGPKEY</ExtLink></li>
+      <li><ExtLink to="/static/PGPKEY.txt">PGPKEY</ExtLink></li>
     </ul>
     <nav>
       <ul>

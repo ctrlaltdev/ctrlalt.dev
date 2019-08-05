@@ -1,19 +1,17 @@
-import { withRouter } from 'next/router'
 import * as Markdown from 'react-markdown'
 
 import fetch from 'isomorphic-unfetch'
 
 import '../style/ProjectPage.sass'
-import jsonProjects from './Projects.json'
 
 class ProjectPage extends React.Component {
   constructor(props) {
     super(props)
 
-    this.project = jsonProjects.filter((proj) => (proj.id === this.props.router.query.id) ? true : false)[0]
+    this.project = this.props.project
 
     this.state = {
-      path: this.props.router.asPath,
+      path: this.props.url.asPath,
       id: this.project.id,
       name: this.project.name,
       img: this.project.img,
@@ -104,4 +102,4 @@ class ProjectPage extends React.Component {
   }
 }
 
-export default withRouter(ProjectPage)
+export default ProjectPage

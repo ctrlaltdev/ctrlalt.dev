@@ -25,6 +25,12 @@
         "github": "ctrlaltdev/illegal-auth-attempts"
     },
     {
+        "id": "makePi",
+        "name": "makePi",
+        "img": "https://placekitten.com/1920/1080",
+        "github": "ctrlaltdev/makePi"
+    },
+    {
         "id": "WYD",
         "name": "What You Doin' CLI Task Manager",
         "img": "https://placekitten.com/1920/1080",

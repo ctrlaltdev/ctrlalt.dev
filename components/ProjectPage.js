@@ -66,33 +66,28 @@ class ProjectPage extends React.Component {
   }
 
   getLinks() {
+    const linkList = []
+
+    if (this.project.github) {
+      linkList.push(<li key="github"><a href={`https://github.com/${this.project.github}`} target="_blank" onMouseOver={this.backgroundColor}>view on github</a></li>)
+    }
+    if (this.project.npm) {
+      linkList.push(<li key="npm"><a href={`https://npmjs.com/package/${this.project.npm}`} target="_blank" onMouseOver={this.backgroundColor}>view on npm</a></li>)
+    }
+    if (this.project.codepen) {
+      linkList.push(<li key="codepen"><a href={`https://codepen.io/${this.project.codepen}`} target="_blank" onMouseOver={this.backgroundColor}>view on codepen</a></li>)
+    }
     if (this.project.links) {
 
       const links = this.project.links
-      const linkList = []
   
       links.map(link => {
         linkList.push(<li key={link.txt}><a href={link.href} target="_blank" onMouseOver={this.backgroundColor}>{link.txt}</a></li>)
       })
-  
-      this.setState({links: linkList})
 
-    } else {
+    } 
 
-      const linkList = []
-      if (this.project.github) {
-        linkList.push(<li key="github"><a href={`https://github.com/${this.project.github}`} target="_blank" onMouseOver={this.backgroundColor}>view on github</a></li>)
-      }
-      if (this.project.npm) {
-        linkList.push(<li key="npm"><a href={`https://npmjs.com/package/${this.project.npm}`} target="_blank" onMouseOver={this.backgroundColor}>view on npm</a></li>)
-      }
-      if (this.project.codepen) {
-        linkList.push(<li key="codepen"><a href={`https://codepen.io/${this.project.codepen}`} target="_blank" onMouseOver={this.backgroundColor}>view on codepen</a></li>)
-      }
-
-      this.setState({links: linkList})
-
-    }
+    this.setState({links: linkList})
   }
 
   backgroundColor(e) {

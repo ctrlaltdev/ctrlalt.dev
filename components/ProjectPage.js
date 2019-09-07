@@ -69,13 +69,13 @@ class ProjectPage extends React.Component {
     const linkList = []
 
     if (this.project.github) {
-      linkList.push(<li key="github"><a href={`https://github.com/${this.project.github}`} target="_blank" onMouseOver={this.backgroundColor}>view on github</a></li>)
+      linkList.push(<li key="github"><a href={`https://github.com/${this.project.github}`} target="_blank" onMouseOver={this.backgroundColor}>github</a></li>)
     }
     if (this.project.npm) {
-      linkList.push(<li key="npm"><a href={`https://npmjs.com/package/${this.project.npm}`} target="_blank" onMouseOver={this.backgroundColor}>view on npm</a></li>)
+      linkList.push(<li key="npm"><a href={`https://npmjs.com/package/${this.project.npm}`} target="_blank" onMouseOver={this.backgroundColor}>npm</a></li>)
     }
     if (this.project.codepen) {
-      linkList.push(<li key="codepen"><a href={`https://codepen.io/${this.project.codepen}`} target="_blank" onMouseOver={this.backgroundColor}>view on codepen</a></li>)
+      linkList.push(<li key="codepen"><a href={`https://codepen.io/${this.project.codepen}`} target="_blank" onMouseOver={this.backgroundColor}>codepen</a></li>)
     }
     if (this.project.links) {
 

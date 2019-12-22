@@ -1,0 +1,248 @@
+.ErrorPage__404 {
+  text-align: center;
+  font-size: 25vmin; }
+
+.ProjectPage {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 2rem; }
+  .ProjectPage header {
+    flex: 1 0 100%;
+    margin: 2rem; }
+  .ProjectPage h2,
+  .ProjectPage h3,
+  .ProjectPage h4,
+  .ProjectPage h5,
+  .ProjectPage h6 {
+    font-family: 'Yantramanav', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700; }
+  .ProjectPage h2 {
+    font-size: 4rem; }
+  .ProjectPage h3 {
+    font-size: 3rem; }
+  .ProjectPage h4,
+  .ProjectPage h5,
+  .ProjectPage h6 {
+    font-size: 2em; }
+  .ProjectPage section {
+    flex: 1 1 calc(50% - 4rem);
+    margin: 0 2rem; }
+    @media only screen and (max-width: 735px) {
+      .ProjectPage section {
+        flex: 1 1 100%;
+        max-width: calc(100% - 4rem); } }
+    .ProjectPage section img {
+      width: 100%;
+      height: auto; }
+    .ProjectPage section article {
+      margin: 2rem 0;
+      font-size: 2rem; }
+      .ProjectPage section article p {
+        margin: 1rem 0;
+        line-height: 1.4; }
+      .ProjectPage section article a {
+        color: unset;
+        text-decoration: none; }
+      .ProjectPage section article img {
+        height: auto;
+        max-width: 100%; }
+      .ProjectPage section article img[src^="https://img"] {
+        max-height: 4rem;
+        width: auto; }
+      .ProjectPage section article table {
+        width: 100%;
+        border: solid 2px #DDD; }
+        .ProjectPage section article table tr:hover {
+          background-color: #DDD; }
+        .ProjectPage section article table th {
+          background-color: #DDD;
+          text-align: left; }
+        .ProjectPage section article table th, .ProjectPage section article table td {
+          padding: 1rem 2rem; }
+      .ProjectPage section article p > code {
+        padding: 0 1rem;
+        font-style: italic; }
+      .ProjectPage section article code {
+        font-family: 'Space Mono', monospace; }
+      .ProjectPage section article pre {
+        background-color: #333;
+        color: white;
+        padding: 2rem;
+        border-radius: 2px;
+        overflow-x: auto; }
+    .ProjectPage section footer {
+      margin: 2rem 0; }
+      .ProjectPage section footer ul {
+        padding: 0;
+        list-style: none; }
+        .ProjectPage section footer ul li {
+          display: inline-block;
+          margin: 2rem; }
+        .ProjectPage section footer ul a {
+          padding: 1rem 2rem;
+          font-size: 2rem;
+          text-decoration: none;
+          color: #DDD;
+          background-color: #333;
+          background-size: 400%;
+          background-position: 100% 0%;
+          transition: background-position 2s, color 2s; }
+          .ProjectPage section footer ul a:hover {
+            background-position: 0% 0%;
+            color: #111;
+            transition: background-position 1s, color 1s; }
+          .ProjectPage section footer ul a.Turquoise {
+            background-image: linear-gradient(45deg, Turquoise, Turquoise 50%, #333 50%, #333); }
+          .ProjectPage section footer ul a.Aquamarine {
+            background-image: linear-gradient(45deg, Aquamarine, Aquamarine 50%, #333 50%, #333); }
+          .ProjectPage section footer ul a.SteelBlue {
+            background-image: linear-gradient(45deg, SteelBlue, SteelBlue 50%, #333 50%, #333); }
+          .ProjectPage section footer ul a.Chartreuse {
+            background-image: linear-gradient(45deg, Chartreuse, Chartreuse 50%, #333 50%, #333); }
+          .ProjectPage section footer ul a.SpringGreen {
+            background-image: linear-gradient(45deg, SpringGreen, SpringGreen 50%, #333 50%, #333); }
+          .ProjectPage section footer ul a.ForestGreen {
+            background-image: linear-gradient(45deg, ForestGreen, ForestGreen 50%, #333 50%, #333); }
+          .ProjectPage section footer ul a.OliveDrab {
+            background-image: linear-gradient(45deg, OliveDrab, OliveDrab 50%, #333 50%, #333); }
+          .ProjectPage section footer ul a.Gold {
+            background-image: linear-gradient(45deg, Gold, Gold 50%, #333 50%, #333); }
+          .ProjectPage section footer ul a.Khaki {
+            background-image: linear-gradient(45deg, Khaki, Khaki 50%, #333 50%, #333); }
+          .ProjectPage section footer ul a.Coral {
+            background-image: linear-gradient(45deg, Coral, Coral 50%, #333 50%, #333); }
+          .ProjectPage section footer ul a.OrangeRed {
+            background-image: linear-gradient(45deg, OrangeRed, OrangeRed 50%, #333 50%, #333); }
+          .ProjectPage section footer ul a.DarkOrange {
+            background-image: linear-gradient(45deg, DarkOrange, DarkOrange 50%, #333 50%, #333); }
+          .ProjectPage section footer ul a.IndianRed {
+            background-image: linear-gradient(45deg, IndianRed, IndianRed 50%, #333 50%, #333); }
+          .ProjectPage section footer ul a.Salmon {
+            background-image: linear-gradient(45deg, Salmon, Salmon 50%, #333 50%, #333); }
+          .ProjectPage section footer ul a.FireBrick {
+            background-image: linear-gradient(45deg, FireBrick, FireBrick 50%, #333 50%, #333); }
+          .ProjectPage section footer ul a.Crimson {
+            background-image: linear-gradient(45deg, Crimson, Crimson 50%, #333 50%, #333); }
+          .ProjectPage section footer ul a.MediumVioletRed {
+            background-image: linear-gradient(45deg, MediumVioletRed, MediumVioletRed 50%, #333 50%, #333); }
+          .ProjectPage section footer ul a.HotPink {
+            background-image: linear-gradient(45deg, HotPink, HotPink 50%, #333 50%, #333); }
+          .ProjectPage section footer ul a.DeepPink {
+            background-image: linear-gradient(45deg, DeepPink, DeepPink 50%, #333 50%, #333); }
+          .ProjectPage section footer ul a.Orchid {
+            background-image: linear-gradient(45deg, Orchid, Orchid 50%, #333 50%, #333); }
+
+.About {
+  height: 100vh;
+  background-color: GhostWhite;
+  padding: 0;
+  margin: 0 0 2rem; }
+  .About h2 {
+    font-family: 'Yantramanav', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 11rem;
+    margin: 0 0 2rem;
+    padding: calc(35vh - 8rem) 2rem 0; }
+    @media only screen and (max-width: 735px) {
+      .About h2 {
+        padding: 2rem 2rem 0;
+        font-size: 8rem; } }
+  .About .intro {
+    position: relative;
+    top: -2rem;
+    margin: 0;
+    padding: 0 2rem;
+    font-size: 2rem; }
+  .About .techs {
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    padding: 0 1rem; }
+    .About .techs li {
+      flex: 0 1 auto;
+      width: calc(100% / 9 - 2rem);
+      min-width: 10rem;
+      margin: 1rem;
+      padding: 0; }
+      .About .techs li svg {
+        max-width: 100%;
+        height: auto;
+        margin: 0;
+        font-size: 10rem;
+        fill: #333;
+        text-anchor: end; }
+
+.Project {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  background: center / cover no-repeat #222;
+  margin: 1rem; }
+  .Project a {
+    flex: 0 0 auto;
+    font-size: 3rem;
+    text-decoration: none;
+    color: #222;
+    padding: 1rem;
+    max-width: 100%;
+    box-sizing: border-box; }
+  .Project h3 {
+    text-transform: uppercase;
+    font-family: 'Yantramanav', sans-serif;
+    font-weight: 700;
+    margin: 0;
+    padding: 2rem 3rem; }
+    .Project h3.Turquoise {
+      color: Turquoise; }
+    .Project h3.Aquamarine {
+      color: Aquamarine; }
+    .Project h3.SteelBlue {
+      color: SteelBlue; }
+    .Project h3.Chartreuse {
+      color: Chartreuse; }
+    .Project h3.SpringGreen {
+      color: SpringGreen; }
+    .Project h3.ForestGreen {
+      color: ForestGreen; }
+    .Project h3.OliveDrab {
+      color: OliveDrab; }
+    .Project h3.Gold {
+      color: Gold; }
+    .Project h3.Khaki {
+      color: Khaki; }
+    .Project h3.Coral {
+      color: Coral; }
+    .Project h3.OrangeRed {
+      color: OrangeRed; }
+    .Project h3.DarkOrange {
+      color: DarkOrange; }
+    .Project h3.IndianRed {
+      color: IndianRed; }
+    .Project h3.Salmon {
+      color: Salmon; }
+    .Project h3.FireBrick {
+      color: FireBrick; }
+    .Project h3.Crimson {
+      color: Crimson; }
+    .Project h3.MediumVioletRed {
+      color: MediumVioletRed; }
+    .Project h3.HotPink {
+      color: HotPink; }
+    .Project h3.DeepPink {
+      color: DeepPink; }
+    .Project h3.Orchid {
+      color: Orchid; }
+
+.Projects {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20vh;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  align-content: flex-start; }
+

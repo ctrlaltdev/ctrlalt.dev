@@ -1,11 +1,5 @@
 [
-    {
-        "id": "pugserver",
-        "name": "Pug Server",
-        "img": "https://placekitten.com/1920/1080",
-        "github": "ctrlaltdev/pug-server",
-        "npm": "pugserver"
-    },
+    
     {
         "id": "DIYDDNS",
         "name": "DIY Dynamic DNS",
@@ -23,6 +17,12 @@
         "name": "Illegal Auth Attempts",
         "img": "https://placekitten.com/1920/1080",
         "github": "ctrlaltdev/illegal-auth-attempts"
+    },
+    {
+        "id": "GHR",
+        "name": "GitHub Release CLI",
+        "img": "https://placekitten.com/1920/1080",
+        "github": "ctrlaltdev/GHR"
     },
     {
         "id": "makePi",
@@ -55,6 +55,12 @@
         ]
     },
     {
+        "id": "PBFS",
+        "name": "Pastebin File System",
+        "img": "https://placekitten.com/1920/1080",
+        "github": "ctrlaltdev/pbfs"
+    },
+    {
         "id": "WYD",
         "name": "What You Doin' CLI Task Manager",
         "img": "https://placekitten.com/1920/1080",
@@ -65,6 +71,13 @@
         "name": "Right-To-left Override Attack POC",
         "img": "https://placekitten.com/1920/1080",
         "github": "ctrlaltdev/RTLO-attack"
+    },
+    {
+        "id": "pugserver",
+        "name": "Pug Server",
+        "img": "https://placekitten.com/1920/1080",
+        "github": "ctrlaltdev/pug-server",
+        "npm": "pugserver"
     },
     {
         "id": "socialcall",
@@ -130,17 +143,5 @@
         "name": "CLI News Stream",
         "img": "https://placekitten.com/1920/1080",
         "github": "ctrlaltdev/newstream"
-    },
-    {
-        "id": "UFSC",
-        "name": "UFSC",
-        "img": "https://placekitten.com/1920/1080",
-        "content": "Single page website made for the Defenseur des droits' communication campaign of February '18.",
-        "links": [
-            {
-                "href": "https://information.defenseurdesdroits.fr/unefemmesurcinq/",
-                "txt": "visit the page"
-            }
-        ]
     }
 ]

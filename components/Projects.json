@@ -1,6 +1,12 @@
 [
     
     {
+        "id": "GHR",
+        "name": "GitHub Release CLI",
+        "img": "https://placekitten.com/1920/1080",
+        "github": "ctrlaltdev/GHR"
+    },
+    {
         "id": "DIYDDNS",
         "name": "DIY Dynamic DNS",
         "img": "https://placekitten.com/1920/1080",
@@ -17,12 +23,6 @@
         "name": "Illegal Auth Attempts",
         "img": "https://placekitten.com/1920/1080",
         "github": "ctrlaltdev/illegal-auth-attempts"
-    },
-    {
-        "id": "GHR",
-        "name": "GitHub Release CLI",
-        "img": "https://placekitten.com/1920/1080",
-        "github": "ctrlaltdev/GHR"
     },
     {
         "id": "makePi",

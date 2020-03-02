@@ -4,7 +4,7 @@ import TechList from './TechList'
 const About = () => (
   <section className="About">
     <h2>Yorick Demichelis</h2>
-    <p className="intro">Tech enthusiast, full stack software engineer, occasional tinkerer and infosec amateur.</p>
+    <p className="intro">code + curiosity + cats</p>
     <ul className="techs">
       {TechList}
     </ul>

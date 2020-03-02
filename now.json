@@ -1,8 +1,0 @@
-{
-  "version": 2,
-  "name": "ctrlalt.dev",
-  "builds": [
-    { "src": "next.config.js", "use": "@now/next" }
-  ],
-  "alias": ["ctrlalt.dev", "ctrlaltdev.now.sh"]
-}

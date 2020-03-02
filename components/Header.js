@@ -27,7 +27,7 @@ class Header extends React.Component {
     return (
       <header className="Header">
         <a href="/">
-          <img src="/static/img/logo.svg" alt="" />
+          <img src="/img/logo.svg" alt="" />
         </a>
         <span className="startPath">~</span>
 

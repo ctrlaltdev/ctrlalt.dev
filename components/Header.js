@@ -20,7 +20,7 @@ class Header extends React.Component {
     this.keyDown = this.keyDown.bind(this)
     this.submitCLI = this.submitCLI.bind(this)
 
-    this.cmds = ['sudo', 'cd', 'ls', 'help', 'rm', 'shutdown']
+    this.cmds = ['sudo', 'cd', 'ls', 'help', 'pwd', 'shutdown']
   }
 
   render() {
@@ -117,16 +117,16 @@ class Header extends React.Component {
           }
         }
       } else if (cmd[0] === 'ls') {
-        this.setState({cli: '', placeholder: "with big powers come big lsponsabilities"})
+        this.setState({cli: '', placeholder: jsonProjects.map(p => p.id).join(' ')})
       } else if (cmd[0] === 'help') {
-        this.setState({cli: '', placeholder: "i really shouldn't do all that here"})
+        this.setState({cli: '', placeholder: "available commands: ls, cd"})
       } else if (cmd[0] === 'sudo') {
-        this.setState({cli: '', placeholder: "user is not sudoers - admin will be notified"})
-      } else if (cmd[0] === 'rm') {
-        this.setState({cli: '', placeholder: "unsuficient priviledges"})
+        this.setState({cli: '', placeholder: "username is not in the sudoers file. This incident will be reported"})
       } else if (cmd[0] === 'shutdown') {
-        this.setState({cli: '', placeholder: "user must be admin"})
+        this.setState({cli: '', placeholder: "unsufficient priviledges"})
       }
+    } else {
+      this.setState({cli: '', placeholder: "unknown command"})
     }
   }
 

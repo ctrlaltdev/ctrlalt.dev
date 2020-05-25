@@ -1,0 +1,16 @@
+name: build
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    name: build website
+    runs-on: ubuntu-latest
+    steps:
+      - name: npm ci
+        run: npm ci
+      - name: build
+        run: npm run build
+      - name: export
+        run: npm run export

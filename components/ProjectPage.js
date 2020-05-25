@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { withRouter } from 'next/router'
 import * as Markdown from 'react-markdown'
 
 import fetch from 'isomorphic-unfetch'
@@ -13,7 +14,7 @@ class ProjectPage extends React.Component {
     this.project = this.props.project
 
     this.state = {
-      path: this.props.url.asPath,
+      path: this.props.router.pathname,
       id: this.project.id,
       name: this.project.name,
       img: this.project.img,
@@ -23,7 +24,7 @@ class ProjectPage extends React.Component {
     this.backgroundColor.bind(this)
   }
 
-  componentdidMount () {
+  componentDidMount () {
     this.getContent()
     this.getLinks()
   }
@@ -97,7 +98,7 @@ class ProjectPage extends React.Component {
 
 ProjectPage.propTypes = {
   project: PropTypes.object,
-  url: PropTypes.object
+  router: PropTypes.object
 }
 
-export default ProjectPage
+export default withRouter(ProjectPage)

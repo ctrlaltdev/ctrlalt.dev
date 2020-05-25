@@ -7,7 +7,7 @@ const DownloadFile = (props) => (
 
 DownloadFile.propTypes = {
   src: PropTypes.string.isRequired,
-  children: PropTypes.element
+  children: PropTypes.any
 }
 
 export default DownloadFile

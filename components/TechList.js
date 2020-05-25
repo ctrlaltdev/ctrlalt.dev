@@ -1,13 +1,15 @@
+import React from 'react'
+
 const list = [
-  {n: 'Node', c: '#83CD29'},
-  {n: 'JavaScript', c: '#F0DB4F'},
-  {n: 'GraphQL', c: '#E535AB'},
-  {n: 'Python', c: '#4B8BBE'},
-  {n: 'PHP', c: '#8892BE'},
-  {n: 'React', c: '#61DBFB'},
-  {n: 'SH', c: '#4EAA25'},
-  {n: 'Docker', c: '#0DB7ED'},
-  {n: 'AWS', c: '#FF9900'}
+  { n: 'Node', c: '#83CD29' },
+  { n: 'JavaScript', c: '#F0DB4F' },
+  { n: 'GraphQL', c: '#E535AB' },
+  { n: 'Python', c: '#4B8BBE' },
+  { n: 'PHP', c: '#8892BE' },
+  { n: 'React', c: '#61DBFB' },
+  { n: 'SH', c: '#4EAA25' },
+  { n: 'Docker', c: '#0DB7ED' },
+  { n: 'AWS', c: '#FF9900' }
 ]
 
 const TechList = list.map(tech => (

@@ -1,15 +1,18 @@
+import React from 'react'
+import PropTypes from 'prop-types'
+
 import Main from '../layouts/Main'
 import { E404 } from '../components/Errors'
 
 import Project from '../components/ProjectPage'
 import jsonProjects from '../components/Projects.json'
 
-const project = props => {
+const ProjectPage = props => {
   const projectExists = jsonProjects.filter(proj => (proj.id === props.id)).length === 1
 
   if (!projectExists) {
     return (
-      <Main title={`404 ¯\\_(ツ)_/¯`}>
+      <Main title={'404 ¯\\_(ツ)_/¯'}>
         <E404 />
       </Main>
     )
@@ -22,8 +25,12 @@ const project = props => {
   )
 }
 
-project.getInitialProps = async ({ query }) => {
+ProjectPage.getInitialProps = async ({ query }) => {
   return { id: query.id }
 }
 
-export default project
+ProjectPage.propTypes = {
+  id: PropTypes.string.isRequired
+}
+
+export default ProjectPage

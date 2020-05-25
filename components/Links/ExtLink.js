@@ -1,5 +1,13 @@
+import React from 'react'
+import PropTypes from 'prop-types'
+
 const ExtLink = (props) => (
-  <a href={props.to} target="_blank">{props.children}</a>
+  <a href={props.to} target="_blank" rel="noreferrer">{props.children}</a>
 )
+
+ExtLink.propTypes = {
+  to: PropTypes.string.isRequired,
+  children: PropTypes.element
+}
 
 export default ExtLink

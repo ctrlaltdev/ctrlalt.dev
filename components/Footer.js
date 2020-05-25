@@ -1,3 +1,5 @@
+import React from 'react'
+
 import '../style/Footer.sass'
 import ExtLink from './Links/ExtLink'
 

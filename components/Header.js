@@ -1,3 +1,6 @@
+import React from 'react'
+import PropTypes from 'prop-types'
+
 import { withRouter } from 'next/router'
 
 import '../style/Header.sass'
@@ -6,14 +9,13 @@ import jsonProjects from './Projects.json'
 const mainPages = []
 
 class Header extends React.Component {
-
   constructor (props) {
     super(props)
 
     this.state = {
-      cli: "",
+      cli: '',
       history: [],
-      placeholder: ""
+      placeholder: ''
     }
 
     this.changeCLI = this.changeCLI.bind(this)
@@ -23,7 +25,7 @@ class Header extends React.Component {
     this.cmds = ['sudo', 'cd', 'ls', 'help', 'pwd', 'shutdown']
   }
 
-  render() {
+  render () {
     return (
       <header className="Header">
         <a href="/">
@@ -40,27 +42,27 @@ class Header extends React.Component {
     )
   }
 
-  componentDidMount() {
+  componentDidMount () {
     const userhistory = localStorage.getItem('history') ? JSON.parse(localStorage.getItem('history')).slice(-100) : []
     this.setState({ userhistory: userhistory })
   }
 
-  changeCLI(e) {
-    this.setState({cli: e.target.value})
+  changeCLI (e) {
+    this.setState({ cli: e.target.value })
   }
 
-  keyDown(e) {
-    if(e.key === 'Tab') {
+  keyDown (e) {
+    if (e.key === 'Tab') {
       e.preventDefault()
-      
-      const cmd = this.state.cli.split(" ")
+
+      const cmd = this.state.cli.split(' ')
       const lastcmd = cmd[cmd.length - 1]
 
       if (cmd.length === 1) {
         const autocomplete = this.autoComplete(this.cmds, lastcmd)
-      
+
         if (autocomplete.length === 1) {
-          this.setState({cli: autocomplete[0], placeholder: ''})
+          this.setState({ cli: autocomplete[0], placeholder: '' })
         }
       } else if (cmd.length === 2) {
         if (cmd[0] === 'cd') {
@@ -69,68 +71,68 @@ class Header extends React.Component {
           const autocomplete = this.autoComplete(directories, lastcmd)
 
           if (autocomplete.length === 1) {
-            this.setState({cli: cmd[0] + ' ' + autocomplete[0], placeholder: ''})
+            this.setState({ cli: cmd[0] + ' ' + autocomplete[0], placeholder: '' })
           }
         }
       }
     } else if (e.key === 'ArrowUp') {
       if (this.state.historyIndex && this.state.historyIndex !== null) {
-        this.setState({cli: this.state.history[this.state.historyIndex-1], historyIndex: this.state.historyIndex-1})
+        this.setState({ cli: this.state.history[this.state.historyIndex - 1], historyIndex: this.state.historyIndex - 1 })
       } else {
-        this.setState({cli: this.state.history[this.state.history.length-1], historyIndex: this.state.history.length-1})
+        this.setState({ cli: this.state.history[this.state.history.length - 1], historyIndex: this.state.history.length - 1 })
       }
     } else if (e.key === 'ArrowDown') {
-      if (this.state.historyIndex && this.state.historyIndex !== null) {     
-        this.setState({cli: this.state.history[this.state.historyIndex+1], historyIndex: this.state.historyIndex+1})
-        if (this.state.historyIndex === this.state.history.length-1) {
-          this.setState({cli: '', historyIndex: null})
+      if (this.state.historyIndex && this.state.historyIndex !== null) {
+        this.setState({ cli: this.state.history[this.state.historyIndex + 1], historyIndex: this.state.historyIndex + 1 })
+        if (this.state.historyIndex === this.state.history.length - 1) {
+          this.setState({ cli: '', historyIndex: null })
         }
       }
     }
   }
 
-  submitCLI(e) {
+  submitCLI (e) {
     e.preventDefault()
 
     const userhistory = this.state.history
     userhistory.push(this.state.cli)
-    this.setState({history: userhistory})
+    this.setState({ history: userhistory })
     localStorage.setItem('history', JSON.stringify(userhistory))
-    
-    const cmd = this.state.cli.split(" ")
 
-    if(this.isCMD(cmd[0])) {
+    const cmd = this.state.cli.split(' ')
+
+    if (this.isCMD(cmd[0])) {
       if (cmd.length === 2 && cmd[0] === 'cd') {
         if (this.isHomePath(cmd[1])) {
-          this.setState({cli: '', placeholder: ''})
+          this.setState({ cli: '', placeholder: '' })
           location.assign(`${window.location.origin}/`)
         } else {
           const projList = jsonProjects.map((proj) => proj.id)
           const directories = projList.concat(mainPages)
-          const autocomplete = this.autoComplete(directories, cmd[cmd.length-1])
+          const autocomplete = this.autoComplete(directories, cmd[cmd.length - 1])
 
           if (autocomplete.length === 1) {
-            this.setState({cli: '', placeholder: ''})
+            this.setState({ cli: '', placeholder: '' })
             location.assign(`${window.location.origin}/${cmd[1]}`)
           } else {
-            this.setState({cli: '', placeholder: cmd[1] + ' is not a directory'})
+            this.setState({ cli: '', placeholder: cmd[1] + ' is not a directory' })
           }
         }
       } else if (cmd[0] === 'ls') {
-        this.setState({cli: '', placeholder: jsonProjects.map(p => p.id).join(' ')})
+        this.setState({ cli: '', placeholder: jsonProjects.map(p => p.id).join(' ') })
       } else if (cmd[0] === 'help') {
-        this.setState({cli: '', placeholder: "available commands: ls, cd"})
+        this.setState({ cli: '', placeholder: 'available commands: ls, cd' })
       } else if (cmd[0] === 'sudo') {
-        this.setState({cli: '', placeholder: "username is not in the sudoers file. This incident will be reported"})
+        this.setState({ cli: '', placeholder: 'username is not in the sudoers file. This incident will be reported' })
       } else if (cmd[0] === 'shutdown') {
-        this.setState({cli: '', placeholder: "unsufficient priviledges"})
+        this.setState({ cli: '', placeholder: 'unsufficient priviledges' })
       }
     } else {
-      this.setState({cli: '', placeholder: "unknown command"})
+      this.setState({ cli: '', placeholder: 'unknown command' })
     }
   }
 
-  autoComplete(arraysrc, match) {
+  autoComplete (arraysrc, match) {
     const array = arraysrc.slice(0)
     const matches = []
 
@@ -144,7 +146,7 @@ class Header extends React.Component {
     return matches
   }
 
-  isCMD(cmd) {
+  isCMD (cmd) {
     if (this.cmds.includes(cmd)) {
       return true
     } else {
@@ -152,8 +154,8 @@ class Header extends React.Component {
     }
   }
 
-  isHomePath(path) {
-    if (path === '../' || path === '..' || path === '~' || path === '~/' || path === '/')  {
+  isHomePath (path) {
+    if (path === '../' || path === '..' || path === '~' || path === '~/' || path === '/') {
       return true
     } else {
       return false
@@ -161,13 +163,16 @@ class Header extends React.Component {
   }
 }
 
+Header.propTypes = {
+  router: PropTypes.object
+}
+
 const Title = ({ location }) => {
-  if (location === "/") {
+  if (location === '/') {
     return <h1 className="hidden">CTRL_ALT_DEV</h1>
   } else {
     return <h1>{location}</h1>
   }
-  
 }
 
 export default withRouter(Header)

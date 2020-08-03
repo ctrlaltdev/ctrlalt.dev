@@ -2,7 +2,7 @@ name: build
 on:
   push:
     branches:
-      - master
+      - main
 env:
   NEXT_TELEMETRY_DEBUG: 1
   AZURE_CONTAINER: ${{ secrets.AZURE_CONTAINER }}

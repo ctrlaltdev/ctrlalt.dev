@@ -8,6 +8,9 @@ on:
 
 name: Deploy
 
+env:
+  NEXT_TELEMETRY_DEBUG: 1
+
 jobs:
   deploy:
     name: Build and Deploy
@@ -44,6 +47,10 @@ jobs:
     - name: Upload files
       run: |
         aws s3 sync ./out/ s3://ctrlalt.dev/ --delete
+
+    - name: Invalidate Cache
+      run: |
+        aws cloudfront create-invalidation --distribution-id EFMJC4GLPUI1A --paths "/*"
 
     - name: Deployment success
       if: success()

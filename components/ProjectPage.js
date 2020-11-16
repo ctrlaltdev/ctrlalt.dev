@@ -54,13 +54,14 @@ class ProjectPage extends React.Component {
     )
   }
 
-  getContent () {
+  async getContent () {
     if (this.project.github) {
-      fetch(`https://raw.githubusercontent.com/${this.project.github}/master/README.md`)
-        .then(r => r.text())
-        .then(r => {
-          this.setState({ content: r })
-        })
+      const res = await fetch(`https://raw.githubusercontent.com/${this.project.github}/master/README.md`).then(r => r.text())
+      if (res === '404: Not Found') {
+        const res = await fetch(`https://raw.githubusercontent.com/${this.project.github}/main/README.md`).then(r => r.text())
+        this.setState({ content: res })
+      }
+      this.setState({ content: res })
     } else {
       this.setState({ content: this.project.content })
     }

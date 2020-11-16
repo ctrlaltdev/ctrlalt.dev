@@ -22,8 +22,8 @@ jobs:
       id: deployment
       with:
         token: ${{ github.token }}
-        target_url: https://ctrlalt.dev
-        environment: Website
+        target_url: "https://ctrlalt.dev"
+        environment: "Website"
 
     - name: install
       run: npm ci
@@ -50,7 +50,7 @@ jobs:
       uses: chrnorm/deployment-status@releases/v1
       with:
         token: "${{ github.token }}"
-        target_url: https://ctrlalt.dev
+        target_url: "https://ctrlalt.dev"
         state: "success"
         deployment_id: ${{ steps.deployment.outputs.deployment_id }}
 
@@ -59,6 +59,6 @@ jobs:
       uses: chrnorm/deployment-status@releases/v1
       with:
         token: "${{ github.token }}"
-        target_url: https://ctrlalt.dev
+        target_url: "https://ctrlalt.dev"
         state: "failure"
         deployment_id: ${{ steps.deployment.outputs.deployment_id }}

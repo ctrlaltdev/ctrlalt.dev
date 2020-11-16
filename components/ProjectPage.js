@@ -60,8 +60,9 @@ class ProjectPage extends React.Component {
       if (res === '404: Not Found') {
         const res = await fetch(`https://raw.githubusercontent.com/${this.project.github}/main/README.md`).then(r => r.text())
         this.setState({ content: res })
+      } else {
+        this.setState({ content: res })
       }
-      this.setState({ content: res })
     } else {
       this.setState({ content: this.project.content })
     }

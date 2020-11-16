@@ -1,5 +1,10 @@
 [
-    
+    {
+        "id": "memda",
+        "name": "AWS Lambda Memory Usage Check",
+        "img": "https://placekitten.com/1920/1080",
+        "github": "ctrlaltdev/memda"
+    },
     {
         "id": "GHR",
         "name": "GitHub Release CLI",

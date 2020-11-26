@@ -1,0 +1,72 @@
+.error404
+  height: 100%
+  background-color: rgb(50, 51, 59)
+  font-family: sans-serif
+  animation: 60s infinite colorWheel
+  
+.inner404
+  padding-top: calc(50vh - 20vmin)
+  h1
+    display: flex
+    justify-content: center
+    padding: 0
+    margin: 0 auto
+    font-family: sans-serif
+    font-weight: normal
+    font-size: 40vmin
+    text-align: center
+    color: rgba(0,0,0,0.4)
+    overflow: hidden
+    line-height: 40vmin
+    span
+      flex: 0 0 auto
+      min-width: 30vmin
+    span.looking
+      font-family: monospace
+      z-index: 100 
+      overflow: hidden
+      span
+        position: relative
+        z-index: 1
+        top: 40vmin
+        &.slideup
+        animation: 2s slideup
+  .subtitle
+    text-align: center
+    color: rgba(0,0,0,0.4)
+    padding: 0
+    margin: 0 auto
+    font-size: 8vmin
+    font-weight: bold
+
+@keyframes slideup
+  0%
+    top: 40vmin
+  80%
+    top: 0
+  100%
+    top: -40vmin
+
+@keyframes colorWheel
+  from
+    background-color: rgb(50, 51, 59)
+  10%
+    background-color: turquoise
+  20%
+    background-color: springgreen
+  30%
+    background-color: gold
+  40%
+    background-color: coral
+  50%
+    background-color: firebrick
+  60%
+    background-color: deeppink
+  70%
+    background-color: purple
+  80%
+    background-color: indigo
+  90%
+    background-color: midnightblue
+  to
+    background-color: rgb(50, 51, 59)

@@ -1,0 +1,39 @@
+@use "sass:meta"
+
+$color_bg: #1a1a1a
+$color_bg2: #3a3a3a
+$color_fg: White
+$color_fg2: Silver
+
+$font_body: 'Montserrat', Arial, sans-serif
+$font_title: 'Yantramanav', sans-serif
+$font_name: 'Shape Of Things', 'Yantramanav', sans-serif
+
+\:root
+  --color_bg: #{$color_bg}
+  --color_bg2: #{$color_bg2}
+  --color_fg: #{$color_fg}
+  --color_fg2: #{$color_fg2}
+
+  --font_body: #{inspect($font_body)}
+  --font_title: #{inspect($font_title)}
+  --font_name: #{inspect($font_name)}
+  
+html, body, #___gatsby, #gatsby-focus-wrapper
+  height: 100%
+  font-family: var(--font_body)
+  font-size: 8px
+
+body
+  background-color: var(--color_bg)
+  color: var(--color_fg)
+
+a
+  text-decoration: none
+
+p
+  line-height: 1.5
+
+h1, h2, h3, h4, h5, h6
+  font-family: var(--font_title)
+  line-height: 1.5

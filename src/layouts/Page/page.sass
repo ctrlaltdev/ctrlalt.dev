@@ -1,0 +1,22 @@
+.page
+  display: flex
+  flex-flow: row wrap
+  align-items: flex-start
+  justify-content: center
+  min-height: 100%
+  header
+    width: 100%
+  main
+    max-width: 1200px
+    margin: 4rem auto
+    padding: 0 2rem
+
+    @media (orientation: portrait)
+      margin-top: 7rem
+
+    & > header
+      margin-bottom: 2rem
+      h1
+        font-size: 3rem
+        text-transform: uppercase
+        letter-spacing: 1rem

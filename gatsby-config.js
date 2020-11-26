@@ -5,9 +5,9 @@ require('dotenv').config({
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: 'Aurelien Davennes',
-    description: 'Born and raised in southern France, Aurélien (he/his) is doing his Ph.D. in American Studies and Ethnicity, with a focus on: anthropology, literary theory, affect studies, postcolonial studies, witchcraft and sorcery, magic, sexuality, and diaspora',
-    siteUrl: `https://davennes.us`
+    title: 'CTRL ALT DEV',
+    description: 'Yorick Demichelis',
+    siteUrl: `https://ctrlalt.dev`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -16,24 +16,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-s3`,
       options: {
-        bucketName: "0x766f6964-aurelien-davennes.us",
+        bucketName: "0x766f6964-ctrlaltdev-ctrlalt.dev",
         protocol: "https",
-        hostname: "davennes.us"
+        hostname: "ctrlalt.dev"
       }
     },
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: 'https://davennes.us'
-      }
-    },
-    {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: `xzq75axp1e5g`,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-        localeFilter: locale => locale.code === 'en-US',
-        downloadLocal: true
+        siteUrl: 'https://ctrlalt.dev'
       }
     },
     {

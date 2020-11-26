@@ -1,5 +1,2 @@
 [![Website](https://img.shields.io/website-up-down-green-red/https/ctrlalt.dev.svg?style=for-the-badge)](https://ctrlalt.dev)
 [![license](https://img.shields.io/github/license/ctrlaltdev/ctrlalt.dev.svg?style=for-the-badge)](https://github.com/ctrlaltdev/ctrlalt.dev/blob/master/LICENSE)
-![HTML5](https://img.shields.io/badge/_-HTML-E44D26.svg?style=for-the-badge)
-![Sass](https://img.shields.io/badge/_-Sass-CC6699.svg?style=for-the-badge)
-![JavaScript](https://img.shields.io/badge/_-JS-F0DB4F.svg?style=for-the-badge)

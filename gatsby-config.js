@@ -11,8 +11,25 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        indentedSyntax: true
+      }
+    },  
     `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `CTRL ALT DEV`,
+        short_name: `ctrlaltdev`,
+        start_url: `/`,
+        background_color: `#B3B3B3`,
+        theme_color: `#FF00FF`,
+        display: `minimal-ui`,
+        icon: `static/favicon.png`
+      }
+    },
     {
       resolve: `gatsby-plugin-s3`,
       options: {

@@ -13,9 +13,11 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@juggle/resize-observer": "^3.2.0",
     "classnames": "^2.2.6",
     "gatsby": "^2.24.91",
     "gatsby-plugin-canonical-urls": "^2.3.13",
+    "gatsby-plugin-manifest": "^2.7.0",
     "gatsby-plugin-react-helmet": "^3.3.14",
     "gatsby-plugin-remove-generator": "^1.0.6",
     "gatsby-plugin-robots-txt": "^1.5.3",
@@ -25,6 +27,7 @@
     "isomorphic-unfetch": "^3.1.0",
     "node-sass": "^4.14.1",
     "react": "^16.12.0",
+    "react-cool-dimensions": "^1.1.10",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
     "react-markdown": "^5.0.2"

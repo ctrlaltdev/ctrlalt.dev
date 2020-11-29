@@ -1,0 +1,135 @@
+[
+  {
+    "id": "memda",
+    "name": "Memda",
+    "github": "TechHoldingLLC/memda"
+  },
+  {
+  "id": "kappa",
+  "name": "Kappa",
+  "github": "TechHoldingLLC/kappa"
+  },
+  {
+    "id": "GHR",
+    "name": "GitHub Release CLI",
+    "github": "ctrlaltdev/GHR"
+  },
+  {
+    "id": "DIYDDNS",
+    "name": "DIY Dynamic DNS",
+    "github": "ctrlaltdev/DIYDDNS"
+  },
+  {
+    "id": "LMGTFY",
+    "name": "Let Me Google That For You Queries",
+    "github": "ctrlaltdev/LMGTFY-queries"
+  },
+  {
+    "id": "IAA",
+    "name": "Illegal Auth Attempts",
+    "github": "ctrlaltdev/illegal-auth-attempts"
+  },
+  {
+    "id": "makePi",
+    "name": "makePi",
+    "github": "ctrlaltdev/makePi"
+  },
+  {
+    "id": "impulse",
+    "name": "impulse",
+    "github": "ctrlaltdev/impulse",
+    "links": [
+      {
+        "href": "https://hub.docker.com/r/ctrlaltdev/impulse",
+        "txt": "docker"
+      }
+    ]
+  },
+  {
+    "id": "certpibot",
+    "name": "CertPiBot",
+    "github": "ctrlaltdev/certpibot",
+    "links": [
+      {
+        "href": "https://hub.docker.com/r/ctrlaltdev/certpibot",
+        "txt": "docker"
+      }
+    ]
+  },
+  {
+    "id": "PBFS",
+    "name": "Pastebin File System",
+    "github": "ctrlaltdev/pbfs"
+  },
+  {
+    "id": "WYD",
+    "name": "What You Doin' CLI Task Manager",
+    "github": "ctrlaltdev/WYD"
+  },
+  {
+    "id": "RTLO",
+    "name": "Right-To-left Override Attack POC",
+    "github": "ctrlaltdev/RTLO-attack"
+  },
+  {
+    "id": "pugserver",
+    "name": "Pug Server",
+    "github": "ctrlaltdev/pug-server",
+    "npm": "pugserver"
+  },
+  {
+    "id": "socialcall",
+    "name": "Social Call Browser Extension",
+    "github": "ctrlaltdev/socialcall"
+  },
+  {
+    "id": "commentvoid",
+    "name": "Comment into the Void React Component",
+    "github": "ctrlaltdev/react-comments-void",
+    "npm": "react-comments-void",
+    "codepen": "ctrlaltdev/pen/XPZNNP"
+  },
+  {
+    "id": "matchgame",
+    "name": "Match Game",
+    "github": "ctrlaltdev/matchgame",
+    "npm": "matchgame"
+  },
+  {
+    "id": "wordpuzzle",
+    "name": "Word Puzzle",
+    "github": "ctrlaltdev/wordpuzzle",
+    "npm": "wordpuzzle"
+  },
+  {
+    "id": "multichoicetest",
+    "name": "Multichoice Test",
+    "github": "ctrlaltdev/multichoicetest",
+    "npm": "multichoicetest"
+  },
+  {
+    "id": "isFileUsed",
+    "name": "isFileUsed",
+    "github": "ctrlaltdev/isFileUsed"
+  },
+  {
+    "id": "resume",
+    "name": "Resume Generator",
+    "github": "ctrlaltdev/resume"
+  },
+  {
+    "id": "coverletter",
+    "name": "Cover Letter Generator",
+    "github": "ctrlaltdev/cover-letter"
+  },
+  {
+    "id": "namethee",
+    "name": "Naming Suggestions Script",
+    "github": "ctrlaltdev/namethee"
+  },
+  {
+    "id": "newstream",
+    "name": "CLI News Stream",
+    "github": "ctrlaltdev/newstream"
+  }
+]

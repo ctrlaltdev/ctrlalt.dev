@@ -5,9 +5,9 @@
     "github": "TechHoldingLLC/memda"
   },
   {
-  "id": "kappa",
-  "name": "Kappa",
-  "github": "TechHoldingLLC/kappa"
+    "id": "kappa",
+    "name": "Kappa",
+    "github": "TechHoldingLLC/kappa"
   },
   {
     "id": "GHR",
@@ -68,7 +68,7 @@
   },
   {
     "id": "RTLO",
-    "name": "Right-To-left Override Attack POC",
+    "name": "RTL Override Attack POC",
     "github": "ctrlaltdev/RTLO-attack"
   },
   {

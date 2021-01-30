@@ -1,0 +1,25 @@
+.techlist
+  display: flex
+  flex-flow: row wrap
+
+  &__item
+    flex: 0 0 auto
+    width: calc((1168px - 20rem) / 10)
+    height: 100px
+    padding: 1rem
+    margin: 1rem
+    font-size: 2rem
+    box-sizing: border-box
+    border: 1px solid White
+    background-color: var(--color_bg)
+    text-align: right
+    display: flex
+    align-items: flex-end
+    justify-content: right
+    cursor: pointer
+
+    &--selected
+      border: 0.5rem solid White
+      padding: 5px
+      font-weight: 700
+      font-size: 1.9rem

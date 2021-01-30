@@ -38,24 +38,61 @@ const colorScale = int => {
 
 export const ProjectItem = ({ project, color }) => {
   return (
-    <li style={color}>
+    <li>
       <a href={ `/${project.id}/` }>{ project.name }</a>
     </li>
   )
 }
 
-const ProjectsList = () => {
+const ProjectsList = ({ techs }) => {
+  const active = projects.filter((p) => {
+    if (techs.length > 0) {
+      return p.active && p.keywords.some((e) => techs.indexOf(e) > -1)
+    } else {
+      return p.active
+    }
+  })
+  const unmaintained = projects.filter((p) => {
+    if (techs.length > 0) {
+      return !p.active && p.keywords.some((e) => techs.indexOf(e) > -1)
+    } else {
+      return !p.active
+    }
+  })
+
   return (
-    <ul className='projectslist'>
+    <>
       {
-        projects.map((p, i) => {
-          const color = { backgroundColor: colorScale(i * 100 / projects.length)  }
-          return (
-            <ProjectItem key={ p.id } project={ p } color={ color } />
-          )
-        })
+        active.length > 0 &&
+        <>
+          <h2>Active Projects</h2>
+          <ul className='projectslist'>
+            {
+              active.map((p, i) => {
+                return (
+                  <ProjectItem key={ p.id } project={ p } />
+                )
+              })
+            }
+          </ul>
+        </>
       }
-    </ul>
+      {
+        unmaintained.length > 0 &&
+        <>
+          <h2>Unmaintained Projects</h2>
+          <ul className='projectslist'>
+            {
+              unmaintained.map((p, i) => {
+                return (
+                  <ProjectItem key={ p.id } project={ p } />
+                )
+              })
+            }
+          </ul>
+        </>
+      }
+    </>
   )
 }
 

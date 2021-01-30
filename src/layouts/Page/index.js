@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 
-import Header from '../../components/Header/'
+import BeSVG from '../../components/BeSVG/'
 import Footer from '../../components/Footer/'
 
 import './reset.css'
@@ -13,8 +13,8 @@ const PageLayout = ({ title, children }) => {
   return (
     <>
       <Helmet title={ title ? `${title} - CTRL ALT DEV` : 'CTRL ALT DEV - Yorick Demichelis' } />
+      <BeSVG />
       <div className='project'>
-        <Header />
         <main>
           { title && <header>
             <h1>{ title }</h1>

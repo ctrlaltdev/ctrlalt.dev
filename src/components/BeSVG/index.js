@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './besvg.sass'
 
 const Rect = ({ x, y, w, h, angle, c }) => (
@@ -34,14 +34,19 @@ const GenRects = ({ w, h }) => {
 }
 
 const BeSVG = () => {
-  const width = parseInt(window.innerWidth)
-  const height = parseInt(window.innerHeight)
+  const [dimensions, setDimensions] = useState({ w: 0, h: 0 })
+
+  useEffect(() => {
+    const w = parseInt(window.innerWidth)
+    const h = parseInt(window.innerHeight)
+    setDimensions({ w, h })
+  }, [])
 
   return (
     <svg id='besvg'>
       <GenRects
-        w={ width }
-        h={ height }
+        w={ dimensions.w }
+        h={ dimensions.h }
         />
     </svg>
   )

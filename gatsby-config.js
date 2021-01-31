@@ -7,7 +7,7 @@ module.exports = {
   siteMetadata: {
     title: 'CTRL ALT DEV',
     description: 'Yorick Demichelis',
-    siteUrl: `https://ctrlalt.dev`
+    siteUrl: `https://ctrlalt.dev/`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -33,7 +33,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-s3`,
       options: {
-        bucketName: "0x766f6964-ctrlaltdev-ctrlalt.dev",
+        bucketName: "ctrlalt.dev",
         protocol: "https",
         hostname: "ctrlalt.dev"
       }
@@ -41,7 +41,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: 'https://ctrlalt.dev'
+        siteUrl: 'https://ctrlalt.dev/'
       }
     },
     {

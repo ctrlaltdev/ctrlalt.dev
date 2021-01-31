@@ -34,9 +34,6 @@ jobs:
     - name: build
       run: npm run build
 
-    - name: export
-      run: npm run export
-
     - name: Configure AWS
       uses: aws-actions/configure-aws-credentials@v1
       with:
@@ -46,7 +43,7 @@ jobs:
 
     - name: Upload files
       run: |
-        aws s3 sync ./out/ s3://ctrlalt.dev/ --delete
+        aws s3 sync ./public/ s3://ctrlalt.dev/ --delete
 
     - name: Invalidate Cache
       run: |

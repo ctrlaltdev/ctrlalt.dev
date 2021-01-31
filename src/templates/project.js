@@ -66,11 +66,11 @@ const Links = ({ project }) => {
   )
 }
 
-const Project = ({ pageContext: ctx }) => {
+const Project = ({ pageContext: ctx, location }) => {
   const { project } = ctx
 
   return (
-    <ProjectLayout title={ project.name }>
+    <ProjectLayout title={ project.name } location={ location }>
       <div className='project'>
         <section>
           <header>

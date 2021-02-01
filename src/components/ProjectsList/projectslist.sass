@@ -20,3 +20,14 @@
       color: var(--color_fg2)
       font-family: var(--font_title)
       text-transform: uppercase
+
+.projectslist__title
+  &__inactive
+    cursor: pointer
+    &::before
+      content: '▽'
+      margin-right: 2rem
+      margin-left: -4rem
+    &--open
+      &::before
+        content: '△'

@@ -26,7 +26,7 @@ export default function Home() {
   <PageLayout>
     <div className='home'>
       <section className='home__title'>
-        <div className='home__void'>Yorick Demichelis</div>
+        <h1 className='home__void'>Yorick Demichelis</h1>
       </section>
       <section className='home__tech'>
         <TechList select={ selectTech } selected={ selectedTechs } />

@@ -34,20 +34,22 @@ const GenRects = ({ w, h }) => {
 }
 
 const BeSVG = () => {
-  const [dimensions, setDimensions] = useState({ w: 0, h: 0 })
+  const [dimensions, setDimensions] = useState({ w: 0, h: 0, loaded: false })
 
   useEffect(() => {
     const w = parseInt(window.innerWidth)
     const h = parseInt(window.innerHeight)
-    setDimensions({ w, h })
+    setDimensions({ w, h, loaded: true })
   }, [])
 
   return (
     <svg id='besvg'>
-      <GenRects
-        w={ dimensions.w }
-        h={ dimensions.h }
-        />
+      { dimensions.loaded && 
+        <GenRects
+          w={ dimensions.w }
+          h={ dimensions.h }
+          />
+      }
     </svg>
   )
 }

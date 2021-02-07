@@ -1,34 +1,27 @@
-import React, { useRef } from 'react'
-import useDimensions from 'react-cool-dimensions'
-import { ResizeObserver } from '@juggle/resize-observer'
-import './svg.sass'
+import React, { useRef, useState, useEffect } from 'react'
+import './gensvg.sass'
 
-const randColor = () => {
-  const colors = ['Turquoise', 'Aquamarine', 'SteelBlue', 'MidnightBlue', 'Chartreuse', 'SpringGreen', 'ForestGreen', 'OliveDrab', 'Gold', 'Khaki', 'Coral', 'OrangeRed 	', 'DarkOrange', 'IndianRed', 'Salmon', 'FireBrick', 'Crimson', 'MediumVioletRed', 'HotPink', 'DeepPink', 'Orchid', 'Purple', 'RebeccaPurple', 'Indigo']
-  return colors[Math.floor(Math.random() * colors.length)]
-}
-
-const Rect = ({ x, y, w, h, angle, color = randColor(), stroke = 'Black' }) => (
+const Rect = ({ x, y, w, h, angle, c }) => (
   <rect
     x={ x.toString() }
     y={ y.toString() }
     width={ w.toString() }
     height={ h.toString() }
     transform={ `rotate(${angle}, ${ w / 2 - x }, ${ h / 2 - x })` }
-    fill={ color }
-    stroke={ stroke }
+    stroke={ c }
     />
 )
 
-const GenRects = ({ id, n, w, h }) => {
+const GenRects = ({ w, h }) => {
   const rectangles = []
-  for (let i = 0; i < n; i++) {
+  for (const c of ['Cyan', 'Magenta', 'Yellow']) {
     rectangles.push(<Rect
-        key={ `rect-${id}-${i}` }
+        key={ `rect-${c}` }
         x={ Math.floor(Math.random() * (w / 2)) }
         y={ Math.floor(Math.random() * (h / 2)) }
         w={ Math.floor(Math.random() * (w * 0.2) + w) }
         h={ Math.floor(Math.random() * (h * 0.2) + h) }
+        c={ c }
         angle={ Math.floor(Math.random() * 180) - 90 }
         />
     )
@@ -40,24 +33,24 @@ const GenRects = ({ id, n, w, h }) => {
   )
 }
 
-const GenSVG = ({ id }) => {
-  const ref = useRef()
+const GenSVG = () => {
+  const figure = useRef()
 
-  const { width, height } = useDimensions({
-    ref,
-    polyfill: ResizeObserver
-  })
+  const [dimensions, setDimensions] = useState({ w: 0, h: 0 })
 
-  const n = Math.floor(Math.random() * 7 + 2)
-  
+  useEffect(() => {
+    console.info(figure.current)
+    const w = parseInt(figure.current.width)
+    const h = parseInt(figure.current.height)
+    setDimensions({ w, h })
+  }, [])
+
   return (
-    <figure className='svgure' ref={ ref }>
-      <svg className='svg'>
-        <GenRects 
-          id={ id }
-          n={ n }
-          w={ width }
-          h={ height }
+    <figure ref={figure} className='gensvgure'>
+      <svg className='gensvg'>
+        <GenRects
+          w={ dimensions.w }
+          h={ dimensions.h }
           />
       </svg>
     </figure>

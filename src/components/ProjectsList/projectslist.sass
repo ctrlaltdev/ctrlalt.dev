@@ -31,3 +31,18 @@
     &--open
       &::before
         content: '△'
+    @media (orientation: portrait)
+      &::before
+        content: unset
+        margin-right: unset
+        margin-left: unset
+      &--open
+        &::before
+          content: unset
+      &::after
+        content: '▽'
+        margin-right: -2rem
+        margin-left: 4rem
+      &--open
+        &::after
+          content: '△'

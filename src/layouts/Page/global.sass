@@ -1,24 +1,33 @@
 @use "sass:meta"
 
-$color_bg: #1a1a1a
-$color_bg2: #3a3a3a
-$color_fg: White
-$color_fg2: Silver
+$darker: #1a1a1a
+$dark: #3a3a3a
+$lighter: White
+$light: Silver
 
 $font_body: 'Montserrat', sans-serif
 $font_title: 'Raleway', sans-serif
 $font_mono: 'Hack', monospace
 
 \:root
-  --color_bg: #{$color_bg}
-  --color_bg2: #{$color_bg2}
-  --color_fg: #{$color_fg}
-  --color_fg2: #{$color_fg2}
+  --color_bg: #{$darker}
+  --color_bg2: #{$dark}
+  --color_fg: #{$lighter}
+  --color_fg2: #{$light}
+  --logo: url(/img/logo.svg)
 
   --font_body: #{inspect($font_body)}
   --font_title: #{inspect($font_title)}
   --font_mono: #{inspect($font_mono)}
-  
+
+[data-theme="light"]
+  --color_bg: #{$lighter}
+  --color_bg2: #{$light}
+  --color_fg: #{$darker}
+  --color_fg2: #{$dark}
+  --logo: url(/img/logo_black.svg)
+
+
 html, body, #___gatsby, #gatsby-focus-wrapper
   height: 100%
   font-family: var(--font_body)

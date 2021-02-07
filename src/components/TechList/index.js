@@ -28,7 +28,7 @@ const TechList = ({ select, selected }) => {
             borderColor: tech.c
           }
           return (
-            <li key={tech.n} className={classNames('techlist__item', { 'techlist__item--selected': selected.indexOf(tech.k) > -1 })} onClick={() => select(tech.k)} style={style}>
+            <li key={tech.n} className={classNames('techlist__item', { 'techlist__item--selected': selected.indexOf(tech.k) > -1 })} role='button' tabIndex={0} onKeyPress={() => select(tech.k)} onClick={() => select(tech.k)} style={style}>
               { tech.n }
             </li>
           )

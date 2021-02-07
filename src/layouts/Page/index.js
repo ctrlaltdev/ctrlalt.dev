@@ -2,6 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 
 import BeSVG from '../../components/BeSVG/'
+import ThemeToggle from '../../components/ThemeToggle/'
 import Footer from '../../components/Footer/'
 
 import './reset.css'
@@ -14,6 +15,7 @@ const PageLayout = ({ title, children }) => {
     <>
       <Helmet title={ title ? `${title} - CTRL ALT DEV` : 'CTRL ALT DEV - Yorick Demichelis' } />
       <BeSVG />
+      <ThemeToggle />
       <div className='project'>
         <main>
           { title && <header>

@@ -17,10 +17,10 @@ const GenRects = ({ w, h }) => {
   for (const c of ['Cyan', 'Magenta', 'Yellow']) {
     rectangles.push(<Rect
         key={ `rect-${c}` }
-        x={ Math.floor(Math.random() * (w / 2)) }
-        y={ Math.floor(Math.random() * (h / 2)) }
-        w={ Math.floor(Math.random() * (w * 0.2) + w) }
-        h={ Math.floor(Math.random() * (h * 0.2) + h) }
+        x={ w / 4 }
+        y={ h / 4 }
+        w={ w / 2 }
+        h={ h / 2 }
         c={ c }
         angle={ Math.floor(Math.random() * 180) - 90 }
         />
@@ -36,22 +36,23 @@ const GenRects = ({ w, h }) => {
 const GenSVG = () => {
   const figure = useRef()
 
-  const [dimensions, setDimensions] = useState({ w: 0, h: 0 })
+  const [dimensions, setDimensions] = useState({ w: 0, h: 0, loaded: false })
 
   useEffect(() => {
-    console.info(figure.current)
-    const w = parseInt(figure.current.width)
-    const h = parseInt(figure.current.height)
-    setDimensions({ w, h })
+    const w = parseInt(figure.current.offsetWidth)
+    const h = parseInt(figure.current.offsetHeight)
+    setDimensions({ w, h, loaded: true })
   }, [])
 
   return (
     <figure ref={figure} className='gensvgure'>
       <svg className='gensvg'>
-        <GenRects
-          w={ dimensions.w }
-          h={ dimensions.h }
-          />
+        { dimensions.loaded && 
+          <GenRects
+            w={ dimensions.w }
+            h={ dimensions.h }
+            />
+        }
       </svg>
     </figure>
   )

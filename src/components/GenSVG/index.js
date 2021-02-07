@@ -7,7 +7,7 @@ const Rect = ({ x, y, w, h, angle, c }) => (
     y={ y.toString() }
     width={ w.toString() }
     height={ h.toString() }
-    transform={ `rotate(${angle}, ${ w / 2 - x }, ${ h / 2 - x })` }
+    transform={ `rotate(${angle}, ${w}, ${h})` }
     stroke={ c }
     />
 )
@@ -15,14 +15,16 @@ const Rect = ({ x, y, w, h, angle, c }) => (
 const GenRects = ({ w, h }) => {
   const rectangles = []
   for (const c of ['Cyan', 'Magenta', 'Yellow']) {
+    const rw = Math.floor(Math.random() * (w / 2 - (w / 6)) + (w / 6))
+    const rh = Math.floor(Math.random() * (h / 2 - (h / 6)) + (h / 6))
     rectangles.push(<Rect
         key={ `rect-${c}` }
-        x={ w / 4 }
-        y={ h / 4 }
-        w={ w / 2 }
-        h={ h / 2 }
+        x={ w / 2 - rw / 2 }
+        y={ h / 2 - rh / 2 }
+        w={ rw }
+        h={ rh }
         c={ c }
-        angle={ Math.floor(Math.random() * 180) - 90 }
+        angle={ Math.floor(Math.random() * 90) - 45 }
         />
     )
   }

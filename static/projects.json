@@ -14,6 +14,32 @@
     "github": "TechHoldingLLC/kappa"
   },
   {
+    "id": "davennes.us",
+    "name": "davennes.us",
+    "active": true,
+    "keywords": ["aws", "js", "tf", "react", "gql"],
+    "github": "ctrlaltdev/davennes.us",
+    "links": [
+      {
+        "href": "https://davennes.us",
+        "txt": "website"
+      }
+    ]
+  },
+  {
+    "id": "ctrlalt.dev",
+    "name": "ctrlalt.dev",
+    "active": true,
+    "keywords": ["aws", "js", "tf", "react"],
+    "github": "ctrlaltdev/ctrlalt.dev",
+    "links": [
+      {
+        "href": "https://ctrlalt.dev",
+        "txt": "website"
+      }
+    ]
+  },
+  {
     "id": "GHR",
     "name": "GitHub Release CLI",
     "active": false,

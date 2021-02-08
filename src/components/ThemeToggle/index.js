@@ -5,7 +5,7 @@ import { handler, get } from '../../utils/theme'
 import './themetoggle.sass'
 
 const ThemeToggle = () => {
-  const [theme, setTheme] = useState(get())
+  const [theme, setTheme] = useState('dark')
 
   useEffect(() => {
     handler(get())

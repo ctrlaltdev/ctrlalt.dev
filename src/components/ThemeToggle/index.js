@@ -9,6 +9,7 @@ const ThemeToggle = () => {
 
   useEffect(() => {
     handler(get())
+    setTheme(get())
   }, [])
 
   const themeHandler = (e) => {

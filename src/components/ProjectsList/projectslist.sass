@@ -1,0 +1,48 @@
+.projectslist
+  width: 100%
+  min-height: 60vh
+  // display: flex
+  // flex-flow: row wrap
+  // align-content: center
+  
+  li
+    // flex: 1 0 auto
+    margin: 8rem 2rem
+    font-weight: 600
+    letter-spacing: 2px
+
+    a
+      display: inline-block
+      background-color: unset
+      padding: 2rem
+      font-size: 3rem
+      border: 2px solid var(--color_fg)
+      color: var(--color_fg2)
+      font-family: var(--font_title)
+      text-transform: uppercase
+
+.projectslist__title
+  &__inactive
+    cursor: pointer
+    &::before
+      content: '▽'
+      margin-right: 2rem
+      margin-left: -4rem
+    &--open
+      &::before
+        content: '△'
+    @media (orientation: portrait)
+      &::before
+        content: unset
+        margin-right: unset
+        margin-left: unset
+      &--open
+        &::before
+          content: unset
+      &::after
+        content: '▽'
+        margin-right: -2rem
+        margin-left: 4rem
+      &--open
+        &::after
+          content: '△'

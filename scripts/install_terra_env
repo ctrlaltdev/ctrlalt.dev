@@ -1,0 +1,30 @@
+#!/bin/sh
+
+TFV=1.0.2
+TGV=0.0.3
+
+echo Installing tfenv v$TFV
+git clone -b v$TFV --depth 1 https://github.com/tfutils/tfenv.git ~/.tfenv
+
+echo Installing tgenv v$TGV
+git clone -b v$TGV --depth 1 https://github.com/cunymatthieu/tgenv.git ~/.tgenv
+
+if [[ $SHELL = '/bin/zsh' ]];
+then
+  echo 'export PATH="$HOME/.tfenv/bin:$PATH"' >> ~/.zshrc
+  echo 'export PATH="$HOME/.tgenv/bin:$PATH"' >> ~/.zshrc
+  echo 'Exectuables added to your path, reload your ~/.zshrc'
+elif [[ $SHELL = '/bin/bash' ]];
+then
+  echo 'export PATH="$HOME/.tfenv/bin:$PATH"' >> ~/.bashrc
+  echo 'export PATH="$HOME/.tgenv/bin:$PATH"' >> ~/.bashrc
+  echo 'Exectuables added to your path, reload your ~/.bashrc'
+else
+  echo 'Add tfenv to your path: export PATH="$HOME/.tfenv/bin:$PATH"'
+  echo 'Add tgenv to your path: export PATH="$HOME/.tgenv/bin:$PATH"'
+fi
+
+export PATH="$HOME/.tfenv/bin:$PATH"
+export PATH="$HOME/.tgenv/bin:$PATH"
+
+echo Done

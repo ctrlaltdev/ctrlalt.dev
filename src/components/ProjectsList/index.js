@@ -14,6 +14,12 @@ export const ProjectItem = ({ project, color }) => {
   )
 }
 
+const renderProjectItemList = (p, i) => {
+  return (
+    <ProjectItem key={ p.id } project={ p } />
+  )
+}
+
 const ProjectsList = ({ techs }) => {
 
   const [inactives, toggleInactives] = useState(false)
@@ -41,11 +47,7 @@ const ProjectsList = ({ techs }) => {
           <h2 className={ classNames('projectslist__title', 'projectslist__title__active') }>Active Projects</h2>
           <ul className='projectslist'>
             {
-              active.map((p, i) => {
-                return (
-                  <ProjectItem key={ p.id } project={ p } />
-                )
-              })
+              active.map(renderProjectItemList)
             }
           </ul>
         </>
@@ -58,11 +60,7 @@ const ProjectsList = ({ techs }) => {
             inactives &&
               <ul className='projectslist'>
                 {
-                  unmaintained.map((p, i) => {
-                    return (
-                      <ProjectItem key={ p.id } project={ p } />
-                    )
-                  })
+                  unmaintained.map(renderProjectItemList)
                 }
               </ul>
           }

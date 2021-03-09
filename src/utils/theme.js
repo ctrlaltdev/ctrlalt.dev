@@ -1,7 +1,4 @@
-const get = () => {
-  const theme = window.localStorage.getItem('theme') || 'dark'
-  return theme
-}
+const get = () => (window.localStorage.getItem('theme') || 'dark')
 
 const set = (theme = 'dark') => {
   window.localStorage.setItem('theme', theme)

@@ -10,7 +10,7 @@ const PageLayout = ({ title, children, location }) => {
   return (
     <>
       <Helmet title={ title ? `${title} - CTRL ALT DEV` : 'CTRL ALT DEV - Yorick Demichelis' } />
-      <div className='page'>
+      <div className='project'>
         <Header path pathname={ location.pathname } />
         <main>
           { title && <header>

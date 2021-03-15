@@ -22,6 +22,7 @@ const renderProjectItemList = (p, i) => {
 
 const ProjectsList = ({ techs }) => {
 
+  const [actives, toggleActives] = useState(false)
   const [inactives, toggleInactives] = useState(false)
 
   const active = projects.filter((p) => {
@@ -44,12 +45,15 @@ const ProjectsList = ({ techs }) => {
       {
         active.length > 0 &&
         <>
-          <h2 className={ classNames('projectslist__title', 'projectslist__title__active') }>Active Projects</h2>
-          <ul className='projectslist'>
-            {
-              active.map(renderProjectItemList)
-            }
-          </ul>
+          <h2 className={ classNames('projectslist__title', 'projectslist__title__active', actives && 'projectslist__title__active--open') }  role='button' tabIndex={0} onKeyPress={ () => toggleActives(!actives) } onClick={ () => toggleActives(!actives) }>Active Projects</h2>
+          {
+            actives &&
+              <ul className='projectslist'>
+                {
+                  active.map(renderProjectItemList)
+                }
+              </ul>
+          }
         </>
       }
       {

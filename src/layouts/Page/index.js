@@ -16,7 +16,7 @@ const PageLayout = ({ title, children }) => {
       <Helmet title={ title ? `${title} - CTRL ALT DEV` : 'CTRL ALT DEV - Yorick Demichelis' } />
       <BeSVG />
       <ThemeToggle />
-      <div className='project'>
+      <div className='page'>
         <main>
           { title && <header>
             <h1>{ title }</h1>

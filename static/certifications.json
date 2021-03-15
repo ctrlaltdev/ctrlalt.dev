@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Terraform",
+    "url": "https://www.youracclaim.com/badges/df8e7311-e070-4f57-815a-066cc1a5078a/embedded",
+    "img": "/img/cert-terraform.png",
+    "id": "df8e7311-e070-4f57-815a-066cc1a5078a",
+    "title": "HashiCorp Certified: Terraform Associate",
+    "enabled": true
+  }
+]

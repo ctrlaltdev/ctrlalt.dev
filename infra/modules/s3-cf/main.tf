@@ -128,6 +128,7 @@ resource "aws_cloudfront_distribution" "d" {
     min_ttl                = 0
     default_ttl            = 3600
     max_ttl                = 86400
+    compress               = true
   }
 
   price_class = "PriceClass_100"

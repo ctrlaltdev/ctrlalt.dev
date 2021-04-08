@@ -1,5 +1,12 @@
 [
   {
+    "id": "thi",
+    "name": "THI",
+    "active": true,
+    "keywords": ["go"],
+    "github": "ctrlaltdev/thi"
+  },
+  {
     "id": "srv42",
     "name": "srv42",
     "active": true,

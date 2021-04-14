@@ -1,10 +1,10 @@
 [
   {
-    "id": "thi",
-    "name": "THI",
+    "id": "harvest",
+    "name": "Harvest CLI",
     "active": true,
     "keywords": ["go"],
-    "github": "ctrlaltdev/thi"
+    "github": "ctrlaltdev/harvest-cli"
   },
   {
     "id": "srv42",

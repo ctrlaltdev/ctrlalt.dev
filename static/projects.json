@@ -1,5 +1,26 @@
 [
   {
+    "id": "imgen",
+    "name": "imgen",
+    "active": true,
+    "keywords": ["go"],
+    "github": "ctrlaltdev/imgen",
+    "links": [
+      {
+        "href": "https://imgen.ctrlalt.dev/svg/1600/800/",
+        "txt": "svg"
+      },
+      {
+        "href": "https://imgen.ctrlalt.dev/png/1600/800/",
+        "txt": "png"
+      },
+      {
+        "href": "https://imgen.ctrlalt.dev/jpg/1600/800/",
+        "txt": "jpg"
+      }
+    ]
+  },
+  {
     "id": "harvest",
     "name": "Harvest CLI",
     "active": true,

@@ -7,6 +7,10 @@
     "github": "ctrlaltdev/imgen",
     "links": [
       {
+        "href": "https://hub.docker.com/r/ctrlaltdev/imgen",
+        "txt": "docker"
+      },
+      {
         "href": "https://imgen.ctrlalt.dev/svg/1600/800/",
         "txt": "svg"
       },

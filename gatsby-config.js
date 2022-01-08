@@ -11,12 +11,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: 'gatsby-plugin-sass',
-      options: {
-        indentedSyntax: true
-      }
-    },  
+    `gatsby-plugin-sass`,
     `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -31,14 +26,6 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-s3`,
-      options: {
-        bucketName: "ctrlalt.dev",
-        protocol: "https",
-        hostname: "ctrlalt.dev"
-      }
-    },
-    {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
         siteUrl: 'https://ctrlalt.dev/'
@@ -48,12 +35,6 @@ module.exports = {
       resolve: 'gatsby-plugin-remove-generator',
       options: {
         content: 'An old Toaster in a Garage v1.6.3'
-      }
-    },
-    {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        policy: [{ userAgent: '*', allow: '/' }]
       }
     }
   ]

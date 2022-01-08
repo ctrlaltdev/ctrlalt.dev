@@ -16,6 +16,7 @@ const PageLayout = ({ title, children }) => {
       <Helmet title={ title ? `${title} - CTRL ALT DEV` : 'CTRL ALT DEV - Yorick Demichelis' }>
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="theme-color" content="#1a1a1a" />
       </Helmet>
       <BeSVG />
       <ThemeToggle />

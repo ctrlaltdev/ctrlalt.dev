@@ -64,7 +64,7 @@ const Links = ({ project }) => {
   }
 
   return (
-    <ul>
+    <ul className='projlinks'>
       { linkList }
     </ul>
   )

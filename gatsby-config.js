@@ -20,7 +20,6 @@ module.exports = {
         short_name: `ctrlaltdev`,
         start_url: `/`,
         background_color: `#B3B3B3`,
-        theme_color: `#FF00FF`,
         display: `minimal-ui`,
         icon: `static/icon.png`
       }

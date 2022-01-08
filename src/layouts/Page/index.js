@@ -13,7 +13,10 @@ import './page.sass'
 const PageLayout = ({ title, children }) => {
   return (
     <>
-      <Helmet title={ title ? `${title} - CTRL ALT DEV` : 'CTRL ALT DEV - Yorick Demichelis' } />
+      <Helmet title={ title ? `${title} - CTRL ALT DEV` : 'CTRL ALT DEV - Yorick Demichelis' }>
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+      </Helmet>
       <BeSVG />
       <ThemeToggle />
       <div className='page'>

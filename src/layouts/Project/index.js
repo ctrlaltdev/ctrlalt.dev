@@ -10,6 +10,8 @@ const ProjectLayout = ({ title, children, location, color }) => {
   return (
     <>
       <Helmet title={ title ? `${title} - CTRL ALT DEV` : 'CTRL ALT DEV - Yorick Demichelis' }>
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="theme-color" content={color} />
       </Helmet>
       <div className='project'>

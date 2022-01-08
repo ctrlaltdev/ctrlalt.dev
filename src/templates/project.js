@@ -5,10 +5,14 @@ import Markdown from 'react-markdown'
 import ProjectLayout from '../layouts/Project/'
 import GenSVG from '../components/GenSVG/'
 
-const backgroundColor = (e) => {
-  const colors = ['Turquoise', 'Aquamarine', 'SteelBlue', 'Chartreuse', 'SpringGreen', 'ForestGreen', 'OliveDrab', 'Gold', 'Khaki', 'Coral', 'OrangeRed', 'DarkOrange', 'IndianRed', 'Salmon', 'FireBrick', 'Crimson', 'MediumVioletRed', 'HotPink', 'DeepPink', 'Orchid']
+const colors = ['Turquoise', 'Aquamarine', 'SteelBlue', 'Chartreuse', 'SpringGreen', 'ForestGreen', 'OliveDrab', 'Gold', 'Khaki', 'Coral', 'OrangeRed', 'DarkOrange', 'IndianRed', 'Salmon', 'FireBrick', 'Crimson', 'MediumVioletRed', 'HotPink', 'DeepPink', 'Orchid']
 
-  e.target.className = colors[Math.floor(Math.random() * colors.length)]
+const randColor = () => {
+  return colors[Math.floor(Math.random() * colors.length)]
+}
+
+const backgroundColor = (e) => {
+  e.target.className = randColor()
 }
 
 const GithubContent = ({ project }) => {
@@ -70,7 +74,7 @@ const Project = ({ pageContext: ctx, location }) => {
   const { project } = ctx
 
   return (
-    <ProjectLayout title={ project.name } location={ location }>
+    <ProjectLayout title={ project.name } location={ location } color={ randColor() }>
       <div className='project'>
         <section>
           <header>

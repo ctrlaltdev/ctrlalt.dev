@@ -6,10 +6,12 @@ import Footer from '../../components/Footer/'
 
 import './project.sass'
 
-const PageLayout = ({ title, children, location }) => {
+const ProjectLayout = ({ title, children, location, color }) => {
   return (
     <>
-      <Helmet title={ title ? `${title} - CTRL ALT DEV` : 'CTRL ALT DEV - Yorick Demichelis' } />
+      <Helmet title={ title ? `${title} - CTRL ALT DEV` : 'CTRL ALT DEV - Yorick Demichelis' }>
+        <meta name="theme-color" content={color} />
+      </Helmet>
       <div className='project'>
         <Header path pathname={ location.pathname } />
         <main>
@@ -24,4 +26,4 @@ const PageLayout = ({ title, children, location }) => {
   )
 }
 
-export default PageLayout
+export default ProjectLayout

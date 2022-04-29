@@ -1,12 +1,10 @@
+name: Deploy
+
 on:
   workflow_dispatch:
-    branches:
-      - main
   push:
     branches:
       - main
-
-name: Deploy
 
 jobs:
   deploy:

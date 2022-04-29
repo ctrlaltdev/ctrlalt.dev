@@ -6,14 +6,16 @@ import './header.sass'
 
 const Header = ({ path, pathname }) => {
   return (
-    <header className='header'>
-      <a href='/'>
-        <figure />
-      </a>
-      <span className='start_path'>~</span>
-      <span className='path'>{ path && pathname }</span>
+    <>
+      <header className='header'>
+        <a href='/'>
+          <figure />
+        </a>
+        <span className='start_path'>~</span>
+        <span className='path'>{ path && pathname }</span>
+      </header>
       <ThemeToggle />
-    </header>
+    </>
   )
 }
 

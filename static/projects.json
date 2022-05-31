@@ -1,5 +1,18 @@
 [
   {
+    "id": "assemble",
+    "name": "Assemble!",
+    "active": true,
+    "keywords": ["github", "ts"],
+    "github": "01011111/assemble",
+    "links": [
+      {
+        "href": "https://github.com/marketplace/actions/team-assemble",
+        "txt": "action"
+      }
+    ]
+  },
+  {
     "id": "imgen",
     "name": "imgen",
     "active": true,
@@ -9,27 +22,8 @@
       {
         "href": "https://hub.docker.com/r/ctrlaltdev/imgen",
         "txt": "docker"
-      },
-      {
-        "href": "https://imgen.ctrlalt.dev/svg/1600/800/",
-        "txt": "svg"
-      },
-      {
-        "href": "https://imgen.ctrlalt.dev/png/1600/800/",
-        "txt": "png"
-      },
-      {
-        "href": "https://imgen.ctrlalt.dev/jpg/1600/800/",
-        "txt": "jpg"
       }
     ]
-  },
-  {
-    "id": "harvest",
-    "name": "Harvest CLI",
-    "active": true,
-    "keywords": ["go"],
-    "github": "ctrlaltdev/harvest-cli"
   },
   {
     "id": "srv42",
@@ -77,6 +71,13 @@
         "txt": "website"
       }
     ]
+  },
+  {
+    "id": "harvest",
+    "name": "Harvest CLI",
+    "active": true,
+    "keywords": ["go"],
+    "github": "ctrlaltdev/harvest-cli"
   },
   {
     "id": "GHR",
@@ -196,7 +197,7 @@
     "id": "wordpuzzle",
     "name": "Word Puzzle",
     "active": false,
-    "keywords": [],
+    "keywords": ["js"],
     "github": "ctrlaltdev/wordpuzzle",
     "npm": "wordpuzzle"
   },

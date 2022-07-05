@@ -9,7 +9,7 @@
     "name": "CodePen",
     "url": "https://codepen.io/ctrlaltdev",
     "img": "/img/codepen.svg",
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "Dev",

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import PageLayout from '../layouts/Page/'
 import { Codepen, Codepens } from '../components/Codepen/'
 
-import codepenData from '../../public/codepen.json'
+import codepenData from '../../static/codepen.json'
 
 import './creative.sass'
 

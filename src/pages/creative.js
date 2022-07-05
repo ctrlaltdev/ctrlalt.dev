@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import PageLayout from '../layouts/Page/'
 import { Codepen, Codepens } from '../components/Codepen/'
 
-import codepenData from '../../static/codepen.json'
+import codepenData from '../../public/codepen.json'
 
 import './creative.sass'
 
 export default function Home() {
-  const pens = codepenData.pens.sort(() => 0.5 - Math.random())
-  const featured = pens[0]
+  const [codepen, setCodepen] = useState({ pens: [] })
+
+  useEffect(() => {
+    setCodepen({ ...codepenData, pens: codepenData.pens.sort(() => 0.5 - Math.random()) })
+  }, [])
 
   return (
   <PageLayout>
@@ -18,9 +21,9 @@ export default function Home() {
       </section>
       <section className='creative__pens'>
         <header>
-          <Codepen featured user={codepenData.user} id={featured} />
+          { codepen.pens.length && <Codepen featured user={codepen.user} id={codepen.pens[0]} /> }
         </header>
-        <Codepens user={codepenData.user} pens={pens.slice(1)} />
+        <Codepens user={codepen.user} pens={codepen.pens.slice(1)} />
       </section>
     </div>
   </PageLayout>

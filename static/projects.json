@@ -1,5 +1,12 @@
 [
   {
+    "id": "gry",
+    "name": "Go Redir Yourself",
+    "active": true,
+    "keywords": ["go"],
+    "github": "ctrlaltdev/GRY"
+  },
+  {
     "id": "assemble",
     "name": "Assemble!",
     "active": true,

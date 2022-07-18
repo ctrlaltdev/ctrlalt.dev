@@ -1,25 +1,61 @@
 .projectslist
   width: 100%
   min-height: 60vh
-  // display: flex
-  // flex-flow: row wrap
-  // align-content: center
   
   li
-    // flex: 1 0 auto
     margin: 8rem 2rem
     font-weight: 600
     letter-spacing: 2px
 
     a
+      position: relative
       display: inline-block
       background-color: unset
       padding: 2rem
       font-size: 3rem
-      border: 2px solid var(--color_fg)
       color: var(--color_fg2)
       font-family: var(--font_title)
       text-transform: uppercase
+
+      &.unmaintained
+        & .border
+          mix-blend-mode: luminosity
+      
+      & .border
+        position: absolute
+        transition: top 0.5s, right 0.5s, bottom 0.5s, left 0.5s
+        
+        border: 2px solid transparent
+        mix-blend-mode: screen
+      
+      & .border-c
+        top: -0.5rem
+        right: 0.6rem
+        bottom: 0.5rem
+        left: -0.6rem
+        border-color: cyan
+
+      & .border-m 
+        top: 0
+        right: -0.5rem
+        bottom: 0
+        left: 0.5rem
+        border-color: magenta
+
+      & .border-y
+        top: 0.5rem
+        right: 0rem
+        bottom: -0.5rem
+        left: 0rem
+        border-color: yellow
+      
+      &:hover
+        & .border
+          transition: top 0.5s, right 0.5s, bottom 0.5s, left 0.5s
+          top: 0rem
+          right: 0rem
+          bottom: 0rem
+          left: 0rem
 
   &__unmaintained
     display: block
@@ -28,6 +64,13 @@
     background-color: unset
     color: var(--color_fg2)
     margin: 1rem 2rem
+
+[data-theme="light"]
+  .projectslist
+    li
+      a
+        .border
+          mix-blend-mode: multiply
 
 .projectslist__title
   &__inactive,

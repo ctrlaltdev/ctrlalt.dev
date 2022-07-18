@@ -7,7 +7,12 @@ import './projectslist.sass'
 export const ProjectItem = ({ project, color }) => {
   return (
     <li>
-      <a href={ `/${project.id}/` }>{ project.name }</a> { !project.active && <span className='projectslist__unmaintained'>Unmaintained</span> }
+      <a href={ `/${project.id}/` } className={ !project.active && 'unmaintained' }>
+        <div className="border border-c" />
+        <div className="border border-m" />
+        <div className="border border-y" />
+        { project.name }
+      </a> { !project.active && <span className='projectslist__unmaintained'>Unmaintained</span> }
     </li>
   )
 }

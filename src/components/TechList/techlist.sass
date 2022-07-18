@@ -1,6 +1,12 @@
 .techlist
   display: flex
-  flex-flow: row wrap
+  flex-flow: row nowrap
+  overflow-x: scroll
+  padding: 2rem 0
+
+  @media (orientation: portrait)
+    flex-flow: column wrap
+    height: calc((1168px - 20rem) / 10 * 3.5)
 
   &__item
     flex: 0 0 auto

@@ -23,12 +23,12 @@
     "id": "imgen",
     "name": "imgen",
     "active": true,
-    "keywords": ["go"],
+    "keywords": ["go", "container"],
     "github": "ctrlaltdev/imgen",
     "links": [
       {
         "href": "https://hub.docker.com/r/ctrlaltdev/imgen",
-        "txt": "docker"
+        "txt": "container"
       }
     ]
   },
@@ -97,7 +97,7 @@
     "id": "DIYDDNS",
     "name": "DIY Dynamic DNS",
     "active": true,
-    "keywords": ["sh"],
+    "keywords": ["sh", "go"],
     "github": "ctrlaltdev/DIYDDNS"
   },
   {
@@ -125,12 +125,12 @@
     "id": "impulse",
     "name": "impulse",
     "active": false,
-    "keywords": ["docker", "py"],
+    "keywords": ["container", "py"],
     "github": "ctrlaltdev/impulse",
     "links": [
       {
         "href": "https://hub.docker.com/r/ctrlaltdev/impulse",
-        "txt": "docker"
+        "txt": "container"
       }
     ]
   },
@@ -138,12 +138,12 @@
     "id": "certpibot",
     "name": "CertPiBot",
     "active": false,
-    "keywords": ["docker"],
+    "keywords": ["container"],
     "github": "ctrlaltdev/certpibot",
     "links": [
       {
         "href": "https://hub.docker.com/r/ctrlaltdev/certpibot",
-        "txt": "docker"
+        "txt": "container"
       }
     ]
   },

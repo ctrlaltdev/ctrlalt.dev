@@ -1,5 +1,18 @@
 [
   {
+    "id": "flog",
+    "name": "AWS Flow Logs Parser",
+    "active": true,
+    "keywords": ["ts", "aws"],
+    "github": "ctrlaltdev/flog",
+    "links": [
+      {
+        "href": "https://ctrlaltdev.github.io/flog",
+        "txt": "parser"
+      }
+    ]
+  },
+  {
     "id": "gry",
     "name": "Go Redir Yourself",
     "active": true,

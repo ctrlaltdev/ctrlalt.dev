@@ -1,8 +1,8 @@
-.Project img {
+.ProjectPage img {
   display: inline-block;
 }
 
-.Project pre {
+.ProjectPage pre {
   padding: 2rem;
   box-sizing: border-box;
   overflow-x: scroll;
@@ -12,32 +12,32 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .Project pre {
+  .ProjectPage pre {
     mix-blend-mode: screen;
   }
 }
 
-.Project p {
+.ProjectPage p {
   margin: 1rem 0;
   line-height: 1.4;
 }
 
-.Project a {
+.ProjectPage a {
   color: unset;
   text-decoration: none;
   border-bottom: 1px solid var(--color-code-foreground);
   padding-bottom: 0.5rem;
 }
 
-.Project li {
+.ProjectPage li {
   margin: 2rem 0;
 }
 
-.Project code {
+.ProjectPage code {
   font-family: var(--font-code);
 }
 
-.Project h1 {
+.ProjectPage h1 {
   font-family: var(--font-title);
   font-size: 3rem;
   font-weight: 600;
@@ -45,7 +45,7 @@
   font-variant: small-caps;
 }
 
-.Project h2, .Project h3, .Project h4, .Project h5, .Project h6 {
+.ProjectPage h2, .ProjectPage h3, .ProjectPage h4, .ProjectPage h5, .ProjectPage h6 {
   margin: 2rem 0 1rem 0;
   font-variant: small-caps;
   font-size: 3rem;

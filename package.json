@@ -1,34 +1,32 @@
 {
-  "name": "ctrlalt.dev",
-  "version": "4.0.0",
-  "private": true,
-  "homepage": "https://ctrlalt.dev/",
-  "license": "MPL-2.0",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop -H 0.0.0.0",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "gatsby develop -H 0.0.0.0",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
-  },
-  "dependencies": {
-    "classnames": "^2.3.1",
-    "gatsby": "^4.18.2",
-    "gatsby-plugin-canonical-urls": "^4.18.0",
-    "gatsby-plugin-manifest": "^4.18.1",
-    "gatsby-plugin-react-helmet": "^5.18.0",
-    "gatsby-plugin-remove-generator": "^1.2.0",
-    "gatsby-plugin-sass": "^5.18.1",
-    "gatsby-plugin-sitemap": "^5.18.1",
-    "isomorphic-unfetch": "^3.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
-    "react-markdown": "^8.0.3",
-    "sass": "^1.53.0"
-  },
-  "devDependencies": {
-    "prettier": "^2.7.1"
-  }
+	"name": "ctrlalt.dev",
+	"version": "5.0.0",
+	"private": true,
+	"type": "module",
+	"license": "MPL-2.0",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "eslint ."
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-static": "^3.0.1",
+		"@sveltejs/kit": "^2.0.0",
+		"@sveltejs/vite-plugin-svelte": "^3.0.0",
+		"@types/eslint": "8.56.0",
+		"@typescript-eslint/eslint-plugin": "^6.21.0",
+		"@typescript-eslint/parser": "^6.0.0",
+		"eslint": "^8.56.0",
+		"eslint-config-standard-with-typescript": "^43.0.1",
+		"eslint-plugin-svelte": "^2.35.1",
+		"marked": "^12.0.0",
+		"svelte": "^4.2.7",
+		"svelte-check": "^3.6.0",
+		"tslib": "^2.4.1",
+		"typescript": "^5.0.0",
+		"vite": "^5.0.3"
+	}
 }

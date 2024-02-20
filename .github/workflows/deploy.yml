@@ -12,22 +12,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: checkout
-      uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
-    - name: create deployment
-      uses: chrnorm/deployment-action@releases/v1
-      id: deployment
+    - uses: pnpm/action-setup@v3
       with:
-        token: ${{ github.token }}
-        target_url: "https://ctrlalt.dev"
-        environment: "Website"
+        version: 8
 
-    - name: install
-      run: npm ci
+    - name: Use Node.js LTS
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+        cache: pnpm
 
-    - name: build
-      run: npm run build
+    - name: Install Dependencies
+      run: pnpm ci
+
+    - name: Check
+      run: pnpm check
+
+    - name: Build
+      run: pnpm build
 
     - name: Configure AWS
       uses: aws-actions/configure-aws-credentials@v1
@@ -38,26 +42,8 @@ jobs:
 
     - name: Upload files
       run: |
-        aws s3 sync ./public/ s3://ctrlalt.dev/ --delete
+        aws s3 sync ./build/ s3://ctrlalt.dev/ --delete
 
     - name: Invalidate Cache
       run: |
         aws cloudfront create-invalidation --distribution-id EFMJC4GLPUI1A --paths "/*"
-
-    - name: Deployment success
-      if: success()
-      uses: chrnorm/deployment-status@releases/v1
-      with:
-        token: "${{ github.token }}"
-        target_url: "https://ctrlalt.dev"
-        state: "success"
-        deployment_id: ${{ steps.deployment.outputs.deployment_id }}
-
-    - name: Deployment failure
-      if: failure()
-      uses: chrnorm/deployment-status@releases/v1
-      with:
-        token: "${{ github.token }}"
-        target_url: "https://ctrlalt.dev"
-        state: "failure"
-        deployment_id: ${{ steps.deployment.outputs.deployment_id }}

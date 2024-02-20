@@ -7,17 +7,11 @@
   import '$lib/style/markdown.css'
 
   export let data: Project
-  let width: number = 800
-  let height: number = 600
-
-  let imgHeight: number = Math.min(Math.round(height / 2), 400)
 </script>
 
 <svelte:head>
   <title>{ data.name } - CTRL ALT DEV</title>
 </svelte:head>
-
-<svelte:window bind:innerWidth={width} bind:innerHeight={height} />
 
 <main>
   <p class="Title">{data.name}</p>
@@ -25,7 +19,17 @@
   <Banner />
 
   <section class="ProjectPage">
-    {@html data.content}
+    <aside class="ProjectPage__Links">
+      <ul class="ProjectPage__LinkList">
+        <li class="ProjectPage__LinkItem"><a href={`https://github.com/${data.github}`}>GitHub</a></li>
+        { #each data.links || [] as link }
+          <li class="ProjectPage__LinkItem"><a href={link.href}>{link.text}</a></li>
+        {/each}
+      </ul>
+    </aside>
+    <article class="ProjectPage__Content">
+      {@html data.content}
+    </article>
   </section>
 </main>
 
@@ -36,16 +40,45 @@
     font-weight: 500;
     letter-spacing: 1rem;
     font-variant: small-caps;
+    margin: 4rem 0 2rem 0;
   }
 
   .ProjectPage {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  @media (orientation: landscape) {
+    .ProjectPage {
+      flex-flow: row-reverse nowrap;
+    }
+  }
+
+  .ProjectPage__Content {
+    flex: 1 1 auto;
     font-size: 2rem;
     max-width: 800px;
   }
 
-  .ProjectPage__Banner img {
-    width: 100%;
-    height: 250px;
-    margin: 2rem 0;
+  .ProjectPage__Links {
+    flex: 1 1 auto;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-family: var(--font-title);
+    font-weight: 600;
+    letter-spacing: 0.5rem;
   }
+
+  .ProjectPage__LinkList {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2rem;
+    justify-content: flex-end;
+  }
+
+  .ProjectPage__LinkItem {
+    font-variant: small-caps;
+  }  
 </style>

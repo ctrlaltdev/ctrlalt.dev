@@ -63,7 +63,11 @@
   }
 
   .About__Content p {
-    margin-bottom: 2rem;
+    padding: 2rem;
+    margin: 2rem auto;
+
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
   }
 
 
@@ -87,6 +91,9 @@
     position: relative;
     padding: 2rem;
     margin: 2rem;
+
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
   }
 
   .Project__Link {

@@ -8,8 +8,14 @@
     color: string
   }
 
-  let w: number = 600
-  let h: number = 300
+  let w = 600
+  let h = 0
+
+  let stableHeight = 0
+
+  $: if (h > 0 && stableHeight === 0) {
+    stableHeight = h
+  }
   
   let dots: DotParams[] = []
 
@@ -32,12 +38,12 @@
     }
   }
 
-  generateDots(w, h)
+  generateDots(w, stableHeight)
 
   $: {
     dots = []
     i = 50
-    init = setInterval(() => generateDots(w, h), 20)
+    init = setInterval(() => generateDots(w, stableHeight), 20)
   }
 
   $: if (i <= 0) {
@@ -57,5 +63,8 @@
     width: 100%;
     min-height: 300px;
     height: 50vh;
+
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
   }
 </style>

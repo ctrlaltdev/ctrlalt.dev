@@ -2,6 +2,12 @@
   let w = 0
   let h = 0
 
+  let stableHeight = 0
+
+  $: if (h > 0 && stableHeight === 0) {
+    stableHeight = h
+  }
+
   interface RectInput {
     x: string
     y: string
@@ -27,7 +33,7 @@
     }
   }
 
-  $: genRects(w, h)
+  $: genRects(w, stableHeight)
 </script>
 
 <svelte:window bind:innerWidth={w} bind:innerHeight={h} />

@@ -9,6 +9,9 @@
   color: var(--color-code-foreground);
   background-color: var(--color-code-background);
   mix-blend-mode: multiply;
+
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
 }
 
 @media (prefers-color-scheme: dark) {

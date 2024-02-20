@@ -21,7 +21,18 @@
     position: absolute;
     top: 0;
     right: 0;
+    left: 0;
+    text-align: center;
     mix-blend-mode: multiply;
+  }
+
+  @media (orientation: landscape) {
+    .Logo__Layer {
+      top: 0;
+      right: 0;
+      text-align: right;
+      left: unset;
+    }
   }
 
   @media (prefers-color-scheme: dark) {

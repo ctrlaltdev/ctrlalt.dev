@@ -2,6 +2,7 @@
   import type { Project } from '$lib/projects.js'
 
   import '$lib/style/hack.css'
+  import '$lib/style/markdown.css'
 
   export let data: Project
 </script>
@@ -29,27 +30,6 @@
 
   .Project {
     font-size: 2rem;
-  }
-
-  .Project :global(pre) {
-    padding: 20px;
-    color: var(--color-code-foreground);
-    background-color: var(--color-code-background);
-  }
-
-  .Project :global(code) {
-    font-family: var(--font-code);
-  }
-
-  .Project :global(h1) {
-    font-family: var(--font-title);
-    font-size: 3rem;
-    font-weight: 600;
-    letter-spacing: 1rem;
-    font-variant: small-caps;
-  }
-
-  .Project :global(h2), .Project :global(h3), .Project :global(h4), .Project :global(h5), .Project :global(h6) {
-    margin-top: 2rem;
+    max-width: 800px;
   }
 </style>

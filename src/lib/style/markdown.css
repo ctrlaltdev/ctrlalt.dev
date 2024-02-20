@@ -1,0 +1,52 @@
+.Project img {
+  display: inline-block;
+}
+
+.Project pre {
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow-x: scroll;
+  color: var(--color-code-foreground);
+  background-color: var(--color-code-background);
+  mix-blend-mode: multiply;
+}
+
+@media (prefers-color-scheme: dark) {
+  .Project pre {
+    mix-blend-mode: screen;
+  }
+}
+
+.Project p {
+  margin: 1rem 0;
+  line-height: 1.4;
+}
+
+.Project a {
+  color: unset;
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-code-foreground);
+  padding-bottom: 0.5rem;
+}
+
+.Project li {
+  margin: 2rem 0;
+}
+
+.Project code {
+  font-family: var(--font-code);
+}
+
+.Project h1 {
+  font-family: var(--font-title);
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 1rem;
+  font-variant: small-caps;
+}
+
+.Project h2, .Project h3, .Project h4, .Project h5, .Project h6 {
+  margin: 2rem 0 1rem 0;
+  font-variant: small-caps;
+  font-size: 3rem;
+}

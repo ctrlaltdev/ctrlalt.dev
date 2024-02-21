@@ -44,6 +44,7 @@
   }
 
   .ProjectPage {
+    margin-top: 3rem;
     display: flex;
     flex-flow: column nowrap;
   }

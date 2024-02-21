@@ -58,16 +58,15 @@
     font-size: 2rem;
     line-height: 1.4;
     max-width: 800px;
-    min-height: 75vh;
-    margin: 0 0 0 auto;
-  }
-
-  .About__Content p {
     padding: 2rem;
-    margin: 2rem auto;
+    margin: 35vh 0 35vh auto;
 
     backdrop-filter: blur(1rem);
     -webkit-backdrop-filter: blur(1rem);
+  }
+
+  .About__Content p {
+    margin: 2rem auto;
   }
 
 

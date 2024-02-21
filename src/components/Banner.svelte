@@ -52,7 +52,7 @@
 </script>
 
 <svelte:window bind:innerWidth={w} bind:innerHeight={h} />
-<svg>
+<svg height={`${Math.floor(Math.min(Math.round(stableHeight / 2), 300))}px`}>
   { #each dots as { size, x, y, color } }
     <ellipse cx={x} cy={y} rx={size} ry={size} fill={color} />
   { /each }
@@ -61,8 +61,6 @@
 <style>
   svg {
     width: 100%;
-    min-height: 300px;
-    height: 50vh;
 
     backdrop-filter: blur(1rem);
     -webkit-backdrop-filter: blur(1rem);

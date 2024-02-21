@@ -16,6 +16,7 @@
 
 @media (prefers-color-scheme: dark) {
   .ProjectPage pre {
+    background-color: var(--color-code-background);
     mix-blend-mode: screen;
   }
 }

@@ -1,5 +1,6 @@
 <script lang="ts">
   import { projects } from '$lib/projects'
+  import ColorShadowText from '$components/ColorShadowText.svelte'
 
 </script>
 
@@ -10,14 +11,14 @@
 <main class="Home">
   <section>
     <header class="About__Header">
-      <h1 class="About__Title">Yorick Demichelis</h1>
+      <ColorShadowText let:colorShadowStyle>
+        <h1 class="About__Title" style={colorShadowStyle}>Yorick Demichelis</h1>
+      </ColorShadowText>
     </header>
     <article class="About__Content">
-      <p>I am a seasoned Tech Lead based in Los Angeles, California. With a strong background in both infrastructure and software architecture, I currently serve as a key asset at Tech Holding. My expertise lies in spearheading global teams to design, build, and deploy scalable and resilient services that have a high impact.</p>
+      <p>I am a seasoned Software Engineer based in Los Angeles, California. With experience in frontend, backend, infrastructure and software architecture, I currently serve as a key asset at Tech Holding. My adaptability and expertise led me to design, build, and deploy scalable and resilient services that have a high impact. I had the privilege to work with industry leaders such as Warner Bros, Walmart, and Westfield.</p>
 
-      <p>Throughout my career, I have had the privilege to work with industry leaders such as Warner Bros, Walmart, and Westfield. My passion for technological innovation is matched only by my commitment to operational excellence. I thrive in fast-paced environments, where my skills are put to the test every day.</p>
-
-      <p>I excel at devising solutions that are both cutting-edge and reliable. Always eager for the next challenge, I look forward to connecting with like-minded professionals.</p>
+      <p>My passion for technological innovation is matched only by my commitment to operational excellence. I thrive in product-centric environments, where business interests align with value for the user. I excel at devising solutions that are both cutting-edge and reliable. Always eager for the next challenge, I look forward to connecting with like-minded professionals.</p>
     </article>
   </section>
 
@@ -45,12 +46,10 @@
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    height: 75vh;
+    margin: 10vh auto;
   }
 
   .About__Title {
-    font-size: 6rem;
-    font-weight: 500;
     letter-spacing: 1rem;
   }
 
@@ -59,10 +58,7 @@
     line-height: 1.4;
     max-width: 800px;
     padding: 2rem;
-    margin: 35vh 0 35vh auto;
-
-    backdrop-filter: blur(1rem);
-    -webkit-backdrop-filter: blur(1rem);
+    margin: 10vh 0 10vh auto;
   }
 
   .About__Content p {
@@ -71,7 +67,7 @@
 
 
   .Project {
-    min-height: 75vh;
+    margin: 10vh auto;
   }
 
   .Project__Title {

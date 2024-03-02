@@ -17,9 +17,27 @@ jobs:
         uses: strumwolf/delete-deployment-environment@v3.0.0
         with:
           token: ${{ secrets.TOKEN_DEPLOY }}
-          environment: Website
+          environment: production
           onlyRemoveDeployments: true
-
+      - name: 🗑 Delete deployment environment
+        uses: strumwolf/delete-deployment-environment@v3.0.0
+        with:
+          token: ${{ secrets.TOKEN_DEPLOY }}
+          environment: github-pages
+          onlyRemoveDeployments: true
+      - name: 🗑 Delete deployment environment
+        uses: strumwolf/delete-deployment-environment@v3.0.0
+        with:
+          token: ${{ secrets.TOKEN_DEPLOY }}
+          environment: quiet-sierra-98596
+          onlyRemoveDeployments: true
+      - name: 🗑 Delete deployment environment
+        uses: strumwolf/delete-deployment-environment@v3.0.0
+        with:
+          token: ${{ secrets.TOKEN_DEPLOY }}
+          environment: cryptic-island-23420
+          onlyRemoveDeployments: true
+          
   deploy:
     name: Build and Deploy
     runs-on: ubuntu-latest

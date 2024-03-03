@@ -1,14 +1,12 @@
 <script>
+  import Logo from '$components/Logo.svelte'
+  
   import '$lib/style/reset.css'
   import '$lib/style/global.css'
-
-  import Tridimension from '$components/Tridimension.svelte'
-  import Logo from '$components/Logo.svelte'
 </script>
 
 <div class="Page">
-  <Tridimension />
-  <header>
+  <header class="Header">
     <Logo />
   </header>
 
@@ -31,6 +29,19 @@
 <style>
   .Page {
     padding: 20px;
+  }
+
+  .Header {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6rem;
+    padding: 1rem 2rem;
+
+    backdrop-filter: blur(2rem);
+    -webkit-backdrop-filter: blur(2rem);
   }
 
   .Socials__List {

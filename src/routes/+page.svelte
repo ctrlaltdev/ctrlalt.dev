@@ -1,13 +1,14 @@
 <script lang="ts">
   import { projects } from '$lib/projects'
+  import Tridimension from '$components/Tridimension.svelte'
   import ColorShadowText from '$components/ColorShadowText.svelte'
-
 </script>
 
 <svelte:head>
   <title>CTRL ALT DEV - Yorick Demichelis</title>
 </svelte:head>
 
+<Tridimension />
 <main class="Home">
   <section>
     <header class="About__Header">

@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { Project } from '$lib/projects.js'
 
-  import Banner from '$components/Banner.svelte'
+  import Bubbles from '$components/Bubbles.svelte'
 
   import '$lib/style/hack.css'
   import '$lib/style/markdown.css'
@@ -13,10 +13,10 @@
   <title>{ data.name } - CTRL ALT DEV</title>
 </svelte:head>
 
+<Bubbles />
+<div class="Blur" />
 <main>
-  <p class="Title">{data.name}</p>
-
-  <Banner />
+  <h1 class="Title">{data.name}</h1>
 
   <section class="ProjectPage">
     <aside class="ProjectPage__Links">
@@ -34,6 +34,18 @@
 </main>
 
 <style>
+  .Blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -199;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+  }
   .Title {
     font-family: var(--font-title);
     font-size: 3rem;

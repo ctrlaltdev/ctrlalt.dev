@@ -15,7 +15,7 @@
 
   const maxDots: number = 50
   let i: number = maxDots
-  let init: NodeJS.Timeout
+  let init: number
   
   let dots: DotParams[] = []
 

@@ -10,12 +10,21 @@
 
 <Tridimension />
 <main class="Home">
-  <section>
+  <section class="About">
     <header class="About__Header">
       <ColorShadowText let:colorShadowStyle>
         <h1 class="About__Title" style={colorShadowStyle}>Yorick Demichelis</h1>
       </ColorShadowText>
     </header>
+
+    <aside class="About__Illus">
+      <picture>
+        <source srcset="/img/yorick_demichelis.avif" type="image/avif" />
+        <source srcset="/img/yorick_demichelis.webp" type="image/webp" />
+        <img src="img/yorick_demichelis.png" alt="Yorick Demichelis" class="About__Me" />
+      </picture>
+    </aside>
+
     <article class="About__Content">
       <p>I am a seasoned Software Engineer based in Los Angeles, California. With experience in frontend, backend, infrastructure and software architecture, I currently serve as a key asset at Tech Holding. My adaptability and expertise led me to design, build, and deploy scalable and resilient services that have a high impact. I had the privilege to work with industry leaders such as Warner Bros, Walmart, and Westfield.</p>
 
@@ -43,7 +52,15 @@
 </main>
 
 <style>
+  .About {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
   .About__Header {
+    flex: 1 0 auto;
+    width: 100%;
+    height: 30vh;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -54,7 +71,22 @@
     letter-spacing: 1rem;
   }
 
+  .About__Illus {
+    flex: 1 1 auto;
+    width: 50%;
+    text-align: left;
+  }
+
+  .About__Me {
+    display: inline-block;
+    max-height: 50vh;
+    width: auto;
+    box-shadow: 0 1rem 0 0 rgba(105, 177, 237, 0.6);
+  }
+
   .About__Content {
+    flex: 1 1 auto;
+    width: 50%;
     font-size: 2rem;
     line-height: 1.4;
     max-width: 800px;
@@ -66,6 +98,25 @@
     margin: 2rem auto;
   }
 
+  @media (orientation: portrait) {
+    .About {
+      flex-flow: column nowrap;
+    }
+
+    .About__Header {
+      height: 30vh;
+    }
+
+    .About__Illus {
+      width: 100%;
+      height: 50vh;
+      text-align: right;
+    }
+
+    .About__Content {
+      width: 100%;
+    }
+  }
 
   .Project {
     margin: 10vh auto;

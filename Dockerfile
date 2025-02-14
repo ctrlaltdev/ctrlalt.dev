@@ -6,7 +6,6 @@ WORKDIR /app
 RUN corepack enable
 
 COPY package.json yarn.lock .yarnrc.yml ./
-COPY .yarn/ .yarn/
 
 # Install dependencies
 RUN yarn install
@@ -26,7 +25,6 @@ WORKDIR /app
 RUN corepack enable
 
 COPY package.json yarn.lock .yarnrc.yml ./
-COPY .yarn/ .yarn/
 
 # Install production dependencies only
 RUN yarn workspaces focus --production

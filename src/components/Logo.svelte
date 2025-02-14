@@ -1,8 +1,8 @@
 <div class="Logo">
   <a href="/">
     <p class="Logo__Layer Logo__Layer--cyan"><span>CTRL ALT DEV</span></p>
-    <p class="Logo__Layer Logo__Layer--magenta" aria-hidden><span>CTRL ALT DEV</span></p>
-    <p class="Logo__Layer Logo__Layer--yellow" aria-hidden><span>CTRL ALT DEV</span></p>
+    <p class="Logo__Layer Logo__Layer--magenta" aria-hidden="true"><span>CTRL ALT DEV</span></p>
+    <p class="Logo__Layer Logo__Layer--yellow" aria-hidden="true"><span>CTRL ALT DEV</span></p>
   </a>
 </div>
 

@@ -26,9 +26,21 @@
     </aside>
 
     <article class="About__Content">
-      <p>I am a seasoned Software Engineer based in Los Angeles, California. With experience in frontend, backend, infrastructure and software architecture, I currently serve as a key asset at Tech Holding. My adaptability and expertise led me to design, build, and deploy scalable and resilient services that have a high impact. I had the privilege to work with industry leaders such as Warner Bros, Walmart, and Westfield.</p>
+      <p>I'm a security architect and engineering leader focused on building robust security programs and scalable system architectures. With over 15 years of experience across cloud platforms and software engineering, I've learned that the best security solutions are the ones that enhance rather than hinder development.</p>
 
-      <p>My passion for technological innovation is matched only by my commitment to operational excellence. I thrive in product-centric environments, where business interests align with value for the user. I excel at devising solutions that are both cutting-edge and reliable. Always eager for the next challenge, I look forward to connecting with like-minded professionals.</p>
+      <p>At Tech Holding, I lead security engineering initiatives while providing architectural guidance for complex client solutions. My work spans from implementing Zero Trust architectures to designing secure multi-tenant systems, always with a focus on practical, maintainable solutions.</p>
+        
+      <p>I'm passionate about:</p>
+      <ul>
+        <li>Building security programs that align with modern engineering practices</li>
+        <li>Automating cloud security controls and compliance monitoring</li>
+        <li>Developing tools that make security more accessible to engineering teams</li>
+        <li>Architecting secure, scalable systems that solve real business challenges</li>
+      </ul>
+        
+      <p>My approach combines technical depth with practical implementation, whether I'm helping teams achieve compliance objectives, reviewing system architectures, or developing security automation tools. I believe in sharing knowledge and experience, regularly contributing through technical consulting and speaking engagements.</p>
+        
+      <p>I'm always interested in connecting with others in the field to discuss cloud security, architecture patterns, or how to better integrate security into the development lifecycle.</p>
     </article>
   </section>
 
@@ -36,16 +48,16 @@
     <h2 class="Project__Title">Projects</h2>
     <nav>
       <ul class="Project__List">
-        { #each projects as project }
+        {#each projects as project}
           <li class="Project__Item">
             <a href={`/${project.id}/`} class="Project__Link" title={project.name}>
-              <div class="Project__Border Project__Border--cyan" />
-              <div class="Project__Border Project__Border--magenta" />
-              <div class="Project__Border Project__Border--yellow" />
+              <div class="Project__Border Project__Border--cyan"></div>
+              <div class="Project__Border Project__Border--magenta"></div>
+              <div class="Project__Border Project__Border--yellow"></div>
               <span>{project.id}</span>
             </a>
           </li>
-        { /each }
+        {/each}
       </ul>
     </nav>
   </section>
@@ -64,7 +76,7 @@
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    margin: 10vh auto;
+    margin: 10vh auto 10vh auto;
   }
 
   .About__Title {
@@ -91,7 +103,7 @@
     line-height: 1.4;
     max-width: 800px;
     padding: 2rem;
-    margin: 10vh 0 10vh auto;
+    margin: 2vh 0 2vh auto;
   }
 
   .About__Content p {

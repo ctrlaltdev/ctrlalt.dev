@@ -1,6 +1,6 @@
 {
 	"name": "ctrlalt.dev",
-	"version": "5.0.0",
+	"version": "5.1.0",
 	"private": true,
 	"type": "module",
 	"license": "MPL-2.0",
@@ -12,22 +12,27 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "eslint ."
 	},
-	"devDependencies": {
-		"@sveltejs/adapter-static": "^3.0.1",
-		"@sveltejs/kit": "^2.0.0",
-		"@sveltejs/vite-plugin-svelte": "^3.0.0",
-		"@types/eslint": "8.56.0",
-		"@typescript-eslint/eslint-plugin": "^6.21.0",
-		"@typescript-eslint/parser": "^6.0.0",
-		"eslint": "^8.56.0",
-		"eslint-config-standard-with-typescript": "^43.0.1",
-		"eslint-plugin-svelte": "^2.35.1",
-		"marked": "^12.0.0",
-		"svelte": "^4.2.7",
-		"svelte-check": "^3.6.0",
-		"tslib": "^2.4.1",
-		"typescript": "^5.0.0",
-		"vite": "^5.0.3"
+	"dependencies": {
+		"marked": "^15.0.7",
+		"vite": "^6.1.0"
 	},
-	"packageManager": "pnpm@8.15.4+sha256.cea6d0bdf2de3a0549582da3983c70c92ffc577ff4410cbf190817ddc35137c2"
+	"devDependencies": {
+		"@sveltejs/adapter-node": "^5.2.12",
+		"@sveltejs/kit": "^2.17.1",
+		"@sveltejs/vite-plugin-svelte": "^5.0.3",
+		"@types/eslint": "9.6.1",
+		"@typescript-eslint/eslint-plugin": "6",
+		"@typescript-eslint/parser": "6",
+		"eslint": "8",
+		"eslint-config-standard-with-typescript": "^43.0.1",
+		"eslint-plugin-import": "^2.31.0",
+		"eslint-plugin-n": "16",
+		"eslint-plugin-promise": "6",
+		"eslint-plugin-svelte": "^2.46.1",
+		"svelte": "^5.20.0",
+		"svelte-check": "^4.1.4",
+		"tslib": "^2.8.1",
+		"typescript": "^5.7.3"
+	},
+	"packageManager": "yarn@4.6.0+sha512.5383cc12567a95f1d668fbe762dfe0075c595b4bfff433be478dbbe24e05251a8e8c3eb992a986667c1d53b6c3a9c85b8398c35a960587fbd9fa3a0915406728"
 }

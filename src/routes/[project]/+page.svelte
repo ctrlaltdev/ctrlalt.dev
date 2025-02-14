@@ -14,7 +14,7 @@
 </svelte:head>
 
 <Bubbles />
-<div class="Blur" />
+<div class="Blur"></div>
 <main>
   <h1 class="Title">{data.name}</h1>
 
@@ -22,7 +22,7 @@
     <aside class="ProjectPage__Links">
       <ul class="ProjectPage__LinkList">
         <li class="ProjectPage__LinkItem"><a href={`https://github.com/${data.github}`} target="_blank" rel="noopener noreferrer">GitHub</a></li>
-        { #each data.links || [] as link }
+        {#each data.links || [] as link}
           <li class="ProjectPage__LinkItem"><a href={link.href} target="_blank" rel="noopener noreferrer">{link.text}</a></li>
         {/each}
       </ul>

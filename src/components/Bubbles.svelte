@@ -66,9 +66,9 @@
 
 <svelte:window bind:innerWidth={w} bind:innerHeight={h} />
 <svg class="Bubbles">
-  { #each dots as { size, x, y, color } }
+  {#each dots as { size, x, y, color }}
     <ellipse cx={x} cy={y} rx={size} ry={size} fill={color} class="Bubbles__Bubble" />
-  { /each }
+  {/each}
 </svg>
 
 <style>

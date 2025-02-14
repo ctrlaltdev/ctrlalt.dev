@@ -14,36 +14,22 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - uses: pnpm/action-setup@v3
-      with:
-        version: 8
+    - name: Set up QEMU
+        id: qemu
+        uses: docker/setup-qemu-action@v3
+        with:
+          platforms: arm64
+      
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
 
-    - name: Use Node.js LTS
-      uses: actions/setup-node@v4
-      with:
-        node-version: 20
-        cache: pnpm
-
-    - name: Install Dependencies
-      run: pnpm install
-
-    - name: Check
-      run: pnpm check
-
-    - name: Build
-      run: pnpm build
-
-    - name: Configure AWS
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-west-2
-
-    - name: Upload files
-      run: |
-        aws s3 sync ./build/ s3://ctrlalt.dev/ --delete
-
-    - name: Invalidate Cache
-      run: |
-        aws cloudfront create-invalidation --distribution-id EFMJC4GLPUI1A --paths "/*"
+      - name: Build Image and Push
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: Dockerfile
+          platforms: linux/arm64
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          tags: ctrlaltdev/ctrlalt.dev:latest
+          push: false

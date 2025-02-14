@@ -38,7 +38,7 @@
 
 <svelte:window bind:innerWidth={w} bind:innerHeight={h} />
 <svg class="Tridimension">
-  { #each rects as { x, y, width, height, transform, stroke } }
+  {#each rects as { x, y, width, height, transform, stroke }}
     <rect class="Tridimension__Dimension" x={x} y={y} width={width} height={height} transform={transform} stroke={stroke} />
   {/each}
 </svg>

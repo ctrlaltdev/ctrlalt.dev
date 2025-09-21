@@ -1,17 +1,16 @@
 <script lang="ts">
-	import { page } from '$app/stores'
-  import ShadowText from '$components/ShadowText.svelte'
+	import { page } from '$app/state'
+	
+	let pageState = $state(page)
 </script>
 
 <section class="Error">
-  <ShadowText let:shadowStyle>
-    <h1 class="Error__Title" style={shadowStyle}>{$page.status}</h1>
-  </ShadowText>
+  <h1 class="Error__Title">{pageState.status}</h1>
 </section>
 
 <style>
   .Error {
-    height: 75vh;
+    height: 80vh;
     position: relative;
   }
 

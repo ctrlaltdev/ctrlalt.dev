@@ -65,27 +65,18 @@
     -webkit-backdrop-filter: blur(0.5rem);
   }
 
-  @media (orientation: landscape) {
-    .HeroCard {
-      max-width: 80ch;
-    }
-  }
-
   .HeroCard__Title {
     display: inline-block;
     padding-right: 6ch;
     padding-bottom: 1rem;
     margin-bottom: 4rem;
     border-bottom: 1px solid var(--color-foreground);
-    font-size: 1.6rem;
-  }
-
-  .HeroCard__Title {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   .HeroCard__Content {
-    font-size: 1.2rem;
+    font-size: 2rem;
+    font-weight: 300;
     line-height: 1.4;
   }
 
@@ -94,6 +85,16 @@
   }
   .HeroCard__Content li {
     margin: 1rem 0;
+  }
+
+  @media (orientation: landscape) {
+    .HeroCard {
+      max-width: calc(160ch + 2rem);
+    }
+
+    .HeroCard__Title {
+      font-size: 4rem;
+    }
   }
 
   .Experiences {

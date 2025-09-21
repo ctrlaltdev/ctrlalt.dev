@@ -142,7 +142,7 @@ export const experiences = [
   },
   {
     title: 'Lead DevOps Engineer',
-    company: 'Walmart Labs and Insperience',
+    company: 'Walmart Labs',
     type: 'Client Engagement via Tech Holding, Contract',
     location: 'Los Angeles, California',
     date: 'March 2020 - May 2020',

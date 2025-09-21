@@ -16,7 +16,7 @@
     bottom: 2rem;
     right: 2rem;
     left: 8rem;
-    font-size: 1rem;
+    font-size: 1.6rem;
   }
 
   .Tech {

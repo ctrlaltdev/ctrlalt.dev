@@ -37,16 +37,10 @@
   .Card {
     position: relative;
     padding: 2rem;
-    padding-bottom: 10rem;
+    padding-bottom: 16rem;
     background-color: var(--color-card-background);
     backdrop-filter: blur(0.8rem);
     -webkit-backdrop-filter: blur(0.8rem);
-  }
-
-  @media (orientation: landscape) {
-    .Card {
-      max-width: 80ch;
-    }
   }
 
   .Card__Header {
@@ -59,7 +53,7 @@
 
   .Card__Hero {
     width: 100%;
-    height: 10rem;
+    height: 20rem;
     margin-bottom: 4rem;
   }
 
@@ -73,39 +67,43 @@
   }
 
   .Card__Title {
-    /* padding-right: 6ch;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--color-foreground); */
-    font-size: 1.5rem;
+    flex: 0 0 auto;
+    font-size: 4vi;
     border-bottom: 1px solid var(--color-foreground);
     border-right: 1px solid var(--color-foreground);
   }
 
   .Card__Company {
-    font-size: 1.5rem;
+    flex: 1 0 100%;
+    font-size: 4vi;
+    border-left: 1px solid var(--color-foreground);
   }
 
   .Card__Type {
+    flex: 0 0 auto;
     width: 100%;
-    font-size: 1.2rem;
+    font-size: 3vi;
+    border-top: 1px solid var(--color-foreground);
     border-bottom: 1px solid var(--color-foreground);
     text-align: center;
   }
 
   .Card__Location {
-    flex: 1 1 auto;
-    font-size: 1.2rem;
-    border-right: 1px solid var(--color-foreground);
-    text-align: right;
+    flex: 0 0 100%;
+    font-size: 3vi;
+    border-left: 1px solid var(--color-foreground);
+    text-align: left;
   }
 
   .Card__Date {
-    flex: 1 1 auto;
-    font-size: 1.2rem;
+    flex: 0 0 auto;
+    font-size: 3vi;
+    border-top: 1px solid var(--color-foreground);
+    border-right: 1px solid var(--color-foreground);
   }
 
   .Card__Content {
-    font-size: 1.2rem;
+    font-size: 2rem;
     line-height: 1.4;
   }
 
@@ -114,5 +112,46 @@
   }
   .Card__Content li {
     margin: 1rem 0;
+  }
+
+  @media (orientation: landscape) {
+    .Card {
+      max-width: calc(50% - 1rem);
+    }
+
+    .Card__Title {
+      flex: 0 1 auto;
+      font-size: 3rem;
+      border: 1px solid transparent;
+      border-bottom: 1px solid var(--color-foreground);
+      border-right: 1px solid var(--color-foreground);
+    }
+
+    .Card__Company {
+      flex: 0 1 auto;
+      font-size: 3rem;
+      border: 1px solid transparent;
+    }
+
+    .Card__Type {
+      flex: 1 1 auto;
+      font-size: 2.4rem;
+      border: 1px solid transparent;
+      border-bottom: 1px solid var(--color-foreground);
+    }
+
+    .Card__Location {
+      flex: 1 1 auto;
+      font-size: 2.4rem;
+      border: 1px solid transparent;
+      border-right: 1px solid var(--color-foreground);
+      text-align: right;
+    }
+
+    .Card__Date {
+      flex: 1 1 auto;
+      font-size: 2.4rem;
+      border: 1px solid transparent;
+    }
   }
 </style>

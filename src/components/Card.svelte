@@ -34,6 +34,12 @@
 </article>
 
 <style>
+  :root {
+    --title-size: 2.6vi;
+    --subtitle-size: 2vi;
+    --body-size: 2rem;
+  }
+
   .Card {
     position: relative;
     padding: 2rem;
@@ -41,6 +47,33 @@
     background-color: var(--color-card-background);
     backdrop-filter: blur(0.8rem);
     -webkit-backdrop-filter: blur(0.8rem);
+
+    flex: 0 0 auto;
+    max-width: calc(100% / 1);
+  }
+
+  @media (min-width: 600px) {
+    .Card {
+      max-width: calc(100% / 1);
+    }
+  }
+
+  @media (min-width: 900px) {
+    .Card {
+      max-width: calc(100% / 2 - 2rem);
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .Card {
+      max-width: calc(100% / 2 - 2rem);
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .Card {
+      max-width: calc(100% / 3 - 2rem);
+    }
   }
 
   .Card__Header {
@@ -67,43 +100,44 @@
   }
 
   .Card__Title {
-    flex: 0 0 auto;
-    font-size: 4vi;
+    font-size: calc(var(--title-size) / 1);
+    flex: 0 1 auto;
+    border: 1px solid transparent;
     border-bottom: 1px solid var(--color-foreground);
     border-right: 1px solid var(--color-foreground);
   }
 
   .Card__Company {
-    flex: 1 0 100%;
-    font-size: 4vi;
-    border-left: 1px solid var(--color-foreground);
+    font-size: calc(var(--title-size) / 1);
+    flex: 0 1 auto;
+    border: 1px solid transparent;
   }
 
   .Card__Type {
-    flex: 0 0 auto;
-    width: 100%;
-    font-size: 3vi;
-    border-top: 1px solid var(--color-foreground);
-    border-bottom: 1px solid var(--color-foreground);
+    font-size: calc(var(--subtitle-size) / 1);
     text-align: center;
+    flex: 1 1 100%;
+    border: 1px solid transparent;
+    border-bottom: 1px solid var(--color-foreground);
   }
 
   .Card__Location {
-    flex: 0 0 100%;
-    font-size: 3vi;
-    border-left: 1px solid var(--color-foreground);
-    text-align: left;
+    font-size: calc(var(--subtitle-size) / 1);
+    flex: 1 1 auto;
+    border: 1px solid transparent;
+    border-right: 1px solid var(--color-foreground);
+    text-align: right;
   }
 
   .Card__Date {
-    flex: 0 0 auto;
-    font-size: 3vi;
-    border-top: 1px solid var(--color-foreground);
-    border-right: 1px solid var(--color-foreground);
+    font-size: calc(var(--subtitle-size) / 1);
+    flex: 1 1 auto;
+    border: 1px solid transparent;
   }
 
   .Card__Content {
-    font-size: 2rem;
+    font-size: var(--body-size);
+    font-weight: 300;
     line-height: 1.4;
   }
 
@@ -114,44 +148,107 @@
     margin: 1rem 0;
   }
 
-  @media (orientation: landscape) {
-    .Card {
-      max-width: calc(50% - 1rem);
-    }
-
+  @media (min-width: 600px) {
     .Card__Title {
-      flex: 0 1 auto;
-      font-size: 3rem;
-      border: 1px solid transparent;
-      border-bottom: 1px solid var(--color-foreground);
-      border-right: 1px solid var(--color-foreground);
+      font-size: calc(var(--title-size) / 1);
     }
 
     .Card__Company {
-      flex: 0 1 auto;
-      font-size: 3rem;
-      border: 1px solid transparent;
+      font-size: calc(var(--title-size) / 1);
     }
 
     .Card__Type {
-      flex: 1 1 auto;
-      font-size: 2.4rem;
-      border: 1px solid transparent;
-      border-bottom: 1px solid var(--color-foreground);
+      font-size: calc(var(--subtitle-size) / 1);
     }
 
     .Card__Location {
-      flex: 1 1 auto;
-      font-size: 2.4rem;
-      border: 1px solid transparent;
-      border-right: 1px solid var(--color-foreground);
-      text-align: right;
+      font-size: calc(var(--subtitle-size) / 1);
     }
 
     .Card__Date {
-      flex: 1 1 auto;
-      font-size: 2.4rem;
-      border: 1px solid transparent;
+      font-size: calc(var(--subtitle-size) / 1);
+    }
+
+    .Card__Content {
+      font-size: calc(var(--body-size) * 1);
+    }
+  }
+
+  @media (min-width: 900px) {
+    .Card__Title {
+      font-size: calc(var(--title-size) / 2);
+    }
+
+    .Card__Company {
+      font-size: calc(var(--title-size) / 2);
+    }
+
+    .Card__Type {
+      font-size: calc(var(--subtitle-size) / 2);
+    }
+
+    .Card__Location {
+      font-size: calc(var(--subtitle-size) / 2);
+    }
+
+    .Card__Date {
+      font-size: calc(var(--subtitle-size) / 2);
+    }
+
+    .Card__Content {
+      font-size: calc(var(--body-size) * 1);
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .Card__Title {
+      font-size: calc(var(--title-size) / 2);
+    }
+
+    .Card__Company {
+      font-size: calc(var(--title-size) / 2);
+    }
+
+    .Card__Type {
+      font-size: calc(var(--subtitle-size) / 2);
+    }
+
+    .Card__Location {
+      font-size: calc(var(--subtitle-size) / 2);
+    }
+
+    .Card__Date {
+      font-size: calc(var(--subtitle-size) / 2);
+    }
+
+    .Card__Content {
+      font-size: calc(var(--body-size) * 1);
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .Card__Title {
+      font-size: calc(var(--title-size) / 3);
+    }
+
+    .Card__Company {
+      font-size: calc(var(--title-size) / 3);
+    }
+
+    .Card__Type {
+      font-size: calc(var(--subtitle-size) / 3);
+    }
+
+    .Card__Location {
+      font-size: calc(var(--subtitle-size) / 3);
+    }
+
+    .Card__Date {
+      font-size: calc(var(--subtitle-size) / 3);
+    }
+
+    .Card__Content {
+      font-size: calc(var(--body-size) * 1);
     }
   }
 </style>

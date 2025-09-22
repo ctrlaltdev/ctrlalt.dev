@@ -11,12 +11,40 @@
 </footer>
 
 <style>
+  :root {
+    --footer-size: 1.8vi;
+  }
+
   .Card__Footer {
     position: absolute;
     bottom: 2rem;
     right: 2rem;
     left: 8rem;
-    font-size: 1.6rem;
+    font-size: calc(var(--footer-size) / 1);
+  }
+
+  @media (min-width: 600px) {
+    .Card__Footer {
+      font-size: calc(var(--footer-size) / 1);
+    }
+  }
+
+  @media (min-width: 900px) {
+    .Card__Footer {
+      font-size: calc(var(--footer-size) / 2);
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .Card__Footer {
+      font-size: calc(var(--footer-size) / 2);
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .Card__Footer {
+      font-size: calc(var(--footer-size) / 3);
+    }
   }
 
   .Tech {

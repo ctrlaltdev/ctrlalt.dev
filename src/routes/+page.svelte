@@ -71,7 +71,7 @@
     padding-bottom: 1rem;
     margin-bottom: 4rem;
     border-bottom: 1px solid var(--color-foreground);
-    font-size: 3rem;
+    font-size: 4vi;
   }
 
   .HeroCard__Content {
@@ -87,16 +87,6 @@
     margin: 1rem 0;
   }
 
-  @media (orientation: landscape) {
-    .HeroCard {
-      max-width: calc(160ch + 2rem);
-    }
-
-    .HeroCard__Title {
-      font-size: 4rem;
-    }
-  }
-
   .Experiences {
     display: flex;
     flex-direction: row;
@@ -104,5 +94,29 @@
     align-items: stretch;
     gap: 2rem;
     padding: 2rem;
+  }
+
+  @media (min-width: 600px) {
+    .Experiences {
+      padding: 2rem;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .Experiences {
+      padding: 2rem 0rem 2rem 2rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .Experiences {
+      padding: 2rem 0rem 2rem 2rem;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .Experiences {
+      padding: 2rem 0rem 2rem 2rem;
+    }
   }
 </style>

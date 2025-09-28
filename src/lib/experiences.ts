@@ -198,7 +198,7 @@ export const experiences = [
   },
   {
     title: 'Software Engineer',
-    company: 'CTM',
+    company: 'Corporate Travel Management',
     type: 'Contract',
     location: 'Los Angeles, California',
     date: 'December 2018 - August 2019',
@@ -226,7 +226,7 @@ export const experiences = [
   {
     title: 'Frontend Software Engineer',
     company: 'Apple',
-    type: 'Contract',
+    type: 'Client Engagement via Hogarth Worldwide, Contract',
     location: 'Cupertino, California',
     date: 'August 2018 - October 2018',
     details: [

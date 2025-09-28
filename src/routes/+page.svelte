@@ -25,16 +25,6 @@
 
         <p>At Tech Holding, I lead our security engineering initiatives and oversee our external security offerings while continuing to provide architectural guidance for complex client solutions. My approach combines deep technical expertise with practical business outcomes, whether implementing Zero Trust architectures, achieving compliance objectives, or designing secure multi-tenant systems.</p>
 
-        <p>Key focus areas:</p>
-        <ul>
-          <li>Security program development</li>
-          <li>ISO 27001/SOC2 compliance</li>
-          <li>Cloud security architecture and automation</li>
-          <li>DevSecOps practices and secure SDLC implementation</li>
-          <li>Security tool development and integration</li>
-          <li>Technical security reviews and consulting</li>
-        </ul>
-
         <p>I actively contribute to our client's success through secure, scalable solutions. Always interested in connecting with fellow security practitioners and engineering leaders to share insights and experiences.</p>
       </div>
     </article>
@@ -67,24 +57,16 @@
 
   .HeroCard__Title {
     display: inline-block;
-    padding-right: 6ch;
     padding-bottom: 1rem;
     margin-bottom: 4rem;
     border-bottom: 1px solid var(--color-foreground);
-    font-size: 4vi;
+    font-size: 4rem;
   }
 
   .HeroCard__Content {
     font-size: 2rem;
     font-weight: 300;
     line-height: 1.4;
-  }
-
-  .HeroCard__Content ul {
-    padding: 0 0 0 2rem;
-  }
-  .HeroCard__Content li {
-    margin: 1rem 0;
   }
 
   .Experiences {

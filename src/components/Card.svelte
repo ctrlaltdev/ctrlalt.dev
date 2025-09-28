@@ -15,7 +15,7 @@
 <article class="Card">
   <header class="Card__Header">
     <figure class="Card__Hero" style="background-color: {color};"></figure>
-    <h2 class="Card__Title Card__HeaderItem">{title}</h2>
+    <h2 class="Card__Title Card__HeaderItem" style="border-bottom: 1px solid {color};">{title}</h2>
     <p class="Card__Company Card__HeaderItem">{company}</p>
     <p class="Card__Type Card__HeaderItem">{type}</p>
     <p class="Card__Location Card__HeaderItem">{location}</p>
@@ -35,8 +35,8 @@
 
 <style>
   :root {
-    --title-size: 2.6vi;
-    --subtitle-size: 2vi;
+    --title-size: 3rem;
+    --subtitle-size: 2rem;
     --body-size: 2rem;
   }
 
@@ -78,8 +78,8 @@
 
   .Card__Header {
     display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
+    flex-flow: column;
+    flex-wrap: nowrap;
 
     margin-bottom: 4rem;
   }
@@ -100,39 +100,38 @@
   }
 
   .Card__Title {
-    font-size: calc(var(--title-size) / 1);
-    flex: 0 1 auto;
+    font-size: var(--title-size);
+    flex: 1 1 auto;
     border: 1px solid transparent;
+    padding-bottom: 0;
     border-bottom: 1px solid var(--color-foreground);
-    border-right: 1px solid var(--color-foreground);
   }
 
   .Card__Company {
-    font-size: calc(var(--title-size) / 1);
-    flex: 0 1 auto;
+    font-size: var(--title-size);
+    flex: 1 1 auto;
     border: 1px solid transparent;
+    padding-top: 0;
   }
 
   .Card__Type {
-    font-size: calc(var(--subtitle-size) / 1);
-    text-align: center;
-    flex: 1 1 100%;
+    font-size: var(--subtitle-size);
+    flex: 1 1 auto;
     border: 1px solid transparent;
-    border-bottom: 1px solid var(--color-foreground);
   }
 
   .Card__Location {
-    font-size: calc(var(--subtitle-size) / 1);
+    font-size: var(--subtitle-size);
     flex: 1 1 auto;
     border: 1px solid transparent;
-    border-right: 1px solid var(--color-foreground);
-    text-align: right;
+    padding-bottom: 0;
   }
 
   .Card__Date {
-    font-size: calc(var(--subtitle-size) / 1);
+    font-size: var(--subtitle-size);
     flex: 1 1 auto;
     border: 1px solid transparent;
+    padding-top: 0;
   }
 
   .Card__Content {
@@ -142,7 +141,8 @@
   }
 
   .Card__Content ul {
-    padding: 0 0 0 2rem;
+    padding: 0 0 0 4rem;
+    list-style: circle;
   }
   .Card__Content li {
     margin: 1rem 0;
@@ -150,105 +150,105 @@
 
   @media (min-width: 600px) {
     .Card__Title {
-      font-size: calc(var(--title-size) / 1);
+      font-size: var(--title-size);
     }
 
     .Card__Company {
-      font-size: calc(var(--title-size) / 1);
+      font-size: var(--title-size);
     }
 
     .Card__Type {
-      font-size: calc(var(--subtitle-size) / 1);
+      font-size: var(--subtitle-size);
     }
 
     .Card__Location {
-      font-size: calc(var(--subtitle-size) / 1);
+      font-size: var(--subtitle-size);
     }
 
     .Card__Date {
-      font-size: calc(var(--subtitle-size) / 1);
+      font-size: var(--subtitle-size);
     }
 
     .Card__Content {
-      font-size: calc(var(--body-size) * 1);
+      font-size: var(--body-size);
     }
   }
 
   @media (min-width: 900px) {
     .Card__Title {
-      font-size: calc(var(--title-size) / 2);
+      font-size: var(--title-size);
     }
 
     .Card__Company {
-      font-size: calc(var(--title-size) / 2);
+      font-size: var(--title-size);
     }
 
     .Card__Type {
-      font-size: calc(var(--subtitle-size) / 2);
+      font-size: var(--subtitle-size);
     }
 
     .Card__Location {
-      font-size: calc(var(--subtitle-size) / 2);
+      font-size: var(--subtitle-size);
     }
 
     .Card__Date {
-      font-size: calc(var(--subtitle-size) / 2);
+      font-size: var(--subtitle-size);
     }
 
     .Card__Content {
-      font-size: calc(var(--body-size) * 1);
+      font-size: var(--body-size);
     }
   }
 
   @media (min-width: 1200px) {
     .Card__Title {
-      font-size: calc(var(--title-size) / 2);
+      font-size: var(--title-size);
     }
 
     .Card__Company {
-      font-size: calc(var(--title-size) / 2);
+      font-size: var(--title-size);
     }
 
     .Card__Type {
-      font-size: calc(var(--subtitle-size) / 2);
+      font-size: var(--subtitle-size);
     }
 
     .Card__Location {
-      font-size: calc(var(--subtitle-size) / 2);
+      font-size: var(--subtitle-size);
     }
 
     .Card__Date {
-      font-size: calc(var(--subtitle-size) / 2);
+      font-size: var(--subtitle-size);
     }
 
     .Card__Content {
-      font-size: calc(var(--body-size) * 1);
+      font-size: var(--body-size);
     }
   }
 
   @media (min-width: 1536px) {
     .Card__Title {
-      font-size: calc(var(--title-size) / 3);
+      font-size: var(--title-size);
     }
 
     .Card__Company {
-      font-size: calc(var(--title-size) / 3);
+      font-size: var(--title-size);
     }
 
     .Card__Type {
-      font-size: calc(var(--subtitle-size) / 3);
+      font-size: var(--subtitle-size);
     }
 
     .Card__Location {
-      font-size: calc(var(--subtitle-size) / 3);
+      font-size: var(--subtitle-size);
     }
 
     .Card__Date {
-      font-size: calc(var(--subtitle-size) / 3);
+      font-size: var(--subtitle-size);
     }
 
     .Card__Content {
-      font-size: calc(var(--body-size) * 1);
+      font-size: var(--body-size);
     }
   }
 </style>
